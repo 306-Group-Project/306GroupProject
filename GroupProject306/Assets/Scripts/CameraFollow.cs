@@ -1,12 +1,16 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 public class CameraFollow : MonoBehaviour
 {
     // Start is called before the first frame update
-    public Transform target;
-    public Vector3 offset;
+
+    private void Awake()
+    {
+  
+    }
 
     // Start is called before the first frame update
     void Start()
@@ -17,6 +21,6 @@ public class CameraFollow : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        transform.position = target.position + offset;
+
     }
 }
