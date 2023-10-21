@@ -32,30 +32,25 @@ public class MovePlayer : MonoBehaviour
 
 
         if (Vector3.Distance(transform.position, movePoint.position) <= 0.5)
-        {
-
+        { 
             transform.position = Vector3.MoveTowards(transform.position, movePoint.position, moveSpeed * Time.deltaTime);
 
             if (Input.GetKey(KeyCode.W))
             {
-                movePoint.Translate(1 * forward * moveSpeed * Time.deltaTime);
-                //transform.Translate(1 * forward * moveSpeed * Time.deltaTime);
+                movePoint.Translate(1 * forward * moveSpeed * Time.deltaTime); 
             }
             else if (Input.GetKey(KeyCode.S))
             {
-                movePoint.Translate(-1 * forward * moveSpeed * Time.deltaTime);
-                //transform.Translate(-1 * forward * moveSpeed * Time.deltaTime);
+                movePoint.Translate(-1 * forward * moveSpeed * Time.deltaTime);         
             }
 
             else if (Input.GetKey(KeyCode.A))
             {
-                movePoint.Translate(-1 * right * moveSpeed * Time.deltaTime);
-                //transform.Translate(-1 * right * moveSpeed * Time.deltaTime);
+                movePoint.Translate(-1 * right * moveSpeed * Time.deltaTime);          
             }
             else if (Input.GetKey(KeyCode.D))
             {
-                movePoint.Translate(1 * right * moveSpeed * Time.deltaTime);
-                //transform.Translate(1 * right * moveSpeed * Time.deltaTime);
+                movePoint.Translate(1 * right * moveSpeed * Time.deltaTime);       
             }
         }
 
