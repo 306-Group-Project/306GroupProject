@@ -7,7 +7,7 @@ public class GameManager : MonoBehaviour
 {
     public static GameManager instance = null;
 
-    public GameObject player;
+    public GameObject windMill;
 
     public Text scoreText;
     [SerializeField] private int score = 0;
