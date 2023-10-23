@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Projectile : MonoBehaviour
 {
-    [SerializeField] private float lifeTime = 2.0f;
+    [SerializeField] private float lifeTime = 10.0f;
     [SerializeField] private float moveSpeed = 0.75f;
     [SerializeField] private float damage = 50.0f;
 
@@ -28,8 +28,9 @@ public class Projectile : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
 
-        if (other.transform.tag == "Enemy")
+       if (other.transform.tag == "Enemy")
         {
+            
             Destroy(this.gameObject);
         }
 

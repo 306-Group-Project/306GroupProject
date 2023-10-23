@@ -1,12 +1,14 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Animations;
 
 public class Shooter : MonoBehaviour
 {
     public GameObject projectile;
     public float fireTime;
     public float fireRate = 1.0f;
+    public Transform curTarget;
 
     // Start is called before the first frame update
     void Start()
@@ -24,8 +26,25 @@ public class Shooter : MonoBehaviour
     {
         if (Time.time >= fireTime)
         {
-            Instantiate(projectile, transform.position, transform.rotation);
+            //GameObject shotProj = Instantiate(projectile, transform.position, Quaternion.identity);
+            //Debug.DrawLine(transform.position, transform.position + transform.forward*5f,Color.red,3f);
+            //shotProj.transform.forward = transform.forward;
+            //if (curTarget)
+            //{
+              //  shotProj.transform.LookAt(curTarget);
+            //}
+            
+            Instantiate(projectile, transform.position, transform.rotation );
             fireTime = Time.time + fireRate;
+        }
+    }
+
+    void OnTriggerStay(Collider other)
+    {
+        if (other.transform.tag == "Enemy")
+        {
+            transform.LookAt(other.transform.position);
+            //curTarget = other.transform;
         }
     }
 
