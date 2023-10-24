@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -14,6 +15,7 @@ public class GameManager : MonoBehaviour
 
     [SerializeField] private float windMillHealth = 100.0f;
 
+    [SerializeField] private Camera camera;
     [SerializeField] private GameObject pauseMenu;
     [SerializeField] private GameObject startMenu;
     [SerializeField] private bool isPaused;
@@ -46,6 +48,7 @@ public class GameManager : MonoBehaviour
     public void StartGame()
     {
         Time.timeScale = 1;
+        
         startMenu.SetActive(false);
     }
 
