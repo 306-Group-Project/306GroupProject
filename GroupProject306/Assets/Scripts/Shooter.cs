@@ -34,7 +34,8 @@ public class Shooter : MonoBehaviour
               //  shotProj.transform.LookAt(curTarget);
             //}
             
-            Instantiate(projectile, transform.position, transform.rotation );
+            GameObject proj = Instantiate(projectile, transform.position, transform.rotation );
+            proj.transform.LookAt( curTarget );
             fireTime = Time.time + fireRate;
         }
     }
@@ -44,7 +45,7 @@ public class Shooter : MonoBehaviour
         if (other.transform.tag == "Enemy")
         {
             transform.LookAt(other.transform.position);
-            //curTarget = other.transform;
+            curTarget = other.transform;
         }
     }
 
