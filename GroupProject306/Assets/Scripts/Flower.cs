@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Flower : MonoBehaviour
 {
+    public float health = 100.0f;
     // Start is called before the first frame update
     void Start()
     {
@@ -21,5 +22,20 @@ public class Flower : MonoBehaviour
         {
             transform.LookAt(other.transform.position);
         }
+    }
+
+    public void TakeDamage(float damage)
+    {
+        health -= damage;
+    }
+
+    public void ResetHealth()
+    {
+        health = 100.0f;
+    }
+
+    public void SetHealth(float maxHealth)
+    {
+        health = maxHealth;
     }
 }
