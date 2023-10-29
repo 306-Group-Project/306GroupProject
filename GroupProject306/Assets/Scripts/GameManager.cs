@@ -16,8 +16,11 @@ public class GameManager : MonoBehaviour
     [SerializeField] private float windMillHealth = 100.0f;
 
     [SerializeField] private Camera camera;
+    
     [SerializeField] private GameObject pauseMenu;
     [SerializeField] private GameObject startMenu;
+    [SerializeField] private GameObject shopMenu;
+    
     [SerializeField] private bool isPaused;
 
 
@@ -43,6 +46,7 @@ public class GameManager : MonoBehaviour
     private void Update()
     {
         PauseGame();
+        OpenShopMenu();
     }
 
     public void StartGame()
@@ -78,9 +82,10 @@ public class GameManager : MonoBehaviour
 
     public void ResumeGame()
     {
-        isPaused = !isPaused;
-        Time.timeScale = isPaused ? 0 : 1;
-        pauseMenu.SetActive(isPaused);
+        isPaused = false;
+        Time.timeScale = 1;
+        pauseMenu.SetActive(false);
+        shopMenu.SetActive(false);
     }
 
     public void PauseGame()
@@ -90,6 +95,16 @@ public class GameManager : MonoBehaviour
             isPaused = !isPaused;
             Time.timeScale = isPaused ? 0 : 1;
             pauseMenu.SetActive(isPaused);
+        }
+    }
+    
+    // set the shop menu to open on B button press, will change later
+    public void OpenShopMenu()
+    {
+        if (Input.GetKey(KeyCode.B))
+        {
+            Time.timeScale = 0;
+            shopMenu.SetActive(true);
         }
     }
 }
