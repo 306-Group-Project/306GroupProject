@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657815, g: 0.4964136, b: 0.57481563, a: 1}
+  m_IndirectSpecularColor: {r: 0.4465788, g: 0.49641448, b: 0.5748171, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -4082,33 +4082,38 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7031587391305633222, guid: 18bb023d75a113f4cb8d1452371f5c0e, type: 3}
       propertyPath: m_Size.x
-      value: 50
+      value: 121.540665
       objectReference: {fileID: 0}
     - target: {fileID: 7031587391305633222, guid: 18bb023d75a113f4cb8d1452371f5c0e, type: 3}
       propertyPath: m_Size.y
-      value: 40
+      value: 39.999996
       objectReference: {fileID: 0}
     - target: {fileID: 7031587391305633222, guid: 18bb023d75a113f4cb8d1452371f5c0e, type: 3}
       propertyPath: m_Size.z
-      value: 50
+      value: 76.03873
       objectReference: {fileID: 0}
     - target: {fileID: 7031587391305633222, guid: 18bb023d75a113f4cb8d1452371f5c0e, type: 3}
       propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7031587391305633222, guid: 18bb023d75a113f4cb8d1452371f5c0e, type: 3}
+      propertyPath: m_Center.x
+      value: -1.3912886
+      objectReference: {fileID: 0}
+    - target: {fileID: 7031587391305633222, guid: 18bb023d75a113f4cb8d1452371f5c0e, type: 3}
       propertyPath: m_Center.y
-      value: -17
+      value: -17.000002
       objectReference: {fileID: 0}
     - target: {fileID: 7031587391305633222, guid: 18bb023d75a113f4cb8d1452371f5c0e, type: 3}
       propertyPath: m_Center.z
-      value: -8
+      value: 5.0194054
       objectReference: {fileID: 0}
     - target: {fileID: 7031587391305633222, guid: 18bb023d75a113f4cb8d1452371f5c0e, type: 3}
       propertyPath: m_IsTrigger
       value: 1
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 7031587391305633222, guid: 18bb023d75a113f4cb8d1452371f5c0e, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents:
@@ -4124,6 +4129,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 8454364914181216302, guid: 18bb023d75a113f4cb8d1452371f5c0e, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1866314301}
+    - targetCorrespondingSourceObject: {fileID: 8454364914181216302, guid: 18bb023d75a113f4cb8d1452371f5c0e, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1866314306}
   m_SourcePrefab: {fileID: 100100000, guid: 18bb023d75a113f4cb8d1452371f5c0e, type: 3}
 --- !u!1001 &1598849364
 PrefabInstance:
@@ -4913,6 +4921,27 @@ MonoBehaviour:
   fireTime: 0
   fireRate: 1
   curTarget: {fileID: 0}
+--- !u!135 &1866314306
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1866314296}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Radius: 50
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!4 &1883007112 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 400000, guid: e834b34533a1cfc45bc74f5b2c152976, type: 3}
@@ -5068,7 +5097,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5bfcf6195c72441ba82b755e7318e4be, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  shopMenu: {fileID: 1925701053}
 --- !u!1 &1973842589
 GameObject:
   m_ObjectHideFlags: 0
