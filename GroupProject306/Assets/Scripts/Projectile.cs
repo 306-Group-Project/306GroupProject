@@ -5,8 +5,9 @@ using UnityEngine;
 public class Projectile : MonoBehaviour
 {
     [SerializeField] private float lifeTime = 10.0f;
-    [SerializeField] private float moveSpeed = 0.75f;
+    [SerializeField] private float moveSpeed = 2.0f;
     [SerializeField] private float damage = 50.0f;
+    public Transform curTarget = null;
 
     // Start is called before the first frame update
     void Start()
@@ -22,6 +23,10 @@ public class Projectile : MonoBehaviour
 
     private void MoveProjectile()
     {
+        if (curTarget != null)
+        {
+            transform.LookAt(curTarget.transform.position);
+        }
         transform.position += transform.forward * moveSpeed * Time.deltaTime;
     }
 
@@ -31,6 +36,11 @@ public class Projectile : MonoBehaviour
         {
             Destroy(this.gameObject);
         }
-
     }
+
+    public void setTarget(Transform other)
+    {
+        curTarget = other;
+    }
+
 }
