@@ -21,6 +21,7 @@ public class GameManager : MonoBehaviour
     [SerializeField] private GameObject pauseMenu;
     [SerializeField] private GameObject startMenu;
     [SerializeField] private GameObject shopMenu;
+    [SerializeField] private GameObject gameScreen;
     [SerializeField] private GameObject defenceMenu;
     [SerializeField] private GameObject upgradeMenu;
     [SerializeField] private GameObject offenceMenu;
@@ -62,6 +63,7 @@ public class GameManager : MonoBehaviour
             if (isPaused)
             {
                 pauseMenu.SetActive(false);
+                gameScreen.SetActive(false);
             }
         }
     }
@@ -71,6 +73,7 @@ public class GameManager : MonoBehaviour
         Time.timeScale = 1;
         inMenu = false;
         startMenu.SetActive(false);
+        gameScreen.SetActive(true);
     }
 
     void SetScoreText()
@@ -104,12 +107,14 @@ public class GameManager : MonoBehaviour
         Time.timeScale = 1;
         pauseMenu.SetActive(false);
         shopMenu.SetActive(false);
+        gameScreen.SetActive(true);
     }
 
     public void PauseGame()
     {
         if (Input.GetKey(KeyCode.P) && !isPaused && !inMenu)
         {
+            gameScreen.SetActive(false);
             isPaused = !isPaused;
             Time.timeScale = isPaused ? 0 : 1;
             pauseMenu.SetActive(isPaused);
@@ -125,6 +130,7 @@ public class GameManager : MonoBehaviour
         defenceMenu.SetActive(false);
         upgradeMenu.SetActive(false);
         offenceMenu.SetActive(false);
+        gameScreen.SetActive(false);
     }
     
     public void OpenDefenceMenu()
