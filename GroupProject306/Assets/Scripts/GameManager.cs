@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
@@ -20,8 +21,10 @@ public class GameManager : MonoBehaviour
     [SerializeField] private GameObject pauseMenu;
     [SerializeField] private GameObject startMenu;
     [SerializeField] private GameObject shopMenu;
+    [SerializeField] private GameObject gameMenu;
     
     [SerializeField] private bool isPaused;
+
 
 
     // Start is called before the first frame update
@@ -41,6 +44,7 @@ public class GameManager : MonoBehaviour
     {
         SetScoreText();
         Time.timeScale = 0;
+        
     }
 
     private void Update()
@@ -54,6 +58,7 @@ public class GameManager : MonoBehaviour
         Time.timeScale = 1;
         
         startMenu.SetActive(false);
+        gameMenu.SetActive(true);
     }
 
     void SetScoreText()
@@ -86,12 +91,14 @@ public class GameManager : MonoBehaviour
         Time.timeScale = 1;
         pauseMenu.SetActive(false);
         shopMenu.SetActive(false);
+        gameMenu.SetActive(true);
     }
 
     public void PauseGame()
     {
         if (Input.GetKey(KeyCode.P) && !isPaused)
         {
+            gameMenu.SetActive(false);
             isPaused = !isPaused;
             Time.timeScale = isPaused ? 0 : 1;
             pauseMenu.SetActive(isPaused);
@@ -103,6 +110,7 @@ public class GameManager : MonoBehaviour
     {
         if (Input.GetKey(KeyCode.B))
         {
+            gameMenu.SetActive(false);
             Time.timeScale = 0;
             shopMenu.SetActive(true);
         }
