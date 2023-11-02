@@ -21,7 +21,11 @@ public class EnemySpawner : MonoBehaviour
     {
         if(Time.time > spawnTimer)
         {
-            Instantiate(enemyPrefab);
+            Vector3 spawnPosition = transform.position;
+
+            // Instantiate the enemy at the spawner's position
+            Instantiate(enemyPrefab, spawnPosition, Quaternion.identity);
+
             spawnTimer = Time.time + spawnRate;
         }
     }
