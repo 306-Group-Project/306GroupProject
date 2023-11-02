@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class WindMill : MonoBehaviour
 {
+    [SerializeField] float health = 100.0f;
+    public GameManager manager;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -20,7 +23,18 @@ public class WindMill : MonoBehaviour
     {
         if (other.transform.tag == "Enemy")
         {
-            Destroy(other.gameObject);
+           // Destroy(other.gameObject);
+        }
+    }
+
+    public void TakeDamge(float damage)
+    {
+        health -= damage;
+
+        if(health < 0)
+        {
+            Destroy(this.gameObject);
+            manager.EndGame();
         }
     }
 }
