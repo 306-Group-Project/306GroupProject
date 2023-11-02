@@ -20,8 +20,11 @@ public class GameManager : MonoBehaviour
     // Menus
     [SerializeField] private GameObject pauseMenu;
     [SerializeField] private GameObject startMenu;
-    [SerializeField] private GameObject shopMenu;
+   
     [SerializeField] private GameObject gameScreen;
+    [SerializeField] private GameObject endGameScreen;
+
+    [SerializeField] private GameObject shopMenu;
     [SerializeField] private GameObject defenceMenu;
     [SerializeField] private GameObject upgradeMenu;
     [SerializeField] private GameObject offenceMenu;
@@ -149,5 +152,13 @@ public class GameManager : MonoBehaviour
     {
         shopMenu.SetActive(false);
         offenceMenu.SetActive(true);
+    }
+
+    public void EndGame()
+    {
+        gameScreen.SetActive(false);
+        endGameScreen.SetActive(true);
+        isPaused = !isPaused;
+        Time.timeScale = isPaused ? 0 : 1;
     }
 }

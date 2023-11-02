@@ -5,12 +5,12 @@ using UnityEngine;
 
 public class Enemy : MonoBehaviour
 {
-    [SerializeField] private float moveSpeed = 15.0f;
+    [SerializeField] private float moveSpeed = 0.5f;
     [SerializeField] private float health = 100.0f;
     [SerializeField] private float maxHealth = 100.0f;
 
-    [SerializeField] private float damageToPlayer = 20.0f;
     [SerializeField] private float damageRate = 0.7f;
+    [SerializeField] private float damage = 10.0f;
     [SerializeField] private float damageTime;
 
     // Start is called before the first frame update
@@ -49,6 +49,14 @@ public class Enemy : MonoBehaviour
             //Destroy(effect, 1.0f);
             Destroy(this.gameObject);
 
+        }
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if(other.gameObject.tag == "Windmill") {
+
+            other.GetComponent<WindMill>().TakeDamge(damage);
         }
     }
 }
