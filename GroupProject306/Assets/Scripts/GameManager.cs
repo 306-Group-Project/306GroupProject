@@ -29,7 +29,6 @@ public class GameManager : MonoBehaviour
     [SerializeField] private bool inMenu;
     [SerializeField] private bool isPaused;
 
-
     // Start is called before the first frame update
     void Awake()
     {
