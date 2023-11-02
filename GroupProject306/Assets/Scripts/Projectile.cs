@@ -5,8 +5,8 @@ using UnityEngine;
 public class Projectile : MonoBehaviour
 {
     [SerializeField] private float lifeTime = 10.0f;
-    [SerializeField] private float moveSpeed = 2.0f;
-    [SerializeField] private float damage = 50.0f;
+    [SerializeField] private float moveSpeed = 1.25f;
+    [SerializeField] private float damage = 30.0f;
     public Transform curTarget = null;
 
     // Start is called before the first frame update
@@ -34,6 +34,7 @@ public class Projectile : MonoBehaviour
     {
        if (other.transform.tag == "Enemy")
         {
+            other.GetComponent<Enemy>().TakeDamage(damage);
             Destroy(this.gameObject);
         }
     }
