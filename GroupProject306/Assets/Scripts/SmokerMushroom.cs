@@ -9,11 +9,13 @@ public class SmokerMushroom : MonoBehaviour
     public float fireTime;
     public float fireRate = 1.0f;
     public float damage = 10.0f;
-
+    // variable for sound effect for smoking mushroom
+    private AudioSource smokeSound;
     // Start is called before the first frame update
     void Start()
     {
-
+        // this calls and sets up audiosource component
+        smokeSound = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -27,6 +29,7 @@ public class SmokerMushroom : MonoBehaviour
         if (Time.time >= fireTime)
         {
             GameObject cloud = Instantiate(smoke, transform.position + new Vector3(0, 0.2f, 0), transform.rotation);
+            smokeSound.Play();
             Destroy(cloud, 0.5f);
             fireTime = Time.time + fireRate;
         }

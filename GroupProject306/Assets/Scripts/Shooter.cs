@@ -9,11 +9,14 @@ public class Shooter : MonoBehaviour
     public float fireTime;
     public float fireRate = 1.0f;
     public Transform curTarget;
+    // variable for sound effect for shooting projectile
+    private AudioSource projectileSound;
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        // this calls and sets up audiosource component
+        projectileSound = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -35,6 +38,7 @@ public class Shooter : MonoBehaviour
             //}
             
             GameObject proj = Instantiate(projectile, transform.position, transform.rotation );
+            projectileSound.Play();
             proj.transform.LookAt(curTarget);
 
             

@@ -11,7 +11,9 @@ public class GameManager : MonoBehaviour
     public GameObject windMill;
 
     public Text scoreText;
+    public Text levelText;
     [SerializeField] private int score = 0;
+    [SerializeField] private int level = 0;
 
     [SerializeField] private float windMillHealth = 100.0f;
 
@@ -49,6 +51,7 @@ public class GameManager : MonoBehaviour
     {
         inMenu = true;
         SetScoreText();
+        SetLevelText();
         Time.timeScale = 0;
     }
 
@@ -81,6 +84,11 @@ public class GameManager : MonoBehaviour
     void SetScoreText()
     {
         scoreText.text = "Score: " + score.ToString();
+    }
+
+    void SetLevelText()
+    {
+        levelText.text = "Level: " + level.ToString();
     }
 
 
