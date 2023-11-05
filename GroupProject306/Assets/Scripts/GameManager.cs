@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
@@ -159,5 +160,10 @@ public class GameManager : MonoBehaviour
         endGameScreen.SetActive(true);
         isPaused = !isPaused;
         Time.timeScale = isPaused ? 0 : 1;
+    }
+
+    public void RestartGame()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 }
