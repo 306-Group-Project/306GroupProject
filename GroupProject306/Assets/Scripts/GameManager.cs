@@ -62,15 +62,7 @@ public class GameManager : MonoBehaviour
         {
             PauseGame();
         }
-        if (Input.GetKey(KeyCode.B))
-        {
-            OpenShopMenu();
-            if (isPaused)
-            {
-                pauseMenu.SetActive(false);
-                gameScreen.SetActive(false);
-            }
-        }
+        
     }
 
     public void StartGame()
