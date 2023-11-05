@@ -2115,7 +2115,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &326863299
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2551,7 +2551,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Game Title
+  m_text: Bloom Defenders
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: b4ddfb3635c5c4e9099693b18f3cba56, type: 2}
   m_sharedMaterial: {fileID: -567259756381480063, guid: b4ddfb3635c5c4e9099693b18f3cba56, type: 2}
@@ -2614,7 +2614,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: 1.2719727, w: 0}
+  m_margin: {x: 0, y: 0, z: -175.1227, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -3783,7 +3783,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Game Shop
+  m_text: Bloom Defenders
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: b4ddfb3635c5c4e9099693b18f3cba56, type: 2}
   m_sharedMaterial: {fileID: -567259756381480063, guid: b4ddfb3635c5c4e9099693b18f3cba56, type: 2}
@@ -3846,7 +3846,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: 1.2719727, w: 0}
+  m_margin: {x: 0, y: 0, z: -226.70976, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -6272,7 +6272,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1234586326
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6776,7 +6776,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Game Title
+  m_text: Bloom Defenders
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: b4ddfb3635c5c4e9099693b18f3cba56, type: 2}
   m_sharedMaterial: {fileID: -567259756381480063, guid: b4ddfb3635c5c4e9099693b18f3cba56, type: 2}
@@ -6839,7 +6839,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: 1.2719727, w: 0}
+  m_margin: {x: 0, y: 0, z: -123.53558, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -7019,7 +7019,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Game Title
+  m_text: Bloom Defenders
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: b4ddfb3635c5c4e9099693b18f3cba56, type: 2}
   m_sharedMaterial: {fileID: -567259756381480063, guid: b4ddfb3635c5c4e9099693b18f3cba56, type: 2}
@@ -7053,7 +7053,7 @@ MonoBehaviour:
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 1
-  m_HorizontalAlignment: 2
+  m_HorizontalAlignment: 1
   m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: -5
@@ -7082,7 +7082,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: 1.2719727, w: 0}
+  m_margin: {x: 0, y: 0, z: -356.50958, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -8219,7 +8219,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Game Title
+  m_text: Bloom Defenders
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: b4ddfb3635c5c4e9099693b18f3cba56, type: 2}
   m_sharedMaterial: {fileID: -567259756381480063, guid: b4ddfb3635c5c4e9099693b18f3cba56, type: 2}
@@ -8253,7 +8253,7 @@ MonoBehaviour:
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 1
-  m_HorizontalAlignment: 2
+  m_HorizontalAlignment: 1
   m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: -5
@@ -8282,7 +8282,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: 1.2719727, w: 0}
+  m_margin: {x: 0, y: 0, z: -414.75305, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -9006,7 +9006,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Game Title
+  m_text: Bloom Defenders
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: b4ddfb3635c5c4e9099693b18f3cba56, type: 2}
   m_sharedMaterial: {fileID: -567259756381480063, guid: b4ddfb3635c5c4e9099693b18f3cba56, type: 2}
@@ -9069,7 +9069,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: 1.2719727, w: 0}
+  m_margin: {x: 0, y: 0, z: -235.03026, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -10126,7 +10126,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Game Title
+  m_text: Bloom Defenders
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: b4ddfb3635c5c4e9099693b18f3cba56, type: 2}
   m_sharedMaterial: {fileID: -567259756381480063, guid: b4ddfb3635c5c4e9099693b18f3cba56, type: 2}
@@ -10189,7 +10189,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: 1.2719727, w: 0}
+  m_margin: {x: 0, y: 0, z: -161.80986, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
