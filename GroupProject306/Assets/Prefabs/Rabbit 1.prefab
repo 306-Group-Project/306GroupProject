@@ -75,8 +75,8 @@ MonoBehaviour:
   moveSpeed: 0.5
   health: 100
   maxHealth: 100
-  damageToPlayer: 20
   damageRate: 0.7
+  damage: 10
   damageTime: 0
 --- !u!54 &538232005204789693
 Rigidbody:
