@@ -6,7 +6,7 @@ public class WindMill : MonoBehaviour
 {
     [SerializeField] float health = 100.0f;
     public GameManager manager;
-
+    // public GameObject healthbar;
     // Start is called before the first frame update
     void Start()
     {
@@ -35,6 +35,12 @@ public class WindMill : MonoBehaviour
         {
             Destroy(this.gameObject);
             manager.EndGame();
+            // healthbar.GetComponent<WindMillHealth>().SetHealth(health);
         }
+    }
+    // returns current hp
+    public float getHp()
+    {
+        return health;
     }
 }
