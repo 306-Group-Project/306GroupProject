@@ -4,9 +4,9 @@ using UnityEngine;
 
 public class WindMill : MonoBehaviour
 {
-    [SerializeField] float health = 100.0f;
+    [SerializeField] public float health = 100.0f;
     public GameManager manager;
-    // public GameObject healthbar;
+    public GameObject healthbar;
     // Start is called before the first frame update
     void Start()
     {
@@ -30,12 +30,13 @@ public class WindMill : MonoBehaviour
     public void TakeDamge(float damage)
     {
         health -= damage;
+        healthbar.GetComponent<WindMillHealth>().SetHealth(health);
 
-        if(health < 0)
+        if (health < 0)
         {
             Destroy(this.gameObject);
             manager.EndGame();
-            // healthbar.GetComponent<WindMillHealth>().SetHealth(health);
+            
         }
     }
     // returns current hp
