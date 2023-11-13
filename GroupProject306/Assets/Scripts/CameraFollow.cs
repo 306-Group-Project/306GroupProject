@@ -25,12 +25,16 @@ public class CameraFollow : MonoBehaviour
     void Start()
     {
         zoom = cam.orthographicSize;
+        StartCoroutine(loop());
     }
 
-    // Update is called once per frame
-    void Update()
+    private IEnumerator loop()
     {
-        moveCam();
+        while (true)
+        {
+            moveCam();
+            yield return new WaitForSecondsRealtime(0.008f);
+        }
     }
 
     public void moveCam()

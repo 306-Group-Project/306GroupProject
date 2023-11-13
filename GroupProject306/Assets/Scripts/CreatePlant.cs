@@ -28,7 +28,7 @@ public class CreatePlant : MonoBehaviour
         {
             Planting.transform.position = worldPosition;
         }
-        Debug.Log(worldPosition);
+
         make();
     }
 
@@ -44,7 +44,6 @@ public class CreatePlant : MonoBehaviour
 
         if (Input.GetMouseButtonDown(0) && Planting)
         {
-            Instantiate(Prefab, worldPosition, Quaternion.identity);
             Planting = null;
         }
     }
