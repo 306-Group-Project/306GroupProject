@@ -9,7 +9,8 @@ public class GameManager : MonoBehaviour
 {
     public static GameManager instance = null;
 
-    public GameObject windMill;
+    public WindMill windMill;
+    public GameObject windmillObject;
 
     public Text scoreText;
     public Text levelText;
@@ -63,7 +64,12 @@ public class GameManager : MonoBehaviour
         {
             PauseGame();
         }
-        
+
+        if (windMill.getHp() <= 0)
+        {
+            Destroy(windmillObject);
+            EndGame();
+        }
     }
 
     public void StartGame()

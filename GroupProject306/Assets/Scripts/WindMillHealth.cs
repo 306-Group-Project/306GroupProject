@@ -5,8 +5,7 @@ using UnityEngine.UI;
 
 public class WindMillHealth : MonoBehaviour
 {
-    // variables for camera
-    public GameObject cameraToFollow;
+
     // public variables for the healthbar and windmill hp
     public GameObject windMill;
     public Slider healthBar;
@@ -23,7 +22,7 @@ public class WindMillHealth : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        transform.LookAt(-cameraToFollow.transform.position);
+        
     }
 
     // updates the health bar to reflect hp
