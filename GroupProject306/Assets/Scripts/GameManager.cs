@@ -9,8 +9,10 @@ public class GameManager : MonoBehaviour
 {
     public static GameManager instance = null;
 
+    // windmill items
     public WindMill windMill;
     public GameObject windmillObject;
+    public GameObject smoke;
 
     public Text scoreText;
     public Text levelText;
@@ -68,6 +70,8 @@ public class GameManager : MonoBehaviour
         if (windMill.getHp() <= 0)
         {
             Destroy(windmillObject);
+            GameObject cloud = Instantiate(smoke, windmillObject.transform.position, transform.rotation);
+            Destroy(cloud, 0.5f);
             EndGame();
         }
     }
@@ -164,8 +168,6 @@ public class GameManager : MonoBehaviour
     {
         gameScreen.SetActive(false);
         endGameScreen.SetActive(true);
-        isPaused = !isPaused;
-        Time.timeScale = isPaused ? 0 : 1;
     }
 
     public void RestartGame()
