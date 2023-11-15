@@ -13,6 +13,8 @@ public class Enemy : MonoBehaviour
     [SerializeField] private float damage = 10.0f;
     [SerializeField] private float damageTime;
 
+    public GameObject Coin; 
+
     // Start is called before the first frame update
     void Awake()
     {
@@ -35,7 +37,7 @@ public class Enemy : MonoBehaviour
         if (GameManager.instance.windMill)
         {
             transform.LookAt(GameManager.instance.windMill.transform.position);
-            transform.position += transform.forward * moveSpeed * Time.deltaTime;
+            transform.position  += transform.forward * moveSpeed * Time.deltaTime;
         }
     }
 
@@ -48,8 +50,18 @@ public class Enemy : MonoBehaviour
             //GameObject effect = Instantiate(deathEffect, transform.position, transform.rotation);
             //Destroy(effect, 1.0f);
             Destroy(this.gameObject);
+            
+            DropCoin();
 
         }
+    }
+
+    void DropCoin() {
+        Vector3 position = transform.position; // enemy position
+
+        GameObject coin = Instantiate(Coin, position, Quaternion.identity); // coin drop 
+        coin.SetActive(true);
+        Destroy(coin,10f); 
     }
 
     private void OnTriggerEnter(Collider other)
