@@ -5,8 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ba3bef45-8e98-444b-8ea9-f6c74c86d065" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Scripts.dir/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Scripts.dir/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Enemy.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Enemy.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Coins/Devtoid - Gold Coins/3D Assets/Copper Coins/Prefab/SilverCoins.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Coins/Devtoid - Gold Coins/3D Assets/Copper Coins/Prefab/SilverCoins.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Coins/Devtoid - Gold Coins/3D Assets/Gold Coin - Single/Prefab/GoldCoin.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Coins/Devtoid - Gold Coins/3D Assets/Gold Coin - Single/Prefab/GoldCoin.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Coins/Devtoid - Gold Coins/3D Assets/Gold Coins/Prefab/GoldCoins.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Coins/Devtoid - Gold Coins/3D Assets/Gold Coins/Prefab/GoldCoins.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Prefabs/Bear_4.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/../Prefabs/Bear_4.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Prefabs/EnemyBugSwarm.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/../Prefabs/EnemyBugSwarm.prefab" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -22,6 +28,7 @@
     <setting file="file://$PROJECT_DIR$/CameraZoom.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Enemy.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/EnemySpawner.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Flower.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/HealthBuff.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/PowerupEffect.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/WindMill.cs" root0="FORCE_HIGHLIGHTING" />
@@ -68,7 +75,7 @@
       <workItem from="1698706188619" duration="4370000" />
       <workItem from="1699293521252" duration="112000" />
       <workItem from="1700005789918" duration="3087000" />
-      <workItem from="1700023802891" duration="2356000" />
+      <workItem from="1700023802891" duration="3218000" />
     </task>
     <servers />
   </component>

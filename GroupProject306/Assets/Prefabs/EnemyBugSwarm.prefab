@@ -56,7 +56,7 @@ MonoBehaviour:
   damageRate: 0.7
   damage: 10
   damageTime: 0
-  Coin: {fileID: 0}
+  Coin: {fileID: 1498403948531744, guid: fa2c57d3f28a5e6419393e8bc3eeb32a, type: 3}
 --- !u!54 &7532155338353168385
 Rigidbody:
   m_ObjectHideFlags: 0
