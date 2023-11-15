@@ -2,8 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-[CreateAssetMenu(menuName = "Powerups/HealthBuff")]
-public class HealthBuff : PowerupEffect
+[CreateAssetMenu(menuName = "Upgrades/HealthBuff")]
+public class HealthBuff : UpgradeEffect
 {
   public float amount;
   public override void Apply(GameObject target)
