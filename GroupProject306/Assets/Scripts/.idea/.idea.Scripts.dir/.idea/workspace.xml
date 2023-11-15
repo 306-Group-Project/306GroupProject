@@ -5,11 +5,22 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ba3bef45-8e98-444b-8ea9-f6c74c86d065" name="Changes" comment="">
+<<<<<<< HEAD
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Scripts.dir/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Scripts.dir/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Enemy.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Enemy.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/HealthBuff.cs" beforeDir="false" afterPath="$PROJECT_DIR$/HealthBuff.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/PowerupEffect.cs" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/PowerupEffect.cs.meta" beforeDir="false" />
+=======
+      <change beforePath="$PROJECT_DIR$/../Coins/Devtoid - Gold Coins/3D Assets/Copper Coins/Prefab/SilverCoins.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Coins/Devtoid - Gold Coins/3D Assets/Copper Coins/Prefab/SilverCoins.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Coins/Devtoid - Gold Coins/3D Assets/Gold Coin - Single/Prefab/GoldCoin.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Coins/Devtoid - Gold Coins/3D Assets/Gold Coin - Single/Prefab/GoldCoin.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Coins/Devtoid - Gold Coins/3D Assets/Gold Coins/Prefab/GoldCoins.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Coins/Devtoid - Gold Coins/3D Assets/Gold Coins/Prefab/GoldCoins.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Prefabs/Bear_4.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/../Prefabs/Bear_4.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Prefabs/EnemyBugSwarm.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/../Prefabs/EnemyBugSwarm.prefab" afterDir="false" />
+>>>>>>> e3b9a97760c6bd95b432cae4be56be8f61c4f77f
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -21,12 +32,22 @@
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/BlockerPlant.cs" root0="SKIP_HIGHLIGHTING" />
+<<<<<<< HEAD
     <setting file="file://$PROJECT_DIR$/Enemy.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/EnemySlow.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/EnemySpawner.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/HealthBuff.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Upgrade.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/UpgradeEffect.cs" root0="SKIP_HIGHLIGHTING" />
+=======
+    <setting file="file://$PROJECT_DIR$/CameraFollow.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/CameraZoom.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Enemy.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/EnemySpawner.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Flower.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/HealthBuff.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/PowerupEffect.cs" root0="SKIP_HIGHLIGHTING" />
+>>>>>>> e3b9a97760c6bd95b432cae4be56be8f61c4f77f
     <setting file="file://$PROJECT_DIR$/WindMill.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/WindMillHealth.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
@@ -38,26 +59,26 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "git-widget-placeholder": "main",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "vue.rearranger.settings.migration": "true"
   },
-  &quot;keyToStringList&quot;: {
-    &quot;rider.external.source.directories&quot;: [
-      &quot;C:\\Users\\lheur\\AppData\\Roaming\\JetBrains\\Rider2023.2\\resharper-host\\DecompilerCache&quot;,
-      &quot;C:\\Users\\lheur\\AppData\\Roaming\\JetBrains\\Rider2023.2\\resharper-host\\SourcesCache&quot;,
-      &quot;C:\\Users\\lheur\\AppData\\Local\\Symbols\\src&quot;
+  "keyToStringList": {
+    "rider.external.source.directories": [
+      "/Users/kelseykeller/Library/Application Support/JetBrains/Rider2023.2/resharper-host/DecompilerCache",
+      "/Users/kelseykeller/Library/Application Support/JetBrains/Rider2023.2/resharper-host/SourcesCache",
+      "/Users/kelseykeller/.local/share/Symbols/src"
     ]
   }
-}</component>
+}]]></component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -70,9 +91,14 @@
       <workItem from="1698352025666" duration="1421000" />
       <workItem from="1698706188619" duration="4370000" />
       <workItem from="1699293521252" duration="112000" />
+<<<<<<< HEAD
       <workItem from="1700005789918" duration="3969000" />
       <workItem from="1700011692478" duration="805000" />
       <workItem from="1700072069866" duration="6039000" />
+=======
+      <workItem from="1700005789918" duration="3087000" />
+      <workItem from="1700023802891" duration="3218000" />
+>>>>>>> e3b9a97760c6bd95b432cae4be56be8f61c4f77f
     </task>
     <servers />
   </component>
