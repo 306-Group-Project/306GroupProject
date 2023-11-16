@@ -13,6 +13,7 @@ public class GameManager : MonoBehaviour
     public WindMill windMill;
     public GameObject windmillObject;
     public GameObject smoke;
+    private Transform windmillLocation;
 
     public Text scoreText;
     public Text levelText;
@@ -66,11 +67,16 @@ public class GameManager : MonoBehaviour
         {
             PauseGame();
         }
+        checkWindMillHealth();
+    }
 
+    public void checkWindMillHealth()
+    {
         if (windMill.getHp() <= 0)
         {
+            windmillLocation = windmillObject.transform;
+            GameObject cloud = Instantiate(smoke, windmillLocation.position, transform.rotation);
             Destroy(windmillObject);
-            GameObject cloud = Instantiate(smoke, windmillObject.transform.position, transform.rotation);
             Destroy(cloud, 0.5f);
             EndGame();
         }
@@ -168,6 +174,7 @@ public class GameManager : MonoBehaviour
     {
         gameScreen.SetActive(false);
         endGameScreen.SetActive(true);
+        Time.timeScale = 0;
     }
 
     public void RestartGame()

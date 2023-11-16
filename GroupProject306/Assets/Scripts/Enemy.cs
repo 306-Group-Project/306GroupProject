@@ -66,10 +66,10 @@ public class Enemy : MonoBehaviour
     }
 
     private void OnTriggerEnter(Collider other)
-    {
+    { 
         if(other.gameObject.tag == "Windmill") {
-
             other.GetComponent<WindMill>().TakeDamge(damage);
+            Destroy(this.gameObject);
         }
     }
 }
