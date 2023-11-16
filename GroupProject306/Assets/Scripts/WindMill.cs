@@ -20,20 +20,12 @@ public class WindMill : MonoBehaviour
        
     }
 
-    void OnTriggerEnter(Collider other)
-    {
-        if (other.transform.tag == "Enemy")
-        {
-           // Destroy(other.gameObject);
-        }
-    }
+    // moved destroy to enemy script, to ensure damage is counted to windmill, then enemy is destroyed
 
     public void TakeDamge(float damage)
     {
         health -= damage;
-        healthbar.GetComponent<WindMillHealth>().SetHealth(health);
-
-        
+        healthbar.GetComponent<WindMillHealth>().SetHealth(health);  
     }
     // returns current hp
     public float getHp()
