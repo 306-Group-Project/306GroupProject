@@ -56,7 +56,7 @@ public class GameManager : MonoBehaviour
     {
         inMenu = true;
         SetScoreText();
-        SetLevelText();
+        SetLevelText(level);
         Time.timeScale = 0;
     }
 
@@ -90,15 +90,16 @@ public class GameManager : MonoBehaviour
         gameScreen.SetActive(true);
     }
 
-    void SetScoreText()
+    public void SetScoreText()
     {
         scoreText.text = "Score: " + score.ToString();
     }
 
-    void SetLevelText()
+    public void SetLevelText(int levelCount)
     {
-        levelText.text = "Level: " + level.ToString();
+        levelText.text = "Level: " + levelCount.ToString();
     }
+
 
 
 

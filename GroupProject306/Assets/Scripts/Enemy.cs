@@ -50,9 +50,12 @@ public class Enemy : MonoBehaviour
         {
             //GameObject effect = Instantiate(deathEffect, transform.position, transform.rotation);
             //Destroy(effect, 1.0f);
+            this.GetComponentInParent<LevelSystem>().DecreaseLivingEnemies();
             Destroy(this.gameObject);
             
             DropCoin();
+            
+            
 
         }
     }
@@ -70,6 +73,7 @@ public class Enemy : MonoBehaviour
         if(other.gameObject.tag == "Windmill") {
             other.GetComponent<WindMill>().TakeDamge(damage);
             Destroy(this.gameObject);
+            this.GetComponentInParent<LevelSystem>().DecreaseLivingEnemies();
         }
     }
 }
