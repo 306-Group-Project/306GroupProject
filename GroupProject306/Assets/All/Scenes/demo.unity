@@ -3789,7 +3789,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemyPrefab: {fileID: 607780076235608035, guid: 336f45176fb08804781a230dca8bfbc5, type: 3}
-  spawnRate: 1
+  spawnRate: 3
   spawner: {fileID: 555505834}
   levelManager: {fileID: 1617430753}
 --- !u!65 &555505836
@@ -10517,9 +10517,9 @@ GameObject:
   m_Component:
   - component: {fileID: 1588216642}
   - component: {fileID: 1588216646}
-  - component: {fileID: 1588216645}
   - component: {fileID: 1588216644}
   - component: {fileID: 1588216643}
+  - component: {fileID: 1588216647}
   m_Layer: 5
   m_Name: Enemy Wave Bar
   m_TagString: Untagged
@@ -10587,21 +10587,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1588216641}
   m_CullTransparentMesh: 1
---- !u!114 &1588216645
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1588216641}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6724a895c42d4cb47b3452a7c98a94f1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  windMill: {fileID: 1866192521}
-  healthBar: {fileID: 1588216646}
-  playerHealth: {fileID: 0}
 --- !u!114 &1588216646
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10653,6 +10638,20 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &1588216647
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1588216641}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3d5eb461a0e33774a8637942350ea5b5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemyBar: {fileID: 1588216646}
+  enemyCount: {fileID: 1617430754}
 --- !u!1001 &1598849364
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -10726,7 +10725,7 @@ GameObject:
   - component: {fileID: 1617430754}
   m_Layer: 0
   m_Name: LevelSystem
-  m_TagString: Untagged
+  m_TagString: Levelsystem
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -10743,6 +10742,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d45c6eee97514be4984efc9b08f13400, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  enemybar: {fileID: 1588216641}
   enemyCount: 0
   enemyAlive: 0
   levelCount: 0

@@ -19,11 +19,11 @@ public class LevelSystem : MonoBehaviour
      * levelCount: int, the level the player is on
      * spawnEnemies: boolean, determines whether enemies should be spawning or not
      */
-
+    [SerializeField] public GameObject enemybar;
     [SerializeField] private int enemyCount;
-    [SerializeField] private int enemyAlive;
+    [SerializeField] public int enemyAlive;
     [SerializeField] private int levelCount;
-    [SerializeField] private int enemiesInLevel;
+    [SerializeField] public int enemiesInLevel;
     [SerializeField] private Boolean spawnEnemies;
     [SerializeField] private float levelTimer = 60.0f;
     [SerializeField] public GameManager gManager;
@@ -48,14 +48,12 @@ public class LevelSystem : MonoBehaviour
                 levelCount++;
                 GenerateEnemies();
                 gManager.GetComponent<GameManager>().SetLevelText(levelCount);
+
+                // opens store
+                gManager.GetComponent<GameManager>().OpenShopMenu();
+                enemybar.GetComponent<EnemyWaveBar>().resetMax(enemiesInLevel);
+                spawnEnemies = true;
                 
-                //TODO: there is a timer now, could probably be longer.
-                levelTimer = Time.time + levelTimer;
-                if (Time.time > levelTimer)
-                {
-                    levelTimer = Time.time + levelTimer;
-                    spawnEnemies = true;
-                }
                 
             }
             
@@ -89,6 +87,8 @@ public class LevelSystem : MonoBehaviour
     public void DecreaseLivingEnemies()
     {
         enemyAlive--;
+        enemybar.GetComponent<EnemyWaveBar>().SetEnemies(enemyAlive);
+
     }
 
     
