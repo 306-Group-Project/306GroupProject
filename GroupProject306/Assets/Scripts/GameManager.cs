@@ -14,6 +14,7 @@ public class GameManager : MonoBehaviour
     public GameObject windmillObject;
     public GameObject smoke;
     private Transform windmillLocation;
+    private AudioSource windmillDestroyedSound;
 
     public Text scoreText;
     public Text levelText;
@@ -54,6 +55,7 @@ public class GameManager : MonoBehaviour
 
     void Start()
     {
+        windmillDestroyedSound = GetComponent<AudioSource>();
         inMenu = true;
         SetScoreText();
         SetLevelText(level);
@@ -77,8 +79,9 @@ public class GameManager : MonoBehaviour
             windmillLocation = windmillObject.transform;
             GameObject cloud = Instantiate(smoke, windmillLocation.position, transform.rotation);
             Destroy(windmillObject);
+            windmillDestroyedSound.Play();
             Destroy(cloud, 0.5f);
-            EndGame();
+            Invoke("EndGame", (float)0.75);
         }
     }
 

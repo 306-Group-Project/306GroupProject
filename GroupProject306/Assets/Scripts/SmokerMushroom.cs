@@ -13,6 +13,7 @@ public class SmokerMushroom : MonoBehaviour
 
     // variable for sound effect for smoking mushroom
     private AudioSource smokeSound;
+    
     // Start is called before the first frame update
     void Start()
     {

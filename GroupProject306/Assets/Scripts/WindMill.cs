@@ -7,14 +7,20 @@ public class WindMill : MonoBehaviour
     [SerializeField] public float health = 100.0f;
     public GameManager manager;
     public GameObject healthbar;
+    private AudioSource windmillDamageSound;
 
     private WaitForSeconds pause;
     private bool isAnimating = false;
 
-    // Start is called before the first frame update
     void Awake()
     {
         pause = new WaitForSeconds(0.04f);
+    }
+    
+    void Start()
+    {
+        // this calls and sets up audiosource component
+        windmillDamageSound = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -40,6 +46,8 @@ public class WindMill : MonoBehaviour
     {
         if (isAnimating == false && other.gameObject.tag=="Enemy")
         {
+            // sound for windmill damage
+            windmillDamageSound.Play();
             if (gameObject.transform.position.x < other.gameObject.transform.position.x)
             {
                 StartCoroutine(ShakeRight());
