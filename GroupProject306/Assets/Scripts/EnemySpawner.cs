@@ -6,7 +6,7 @@ public class EnemySpawner : MonoBehaviour
 {
     public GameObject enemyPrefab;
 
-    [SerializeField] private float spawnRate = 1.0f;
+    [SerializeField] private float spawnRate = 2.0f;
     private float spawnTimer;
 
     public GameObject spawner;

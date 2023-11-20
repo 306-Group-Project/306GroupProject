@@ -13,8 +13,6 @@ public class Enemy : MonoBehaviour
     [SerializeField] private float damageRate = 0.7f;
     [SerializeField] private float damage = 10.0f;
     [SerializeField] private float damageTime = 0.0f ;
-     public float jumpForce = 5.0f;
-     private Rigidbody enemyRigidbody;
 
     public GameObject Coin; 
 
@@ -74,19 +72,8 @@ public class Enemy : MonoBehaviour
     { 
         if(other.gameObject.tag == "Windmill") {
             other.GetComponent<WindMill>().TakeDamge(damage);
-
-             ApplyJumpForce();
             Destroy(this.gameObject);
             this.GetComponentInParent<LevelSystem>().DecreaseLivingEnemies();
-        }
-    }
-
-private void ApplyJumpForce(){
-        // Check if the enemy has a Rigidbody component
-        if (enemyRigidbody != null)
-        {
-            // Apply the jump force along the Y-axis
-            enemyRigidbody.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);
         }
     }
 }
