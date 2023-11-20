@@ -144,7 +144,6 @@ public class GameManager : MonoBehaviour
         }
     }
     
-    // set the shop menu to open on B button press, will change later
     public void OpenShopMenu()
     {
         inMenu = true;
