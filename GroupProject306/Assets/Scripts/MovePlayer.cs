@@ -48,11 +48,11 @@ public class MovePlayer : MonoBehaviour
                 movePoint.Translate(-1 * forward * moveSpeed * Time.unscaledDeltaTime);         
             }
 
-            else if (Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.RightArrow))
+            else if (Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.LeftArrow))
             {
                 movePoint.Translate(-1 * right * moveSpeed * Time.unscaledDeltaTime);          
             }
-            else if (Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.LeftArrow))
+            else if (Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.RightArrow))
             {
                 movePoint.Translate(1 * right * moveSpeed * Time.unscaledDeltaTime);       
             }
