@@ -74,14 +74,21 @@ public class GameManager : MonoBehaviour
 
     public void checkWindMillHealth()
     {
-        if (windMill.getHp() <= 0)
+        if (windMill)
         {
-            windmillLocation = windmillObject.transform;
-            GameObject cloud = Instantiate(smoke, windmillLocation.position, transform.rotation);
-            Destroy(windmillObject);
-            windmillDestroyedSound.Play();
-            Destroy(cloud, 0.5f);
-            Invoke("EndGame", (float)0.75);
+            if (windMill.getHp() <= 0)
+            {
+                if (!windmillLocation)
+                {
+                    windmillLocation = windmillObject.transform;
+                }
+
+                GameObject cloud = Instantiate(smoke, windmillLocation.position, transform.rotation);
+                Destroy(windmillObject);
+                windmillDestroyedSound.Play();
+                Destroy(cloud, 0.5f);
+                Invoke("EndGame", (float)0.75);
+            }
         }
     }
 
@@ -102,9 +109,6 @@ public class GameManager : MonoBehaviour
     {
         levelText.text = "Level: " + levelCount.ToString();
     }
-
-
-
 
     public void AddPoints(int scoreToAdd)
     {

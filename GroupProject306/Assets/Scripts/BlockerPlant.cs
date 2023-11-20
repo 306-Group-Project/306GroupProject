@@ -35,6 +35,8 @@ public class BlockerPlant : MonoBehaviour
             {
                 health -= damage;
                 damageTime = Time.time + damageRate;
+
+                this.GetComponent<Renderer>().material.color = new Color(0.64f, 0.16f, 0.03f);
             }
         }
     }
