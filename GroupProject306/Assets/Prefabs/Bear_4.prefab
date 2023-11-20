@@ -546,11 +546,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpeed: 0.75
+  originalMoveSpeed: 0.5
   health: 20
   maxHealth: 20
   damageRate: 0.7
-  damage: 10
+  damage: 20
   damageTime: 0
+  jumpForce: 5
   Coin: {fileID: 1950871307682000, guid: 01348926c7cbb3347a006c37204131c3, type: 3}
 --- !u!136 &1112031637848960362
 CapsuleCollider:
