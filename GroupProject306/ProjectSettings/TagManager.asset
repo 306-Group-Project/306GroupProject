@@ -10,6 +10,7 @@ TagManager:
   - Windmill
   - Coin
   - Levelsystem
+  - water
   layers:
   - Default
   - TransparentFX
