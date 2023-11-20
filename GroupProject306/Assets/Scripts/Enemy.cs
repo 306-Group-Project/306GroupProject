@@ -50,8 +50,8 @@ public class Enemy : MonoBehaviour
 
         if(health <= 0)
         {
-            //GameObject effect = Instantiate(deathEffect, transform.position, transform.rotation);
-            //Destroy(effect, 1.0f);
+      
+            
             this.GetComponentInParent<LevelSystem>().DecreaseLivingEnemies();
             Destroy(this.gameObject);
             
