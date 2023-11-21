@@ -13,7 +13,7 @@ public class Enemy : MonoBehaviour
     [SerializeField] private float damageRate = 0.7f;
     [SerializeField] private float damage = 10.0f;
     [SerializeField] private float damageTime = 0.0f ;
-
+    
     public GameObject Coin; 
 
     // Start is called before the first frame update
@@ -24,7 +24,7 @@ public class Enemy : MonoBehaviour
 
     private void Start()
     {
-      
+       
     }
 
     // Update is called once per frame

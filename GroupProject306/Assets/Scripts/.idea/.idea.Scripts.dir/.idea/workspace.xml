@@ -4,7 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ba3bef45-8e98-444b-8ea9-f6c74c86d065" name="Changes" comment="" />
+    <list default="true" id="ba3bef45-8e98-444b-8ea9-f6c74c86d065" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Scripts.dir/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Scripts.dir/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Enemy.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Enemy.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Enemy.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Enemy.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/EnemySlow.cs" beforeDir="false" afterPath="$PROJECT_DIR$/EnemySlow.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HealthBuff.cs" beforeDir="false" afterPath="$PROJECT_DIR$/HealthBuff.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Upgrade.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Upgrade.cs" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -19,11 +26,15 @@
     <setting file="file://$PROJECT_DIR$/CameraZoom.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Enemy.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/EnemySpawner.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/EnemyUpgradeButton.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Flower.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/HealthBuff.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/PowerupEffect.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Projectile.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Upgrade.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/UpgradeEffect.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/WindMill.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/WindMillHealth.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/WindMillUpgradeButton.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 3
@@ -47,9 +58,9 @@
   },
   "keyToStringList": {
     "rider.external.source.directories": [
-      "/Users/kelseykeller/Library/Application Support/JetBrains/Rider2023.2/resharper-host/DecompilerCache",
-      "/Users/kelseykeller/Library/Application Support/JetBrains/Rider2023.2/resharper-host/SourcesCache",
-      "/Users/kelseykeller/.local/share/Symbols/src"
+      "C:\\Users\\lheur\\AppData\\Roaming\\JetBrains\\Rider2023.2\\resharper-host\\DecompilerCache",
+      "C:\\Users\\lheur\\AppData\\Roaming\\JetBrains\\Rider2023.2\\resharper-host\\SourcesCache",
+      "C:\\Users\\lheur\\AppData\\Local\\Symbols\\src"
     ]
   }
 }]]></component>
@@ -67,6 +78,7 @@
       <workItem from="1699293521252" duration="112000" />
       <workItem from="1700005789918" duration="3087000" />
       <workItem from="1700023802891" duration="3218000" />
+      <workItem from="1700528824703" duration="6628000" />
     </task>
     <servers />
   </component>

@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [CreateAssetMenu(menuName = "Upgrades/SlowEnemy")]
-public class SlowEnemy : UpgradeEffect
+public class EnemySlow : UpgradeEffect
 {
     public float slowdownMultiplier = 0.5f; // Adjust the multiplier as needed
     public float duration = 5.0f; // Adjust the duration as needed
