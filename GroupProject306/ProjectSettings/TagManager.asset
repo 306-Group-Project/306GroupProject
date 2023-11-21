@@ -8,6 +8,8 @@ TagManager:
   - Enemy
   - follow
   - Windmill
+  - Coin
+  - Levelsystem
   layers:
   - Default
   - TransparentFX

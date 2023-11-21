@@ -9,8 +9,12 @@ public class GameManager : MonoBehaviour
 {
     public static GameManager instance = null;
 
+    // windmill items
     public WindMill windMill;
     public GameObject windmillObject;
+    public GameObject smoke;
+    private Transform windmillLocation;
+    private AudioSource windmillDestroyedSound;
 
     public Text scoreText;
     public Text levelText;
@@ -51,9 +55,10 @@ public class GameManager : MonoBehaviour
 
     void Start()
     {
+        windmillDestroyedSound = GetComponent<AudioSource>();
         inMenu = true;
         SetScoreText();
-        SetLevelText();
+        SetLevelText(level);
         Time.timeScale = 0;
     }
 
@@ -64,11 +69,19 @@ public class GameManager : MonoBehaviour
         {
             PauseGame();
         }
+        checkWindMillHealth();
+    }
 
+    public void checkWindMillHealth()
+    {
         if (windMill.getHp() <= 0)
         {
+            windmillLocation = windmillObject.transform;
+            GameObject cloud = Instantiate(smoke, windmillLocation.position, transform.rotation);
             Destroy(windmillObject);
-            EndGame();
+            windmillDestroyedSound.Play();
+            Destroy(cloud, 0.5f);
+            Invoke("EndGame", (float)0.75);
         }
     }
 
@@ -80,15 +93,16 @@ public class GameManager : MonoBehaviour
         gameScreen.SetActive(true);
     }
 
-    void SetScoreText()
+    public void SetScoreText()
     {
         scoreText.text = "Score: " + score.ToString();
     }
 
-    void SetLevelText()
+    public void SetLevelText(int levelCount)
     {
-        levelText.text = "Level: " + level.ToString();
+        levelText.text = "Level: " + levelCount.ToString();
     }
+
 
 
 
@@ -164,8 +178,7 @@ public class GameManager : MonoBehaviour
     {
         gameScreen.SetActive(false);
         endGameScreen.SetActive(true);
-        isPaused = !isPaused;
-        Time.timeScale = isPaused ? 0 : 1;
+        Time.timeScale = 0;
     }
 
     public void RestartGame()
