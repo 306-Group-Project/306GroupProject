@@ -771,7 +771,7 @@ GameObject:
   - component: {fileID: 94043088}
   - component: {fileID: 94043087}
   m_Layer: 5
-  m_Name: Empty Button
+  m_Name: PlantPowerButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3200,7 +3200,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: ' Empty'
+  m_text: Increase Plant Power
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: b4ddfb3635c5c4e9099693b18f3cba56, type: 2}
   m_sharedMaterial: {fileID: -567259756381480063, guid: b4ddfb3635c5c4e9099693b18f3cba56, type: 2}
@@ -3227,14 +3227,14 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 55
+  m_fontSize: 39
   m_fontSizeBase: 55
   m_fontWeight: 400
-  m_enableAutoSizing: 0
+  m_enableAutoSizing: 1
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 0
-  m_HorizontalAlignment: 1
+  m_HorizontalAlignment: 2
   m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 0
@@ -5164,7 +5164,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: ' Empty'
+  m_text: Windmill Health
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: b4ddfb3635c5c4e9099693b18f3cba56, type: 2}
   m_sharedMaterial: {fileID: -567259756381480063, guid: b4ddfb3635c5c4e9099693b18f3cba56, type: 2}
@@ -5191,10 +5191,10 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 55
+  m_fontSize: 45.25
   m_fontSizeBase: 55
   m_fontWeight: 400
-  m_enableAutoSizing: 0
+  m_enableAutoSizing: 1
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 0
@@ -8290,7 +8290,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: ' Empty'
+  m_text: ' Slow Enemies'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: b4ddfb3635c5c4e9099693b18f3cba56, type: 2}
   m_sharedMaterial: {fileID: -567259756381480063, guid: b4ddfb3635c5c4e9099693b18f3cba56, type: 2}
@@ -8317,10 +8317,10 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 55
+  m_fontSize: 51.6
   m_fontSizeBase: 55
   m_fontWeight: 400
-  m_enableAutoSizing: 0
+  m_enableAutoSizing: 1
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 0
@@ -11797,8 +11797,9 @@ GameObject:
   - component: {fileID: 1643032483}
   - component: {fileID: 1643032482}
   - component: {fileID: 1643032481}
+  - component: {fileID: 1643032485}
   m_Layer: 5
-  m_Name: Empty Button
+  m_Name: EnemySlowButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -11885,7 +11886,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: CreatePlant, Assembly-CSharp
+        m_TargetAssemblyTypeName: EnemyUpgradeButton, Assembly-CSharp
         m_MethodName: 
         m_Mode: 1
         m_Arguments:
@@ -11934,6 +11935,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1643032479}
   m_CullTransparentMesh: 1
+--- !u!114 &1643032485
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1643032479}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c439b239b7156444b939db1fbb2dd757, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemySlow: {fileID: 0}
+  enemy: {fileID: 0}
 --- !u!1 &1684488593
 GameObject:
   m_ObjectHideFlags: 0
@@ -13868,8 +13883,9 @@ GameObject:
   - component: {fileID: 2027815522}
   - component: {fileID: 2027815521}
   - component: {fileID: 2027815520}
+  - component: {fileID: 2027815524}
   m_Layer: 5
-  m_Name: Empty Button
+  m_Name: WindmillHealthButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -13955,9 +13971,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: CreatePlant, Assembly-CSharp
-        m_MethodName: 
+      - m_Target: {fileID: 2027815524}
+        m_TargetAssemblyTypeName: WindMillUpgradeButton, Assembly-CSharp
+        m_MethodName: ApplyHealthBuff
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -14005,6 +14021,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2027815518}
   m_CullTransparentMesh: 1
+--- !u!114 &2027815524
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2027815518}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 907f8d96b6bf5ae4784bfca7d1a327ef, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  healthBuff: {fileID: 11400000, guid: 337ede652a10c3f4e87663a42391658a, type: 2}
+  windMill: {fileID: 1866192521}
 --- !u!1 &2030794953
 GameObject:
   m_ObjectHideFlags: 0
