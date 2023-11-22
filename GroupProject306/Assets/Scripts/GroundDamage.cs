@@ -8,7 +8,15 @@ public class GroundDamage : MonoBehaviour
     {
         if(other.tag == "Enemy")
         {
-            Destroy(other.gameObject);
+            other.GetComponent<Enemy>().slowMoveSpeed(0.5f);
+        }
+    }
+
+    private void OnTriggerExit(Collider other)
+    {
+        if(other.tag == "Enemy")
+        {
+            other.GetComponent<Enemy>().resetSpeed();
         }
     }
 }

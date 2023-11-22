@@ -16,17 +16,7 @@ public class Enemy : MonoBehaviour
     
     public GameObject Coin; 
 
-    // Start is called before the first frame update
-    void Awake()
-    {
-       
-    }
-
-    private void Start()
-    {
-       
-    }
-
+    
     // Update is called once per frame
     void Update()
     {
@@ -54,9 +44,6 @@ public class Enemy : MonoBehaviour
             Destroy(this.gameObject);
             
             DropCoin();
-            
-            
-
         }
     }
 
@@ -75,6 +62,16 @@ public class Enemy : MonoBehaviour
             Destroy(this.gameObject);
             this.GetComponentInParent<LevelSystem>().DecreaseLivingEnemies();
         }
+    }
+
+    public void slowMoveSpeed(float percentSlowDown)
+    {
+        moveSpeed = moveSpeed * percentSlowDown;
+    }
+
+    public void resetSpeed()
+    {
+        moveSpeed = originalMoveSpeed;
     }
 }
 
