@@ -11,6 +11,9 @@ public class SmokerMushroom : MonoBehaviour
     public float damage = 10.0f;
     public List<Collider> enemies = new List<Collider>();
 
+    public float decomposeDamage = 2.0f;
+    public float decomposeRateSeconds = 5.0f;
+
     // variable for sound effect for smoking mushroom
     private AudioSource smokeSound;
     
@@ -19,12 +22,14 @@ public class SmokerMushroom : MonoBehaviour
     {
         // this calls and sets up audiosource component
         smokeSound = GetComponent<AudioSource>();
+
+        InvokeRepeating("decompose", decomposeRateSeconds, decomposeRateSeconds);
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+        this.GetComponent<Renderer>().material.color = new Color(0.64f, health / 100, 0.03f);
     }
 
     private void Shoot()
@@ -79,9 +84,24 @@ public class SmokerMushroom : MonoBehaviour
         }
     }
 
+    private void decompose()
+    {
+        health -= decomposeDamage;
+
+        if (health <= 0)
+        {
+            Destroy(this.gameObject);
+        }
+
+    }
+
     public void TakeDamage(float damage)
     {
         health -= damage;
+        if(health <= 0)
+        {
+            Destroy(this.gameObject);
+        }
     }
 
     public void IncreaseDamage(float damageIncrease)

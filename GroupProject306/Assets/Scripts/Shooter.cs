@@ -28,23 +28,13 @@ public class Shooter : MonoBehaviour
     private void Shoot()
     {
         if (Time.time >= fireTime && curTarget)
-        {
-            //GameObject shotProj = Instantiate(projectile, transform.position, Quaternion.identity);
-            //Debug.DrawLine(transform.position, transform.position + transform.forward*5f,Color.red,3f);
-            //shotProj.transform.forward = transform.forward;
-            //if (curTarget)
-            //{
-              //  shotProj.transform.LookAt(curTarget);
-            //}
-            
+        {           
             GameObject proj = Instantiate(projectile, transform.position, transform.rotation );
             projectileSound.Play();
             proj.transform.LookAt(curTarget);
-
             
             proj.GetComponent<Projectile>().setTarget(curTarget);
             
-
             fireTime = Time.time + fireRate;
         }
     }
