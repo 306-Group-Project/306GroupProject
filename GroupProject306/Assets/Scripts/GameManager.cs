@@ -34,9 +34,10 @@ public class GameManager : MonoBehaviour
     [SerializeField] private GameObject defenceMenu;
     [SerializeField] private GameObject upgradeMenu;
     [SerializeField] private GameObject offenceMenu;
-    
+     public GameObject Coin; 
     [SerializeField] private bool inMenu;
     [SerializeField] private bool isPaused;
+
 
     // Start is called before the first frame update
     void Awake()
@@ -68,7 +69,38 @@ public class GameManager : MonoBehaviour
             PauseGame();
         }
         checkWindMillHealth();
+if (Input.GetMouseButtonDown(0)) // Assuming left mouse button for interaction
+        {
+            Ray ray = camera.ScreenPointToRay(Input.mousePosition);
+           RaycastHit hit;
+			LayerMask mask = LayerMask.GetMask("Coin");
+           Debug.DrawRay(ray.origin, ray.direction * 10,Color.red,3f);
+    		
+            if (Physics.Raycast(ray, out hit,1000f,mask,QueryTriggerInteraction.Collide))
+            {
+                Debug.Log("Hit");
+                if (hit.collider != null && hit.collider.CompareTag("Coin"))
+                {
+                    CollectCoin(hit.collider.gameObject);
+                }
+            }
+        }
+    
+
+void CollectCoin(GameObject coin)
+    {
+      
+
+        // Destroy the collected coin GameObject
+        Destroy(coin);
+        score+=1;
+        SetScoreText();
     }
+
+        
+    }
+ 
+
 
     public void checkWindMillHealth()
     {

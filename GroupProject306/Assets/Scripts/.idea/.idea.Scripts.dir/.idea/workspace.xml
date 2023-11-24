@@ -5,12 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ba3bef45-8e98-444b-8ea9-f6c74c86d065" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/../Prefabs/GoldCoin.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/../Prefabs/GoldCoin.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Scripts.dir/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Scripts.dir/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Enemy.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Enemy.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Enemy.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Enemy.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/EnemySlow.cs" beforeDir="false" afterPath="$PROJECT_DIR$/EnemySlow.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/HealthBuff.cs" beforeDir="false" afterPath="$PROJECT_DIR$/HealthBuff.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Upgrade.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Upgrade.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GameManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/GameManager.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -24,10 +22,10 @@
     <setting file="file://$PROJECT_DIR$/BlockerPlant.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/CameraFollow.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/CameraZoom.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Enemy.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Enemy.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/EnemySpawner.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/EnemyUpgradeButton.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Flower.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Flower.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/HealthBuff.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Projectile.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Upgrade.cs" root0="SKIP_HIGHLIGHTING" />
@@ -44,26 +42,43 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "main",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
-  "keyToStringList": {
-    "rider.external.source.directories": [
-      "C:\\Users\\lheur\\AppData\\Roaming\\JetBrains\\Rider2023.2\\resharper-host\\DecompilerCache",
-      "C:\\Users\\lheur\\AppData\\Roaming\\JetBrains\\Rider2023.2\\resharper-host\\SourcesCache",
-      "C:\\Users\\lheur\\AppData\\Local\\Symbols\\src"
+  &quot;keyToStringList&quot;: {
+    &quot;rider.external.source.directories&quot;: [
+      &quot;/Users/aleena/Library/Application Support/JetBrains/Rider2023.2/resharper-host/DecompilerCache&quot;,
+      &quot;/Users/aleena/Library/Application Support/JetBrains/Rider2023.2/resharper-host/SourcesCache&quot;,
+      &quot;/Users/aleena/.local/share/Symbols/src&quot;
     ]
   }
-}]]></component>
+}</component>
+  <component name="RunManager">
+    <configuration name="Unity (GroupProject306)" type="UnityPlayer" factoryName="UnityAttachToPlayer" temporary="true">
+      <option name="host" value="127.0.0.1" />
+      <option name="pid" value="57395" />
+      <option name="playerId" value="EditorHelper(Unity-AssetImportWorker1-GroupProject306)" />
+      <option name="port" value="56395" />
+      <option name="projectName" value="GroupProject306" />
+      <option name="roleName" value="AssetImportWorker1" />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Attach to Unity Player.Unity (GroupProject306)" />
+        <item itemvalue="Attach to Unity Player.Unity (GroupProject306)" />
+      </list>
+    </recent_temporary>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -79,6 +94,9 @@
       <workItem from="1700005789918" duration="3087000" />
       <workItem from="1700023802891" duration="3218000" />
       <workItem from="1700528824703" duration="6628000" />
+      <workItem from="1700807671653" duration="1566000" />
+      <workItem from="1700843350189" duration="5132000" />
+      <workItem from="1700856063707" duration="709000" />
     </task>
     <servers />
   </component>
@@ -87,5 +105,38 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/GameManager.cs</url>
+          <line>66</line>
+          <properties documentPath="$PROJECT_DIR$/GameManager.cs" initialLine="66" containingFunctionPresentation="Method 'Update'">
+            <startOffsets>
+              <option value="1826" />
+            </startOffsets>
+            <endOffsets>
+              <option value="1851" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="4" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/GameManager.cs</url>
+          <line>78</line>
+          <properties documentPath="$PROJECT_DIR$/GameManager.cs" initialLine="77" isMultiMethodBreakpoint="true">
+            <option name="multiMethodBreakpoint" value="true" />
+            <startOffsets>
+              <option value="-1" />
+            </startOffsets>
+            <endOffsets>
+              <option value="-1" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="5" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

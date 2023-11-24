@@ -52,7 +52,7 @@ public class Enemy : MonoBehaviour
 
         GameObject coin = Instantiate(Coin, position, Quaternion.identity); // coin drop 
         coin.SetActive(true);
-        Destroy(coin,10f); 
+        //Destroy(coin,10f); 
     }
 
     private void OnTriggerEnter(Collider other)
