@@ -1,9 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.Animations;
 
-public class shooterDamage : MonoBehaviour
+public class smokerDamage : MonoBehaviour
 {
     public float damageTime;
     public float damageRate = 1.0f;
@@ -15,7 +14,7 @@ public class shooterDamage : MonoBehaviour
         {
             if (Time.time >= damageTime)
             {
-                this.GetComponentInParent<Flower>().TakeDamage(damageRate);
+                this.GetComponentInParent<SmokerMushroom>().TakeDamage(damageRate);
                 damageTime = Time.time + damageRate;
             }
         }

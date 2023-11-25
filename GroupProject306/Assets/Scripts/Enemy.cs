@@ -50,7 +50,7 @@ public class Enemy : MonoBehaviour
     void DropCoin() {
         Vector3 position = transform.position; // enemy position
 
-        GameObject coin = Instantiate(Coin, position, Quaternion.identity); // coin drop 
+        GameObject coin = Instantiate(Coin, position + new Vector3(0f, 0.2f, 0f), Quaternion.identity); // coin drop 
         coin.SetActive(true);
         //Destroy(coin,10f); 
     }

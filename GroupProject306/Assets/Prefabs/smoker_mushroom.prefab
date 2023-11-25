@@ -129,6 +129,8 @@ MonoBehaviour:
   fireRate: 1
   damage: 10
   enemies: []
+  decomposeDamage: 2
+  decomposeRateSeconds: 5
 --- !u!65 &8604894431087843745
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -277,7 +279,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7141933124043357516}
   - component: {fileID: 4886528763686970522}
-  - component: {fileID: 3955102454973448081}
+  - component: {fileID: 3468777078106010576}
   m_Layer: 0
   m_Name: damageRadius
   m_TagString: Untagged
@@ -321,7 +323,7 @@ SphereCollider:
   serializedVersion: 3
   m_Radius: 0.15
   m_Center: {x: 0, y: -0.02, z: 0}
---- !u!114 &3955102454973448081
+--- !u!114 &3468777078106010576
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -330,9 +332,6 @@ MonoBehaviour:
   m_GameObject: {fileID: 8794042037494630140}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 977050ac7315f50428e6b8549d66489d, type: 3}
+  m_Script: {fileID: 11500000, guid: a80112db1a79c914a9cde3bd18880447, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damageTime: 0
-  damageRate: 1
-  damage: 10
