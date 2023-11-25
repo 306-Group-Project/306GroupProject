@@ -13,9 +13,9 @@ GameObject:
   - component: {fileID: 8228610}
   - component: {fileID: 11462752}
   - component: {fileID: 11450262}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: Fireball
-  m_TagString: Untagged
+  m_TagString: explosion
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -350,9 +350,9 @@ GameObject:
   - component: {fileID: 5453920}
   - component: {fileID: 10860366}
   - component: {fileID: 11437010}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: FireballCollider
-  m_TagString: Untagged
+  m_TagString: explosion
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -505,9 +505,9 @@ GameObject:
   - component: {fileID: 419864}
   - component: {fileID: 19886674}
   - component: {fileID: 19993248}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: FireballProjectiles
-  m_TagString: Untagged
+  m_TagString: explosion
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4081,7 +4081,7 @@ ParticleSystem:
         m_NumAlphaKeys: 2
     range: {x: 0, y: 1}
   CollisionModule:
-    enabled: 0
+    enabled: 1
     serializedVersion: 4
     type: 1
     collisionMode: 0
@@ -4264,7 +4264,7 @@ ParticleSystem:
     maxCollisionShapes: 256
     quality: 0
     voxelSize: 0.5
-    collisionMessages: 0
+    collisionMessages: 1
     collidesWithDynamic: 1
     interiorCollisions: 0
   TriggerModule:
@@ -5307,9 +5307,9 @@ GameObject:
   - component: {fileID: 492682}
   - component: {fileID: 19810394}
   - component: {fileID: 19908910}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: FireballTail
-  m_TagString: Untagged
+  m_TagString: explosion
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -9943,9 +9943,9 @@ GameObject:
   - component: {fileID: 407174}
   - component: {fileID: 19899590}
   - component: {fileID: 19998884}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: FireballExplosion
-  m_TagString: Untagged
+  m_TagString: explosion
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

@@ -18,6 +18,7 @@ public class GameManager : MonoBehaviour
 
     public Text scoreText;
     public Text levelText;
+    public Text highScoreText;
     [SerializeField] private int score = 0;
     [SerializeField] private int level = 0;
 
@@ -34,9 +35,11 @@ public class GameManager : MonoBehaviour
     [SerializeField] private GameObject defenceMenu;
     [SerializeField] private GameObject upgradeMenu;
     [SerializeField] private GameObject offenceMenu;
-     public GameObject Coin; 
+    public GameObject Coin; 
     [SerializeField] private bool inMenu;
     [SerializeField] private bool isPaused;
+
+    public int enemyKills = 0;
 
 
     // Start is called before the first frame update
@@ -54,6 +57,8 @@ public class GameManager : MonoBehaviour
 
     void Start()
     {
+        SetHighScore(PlayerPrefs.GetInt("MaxEnemyKills", 0));        
+        
         windmillDestroyedSound = GetComponent<AudioSource>();
         inMenu = true;
         SetScoreText();
@@ -68,38 +73,38 @@ public class GameManager : MonoBehaviour
         {
             PauseGame();
         }
+
         checkWindMillHealth();
-if (Input.GetMouseButtonDown(0)) // Assuming left mouse button for interaction
+        
+        if (Input.GetMouseButtonDown(0)) // Assuming left mouse button for interaction
         {
             Ray ray = camera.ScreenPointToRay(Input.mousePosition);
-           RaycastHit hit;
+            RaycastHit hit;
 			LayerMask mask = LayerMask.GetMask("Coin");
-           Debug.DrawRay(ray.origin, ray.direction * 10,Color.red,3f);
+            //Debug.DrawRay(ray.origin, ray.direction * 10,Color.red,3f);
     		
             if (Physics.Raycast(ray, out hit,1000f,mask,QueryTriggerInteraction.Collide))
             {
-                Debug.Log("Hit");
                 if (hit.collider != null && hit.collider.CompareTag("Coin"))
                 {
                     CollectCoin(hit.collider.gameObject);
                 }
             }
-        }
-    
+        }    
+    }
 
-void CollectCoin(GameObject coin)
+    void CollectCoin(GameObject coin)
     {
-      
-
         // Destroy the collected coin GameObject
         Destroy(coin);
-        score+=1;
+        score += 1;
         SetScoreText();
     }
 
-        
+    public void increaseEnemyKill()
+    {
+        enemyKills += 1;
     }
- 
 
 
     public void checkWindMillHealth()
@@ -133,6 +138,11 @@ void CollectCoin(GameObject coin)
     public void SetScoreText()
     {
         scoreText.text = "Score: " + score.ToString();
+    }
+
+    public void SetHighScore(int maxKills)
+    {
+        highScoreText.text = "High Kill Count: " + maxKills.ToString();
     }
 
     public void SetLevelText(int levelCount)
@@ -214,6 +224,11 @@ void CollectCoin(GameObject coin)
         gameScreen.SetActive(false);
         endGameScreen.SetActive(true);
         Time.timeScale = 0;
+
+        if (PlayerPrefs.GetInt("MaxEnemyKills", 0) < enemyKills)
+        {
+            PlayerPrefs.SetInt("MaxEnemyKills", enemyKills);
+        }
     }
 
     public void RestartGame()

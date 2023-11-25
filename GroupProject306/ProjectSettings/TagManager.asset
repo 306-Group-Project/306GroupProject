@@ -12,6 +12,7 @@ TagManager:
   - Levelsystem
   - water
   - Fire
+  - explosion
   layers:
   - Default
   - TransparentFX

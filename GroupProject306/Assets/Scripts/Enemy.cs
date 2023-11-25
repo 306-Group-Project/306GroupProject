@@ -38,6 +38,8 @@ public class Enemy : MonoBehaviour
 
         if(health <= 0)
         {
+            GameManager.instance.increaseEnemyKill();
+
             //GameObject effect = Instantiate(deathEffect, transform.position, transform.rotation);
             //Destroy(effect, 1.0f);
             this.GetComponentInParent<LevelSystem>().DecreaseLivingEnemies();
@@ -56,7 +58,7 @@ public class Enemy : MonoBehaviour
     }
 
     private void OnTriggerEnter(Collider other)
-    { 
+    {
         if(other.gameObject.tag == "Windmill") {
             other.GetComponent<WindMill>().TakeDamge(damage);
             Destroy(this.gameObject);
