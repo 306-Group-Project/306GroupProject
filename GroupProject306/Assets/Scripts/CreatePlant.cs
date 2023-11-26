@@ -4,10 +4,12 @@ using UnityEngine;
 
 public class CreatePlant : MonoBehaviour
 {
+    public GameManager manager;
 
     public GameObject Prefab;
     public GameObject Planting;
     public float offset = 3.0f;
+    public int cost = 0;
 
     public Vector3 worldPosition;
 
@@ -19,16 +21,15 @@ public class CreatePlant : MonoBehaviour
         Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
 
         if (plane.Raycast(ray, out distance))
-        {
+        { 
             worldPosition = ray.GetPoint(distance);
             worldPosition.y += 0.08f;
         }
 
-        if (Planting)
-        {
+        if (Planting) 
+        { 
             Planting.transform.position = worldPosition;
         }
-
         make();
     }
 

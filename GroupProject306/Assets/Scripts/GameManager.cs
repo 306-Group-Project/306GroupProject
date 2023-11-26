@@ -16,10 +16,11 @@ public class GameManager : MonoBehaviour
     private Transform windmillLocation;
     private AudioSource windmillDestroyedSound;
 
-    public Text scoreText;
+    public Text scoreText, defenceScoreText, upgradeScoreText, offenceScoreText;
+
     public Text levelText;
     public Text highScoreText;
-    [SerializeField] private int score = 0;
+    [SerializeField] private int score = 10;
     [SerializeField] private int level = 0;
 
     [SerializeField] private float windMillHealth = 100.0f;
@@ -106,7 +107,6 @@ public class GameManager : MonoBehaviour
         enemyKills += 1;
     }
 
-
     public void checkWindMillHealth()
     {
         if (windMill)
@@ -137,12 +137,15 @@ public class GameManager : MonoBehaviour
 
     public void SetScoreText()
     {
-        scoreText.text = "Score: " + score.ToString();
+        scoreText.text = "Coins: " + score.ToString();
+        defenceScoreText.text = "Coins: " + score.ToString();
+        upgradeScoreText.text = "Coins: " + score.ToString();
+        offenceScoreText.text = "Coins: " + score.ToString();
     }
 
     public void SetHighScore(int maxKills)
     {
-        highScoreText.text = "High Kill Count: " + maxKills.ToString();
+        highScoreText.text = "High Score: " + maxKills.ToString();
     }
 
     public void SetLevelText(int levelCount)
@@ -150,12 +153,13 @@ public class GameManager : MonoBehaviour
         levelText.text = "Level: " + levelCount.ToString();
     }
 
+    public int getScore() { return score; }
+    
     public void AddPoints(int scoreToAdd)
     {
         score += scoreToAdd;
         SetScoreText();
     }
-
 
     public float getWindMillHealth()
     {
@@ -189,7 +193,6 @@ public class GameManager : MonoBehaviour
         }
     }
     
-    // set the shop menu to open on B button press, will change later
     public void OpenShopMenu()
     {
         inMenu = true;
