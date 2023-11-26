@@ -177,7 +177,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 14c5ea4692b512e4fb5621ba1077737e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  manager: {fileID: 0}
+  manager: {fileID: 1513559558}
   Prefab: {fileID: 346343031451866098, guid: 98d44cf2368d62346a4913219d307db8, type: 3}
   Planting: {fileID: 0}
   offset: 3
@@ -228,7 +228,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 5773819}
         m_TargetAssemblyTypeName: CreatePlant, Assembly-CSharp
-        m_MethodName: SetFlower
+        m_MethodName: daffodilButton
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -632,7 +632,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 14c5ea4692b512e4fb5621ba1077737e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  manager: {fileID: 0}
+  manager: {fileID: 1513559558}
   Prefab: {fileID: 6309043098832966922, guid: a3346cea95d7f5d488ab48121b285f60, type: 3}
   Planting: {fileID: 0}
   offset: 3
@@ -683,18 +683,6 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 75991165}
         m_TargetAssemblyTypeName: CreatePlant, Assembly-CSharp
-        m_MethodName: SetFlower
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 1513559558}
-        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
         m_MethodName: hyacinthButton
         m_Mode: 1
         m_Arguments:
@@ -3126,7 +3114,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 14c5ea4692b512e4fb5621ba1077737e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  manager: {fileID: 0}
+  manager: {fileID: 1513559558}
   Prefab: {fileID: 5441078254823676540, guid: 86c02b7a5c966be41b09496029da7c1d, type: 3}
   Planting: {fileID: 0}
   offset: 3
@@ -3177,7 +3165,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 378091246}
         m_TargetAssemblyTypeName: CreatePlant, Assembly-CSharp
-        m_MethodName: SetFlower
+        m_MethodName: mushButton
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -3824,7 +3812,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &458695903
 RectTransform:
   m_ObjectHideFlags: 0
@@ -4313,7 +4301,7 @@ MonoBehaviour:
 
     HP: 100
 
-    Cost: 10
+    Cost: 5
 
 '
   m_isRightToLeft: 0
@@ -6472,7 +6460,7 @@ MonoBehaviour:
 
     HP: 100
 
-    Cost: 10
+    Cost: 2
 
 '
   m_isRightToLeft: 0
@@ -6739,7 +6727,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 14c5ea4692b512e4fb5621ba1077737e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  manager: {fileID: 0}
+  manager: {fileID: 1513559558}
   Prefab: {fileID: 2138671213615064875, guid: 0d30f8fdf56c574429d34611517b6419, type: 3}
   Planting: {fileID: 0}
   offset: 3
@@ -6790,7 +6778,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 780807696}
         m_TargetAssemblyTypeName: CreatePlant, Assembly-CSharp
-        m_MethodName: SetFlower
+        m_MethodName: sunflowerButton
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -7523,7 +7511,7 @@ MonoBehaviour:
 
     HP: 100
 
-    Cost: 10
+    Cost: 4
 
 '
   m_isRightToLeft: 0
@@ -8267,7 +8255,7 @@ MonoBehaviour:
 
     HP: 100
 
-    Cost: 10
+    Cost: 4
 
 '
   m_isRightToLeft: 0
@@ -10664,7 +10652,7 @@ MonoBehaviour:
 
     HP: 100
 
-    Cost: 10
+    Cost: 4
 
 '
   m_isRightToLeft: 0
@@ -12859,7 +12847,7 @@ MonoBehaviour:
   offenceScoreText: {fileID: 1369495307}
   levelText: {fileID: 1564376301}
   highScoreText: {fileID: 1018957935}
-  score: 0
+  score: 10
   level: 0
   windMillHealth: 100
   camera: {fileID: 2119514438}
@@ -14768,7 +14756,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1790067835
 RectTransform:
   m_ObjectHideFlags: 0
@@ -15032,18 +15020,6 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1821318791}
         m_TargetAssemblyTypeName: CreatePlant, Assembly-CSharp
-        m_MethodName: SetFlower
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 1513559558}
-        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
         m_MethodName: grassButton
         m_Mode: 1
         m_Arguments:

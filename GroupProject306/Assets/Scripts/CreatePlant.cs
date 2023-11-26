@@ -5,11 +5,9 @@ using UnityEngine;
 public class CreatePlant : MonoBehaviour
 {
     public GameManager manager;
-
     public GameObject Prefab;
     public GameObject Planting;
     public float offset = 3.0f;
-    public int cost = 0;
 
     public Vector3 worldPosition;
 
@@ -53,4 +51,55 @@ public class CreatePlant : MonoBehaviour
     {
         Planting = Instantiate(Prefab);
     }
+    
+    public void grassButton()
+    {
+        int cost = 4;
+        if (manager.getScore() >= cost)
+        {
+            manager.AddPoints(-cost);
+            SetFlower();
+        }
+    }
+    
+    public void hyacinthButton()
+    {
+        int cost = 2;
+        if (manager.getScore() >= cost)
+        {
+            manager.AddPoints(-cost);
+            SetFlower();
+        }
+    }
+    
+    public void sunflowerButton()
+    {
+        int cost = 4;
+        if (manager.getScore() >= cost)
+        {
+            manager.AddPoints(-cost);
+            SetFlower();
+        }
+    }
+    
+    public void daffodilButton()
+    {
+        int cost = 4;
+        if (manager.getScore() >= cost)
+        {
+            manager.AddPoints(-cost);
+            SetFlower();
+        }
+    }
+    
+    public void mushButton()
+    {
+        int cost = 5;
+        if (manager.getScore() >= cost)
+        {
+            manager.AddPoints(-cost);
+            SetFlower();
+        }
+    }
+    
 }

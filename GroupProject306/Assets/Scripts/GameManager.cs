@@ -20,7 +20,7 @@ public class GameManager : MonoBehaviour
 
     public Text levelText;
     public Text highScoreText;
-    [SerializeField] private int score = 10;
+    [SerializeField] private int score = 0;
     [SerializeField] private int level = 0;
 
     [SerializeField] private float windMillHealth = 100.0f;
@@ -209,6 +209,8 @@ public class GameManager : MonoBehaviour
         shopMenu.SetActive(false);
         defenceMenu.SetActive(true);
     }
+
+
 
     public void OpenUpgradeMenu()
     {
