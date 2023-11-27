@@ -1,10 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class CreatePlant : MonoBehaviour
 {
     public GameManager manager;
+    public GameObject text;
+    
     public GameObject Prefab;
     public GameObject Planting;
     public float offset = 3.0f;
@@ -101,5 +104,5 @@ public class CreatePlant : MonoBehaviour
             SetFlower();
         }
     }
-    
+
 }
