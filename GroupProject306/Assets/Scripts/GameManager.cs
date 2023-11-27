@@ -19,7 +19,7 @@ public class GameManager : MonoBehaviour
     public Text scoreText, defenceScoreText, upgradeScoreText, offenceScoreText;
 
     public Text levelText;
-    public Text highScoreText;
+    public Text highScoreText, gameOverHighScore, gameOverCurrentScore;
     [SerializeField] private int score = 0;
     [SerializeField] private int level = 0;
 
@@ -146,6 +146,7 @@ public class GameManager : MonoBehaviour
     public void SetHighScore(int maxKills)
     {
         highScoreText.text = "High Score: " + maxKills.ToString();
+        gameOverHighScore.text = "High Score: " + maxKills.ToString();
     }
 
     public void SetLevelText(int levelCount)
@@ -210,8 +211,6 @@ public class GameManager : MonoBehaviour
         defenceMenu.SetActive(true);
     }
 
-
-
     public void OpenUpgradeMenu()
     {
         shopMenu.SetActive(false);
@@ -229,6 +228,7 @@ public class GameManager : MonoBehaviour
         gameScreen.SetActive(false);
         endGameScreen.SetActive(true);
         Time.timeScale = 0;
+        gameOverCurrentScore.text = "Current Score: " + enemyKills.ToString();
 
         if (PlayerPrefs.GetInt("MaxEnemyKills", 0) < enemyKills)
         {
@@ -238,6 +238,6 @@ public class GameManager : MonoBehaviour
 
     public void RestartGame()
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        SceneManager.LoadScene("demo");
     }
 }
