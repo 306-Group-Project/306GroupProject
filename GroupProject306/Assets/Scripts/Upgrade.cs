@@ -9,6 +9,7 @@ public class Upgrade : MonoBehaviour
     public void ApplyUpgrade()
     {
         upgradeEffect.Apply(gameObject);
+        Debug.Log("Apply method called.");
     }
 
 }

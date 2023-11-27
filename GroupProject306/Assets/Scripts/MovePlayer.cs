@@ -39,20 +39,20 @@ public class MovePlayer : MonoBehaviour
         { 
             transform.position = Vector3.MoveTowards(transform.position, movePoint.position, moveSpeed * Time.unscaledDeltaTime);
 
-            if (Input.GetKey(KeyCode.W))
+            if (Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.UpArrow))
             {
                 movePoint.Translate(1 * forward * moveSpeed * Time.unscaledDeltaTime); 
             }
-            else if (Input.GetKey(KeyCode.S))
+            else if (Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.DownArrow))
             {
                 movePoint.Translate(-1 * forward * moveSpeed * Time.unscaledDeltaTime);         
             }
 
-            else if (Input.GetKey(KeyCode.A))
+            else if (Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.LeftArrow))
             {
                 movePoint.Translate(-1 * right * moveSpeed * Time.unscaledDeltaTime);          
             }
-            else if (Input.GetKey(KeyCode.D))
+            else if (Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.RightArrow))
             {
                 movePoint.Translate(1 * right * moveSpeed * Time.unscaledDeltaTime);       
             }

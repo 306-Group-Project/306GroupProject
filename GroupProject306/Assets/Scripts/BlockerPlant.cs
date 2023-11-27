@@ -10,22 +10,21 @@ public class BlockerPlant : MonoBehaviour
     public float damageTime;
     public float damageRate = 1.0f;
 
+    public float decomposeDamage = 2.0f;
+    public float decomposeRateSeconds = 5.0f;
+
     // Start is called before the first frame update
     void Start()
     {
-
+        InvokeRepeating("decompose", decomposeRateSeconds, decomposeRateSeconds);
     }
 
     // Update is called once per frame
     void Update()
     {
-        if(health <= 0)
-        {
-            Destroy(this.gameObject);
-        }
+        this.GetComponent<Renderer>().material.color = new Color(0.64f, health / 100, 0.03f);
     }
 
-   
 
     void OnTriggerStay(Collider other)
     {
@@ -34,9 +33,25 @@ public class BlockerPlant : MonoBehaviour
             if (Time.time >= damageTime)
             {
                 health -= damage;
+                if (health <= 0)
+                {
+                    Destroy(this.gameObject);
+                }
+
                 damageTime = Time.time + damageRate;
             }
         }
+    }
+
+    private void decompose()
+    {
+        health -= decomposeDamage;
+
+        if(health <= 0)
+        {
+            Destroy(this.gameObject);
+        }
+
     }
 
     public void ReduceDamage(float damageDecrease)

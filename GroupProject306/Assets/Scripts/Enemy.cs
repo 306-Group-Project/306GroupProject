@@ -13,22 +13,10 @@ public class Enemy : MonoBehaviour
     [SerializeField] private float damageRate = 0.7f;
     [SerializeField] private float damage = 10.0f;
     [SerializeField] private float damageTime = 0.0f ;
-     public float jumpForce = 5.0f;
-     private Rigidbody enemyRigidbody;
-
+    
     public GameObject Coin; 
 
-    // Start is called before the first frame update
-    void Awake()
-    {
-       
-    }
-
-    private void Start()
-    {
-      
-    }
-
+    
     // Update is called once per frame
     void Update()
     {
@@ -50,44 +38,42 @@ public class Enemy : MonoBehaviour
 
         if(health <= 0)
         {
-      
-            
+            GameManager.instance.increaseEnemyKill();
+
+            //GameObject effect = Instantiate(deathEffect, transform.position, transform.rotation);
+            //Destroy(effect, 1.0f);
             this.GetComponentInParent<LevelSystem>().DecreaseLivingEnemies();
             Destroy(this.gameObject);
             
             DropCoin();
-            
-            
-
         }
     }
 
     void DropCoin() {
         Vector3 position = transform.position; // enemy position
 
-        GameObject coin = Instantiate(Coin, position, Quaternion.identity); // coin drop 
+        GameObject coin = Instantiate(Coin, position + new Vector3(0f, 0.2f, 0f), Quaternion.identity); // coin drop 
         coin.SetActive(true);
-        Destroy(coin,10f); 
+        //Destroy(coin,10f); 
     }
 
     private void OnTriggerEnter(Collider other)
-    { 
+    {
         if(other.gameObject.tag == "Windmill") {
             other.GetComponent<WindMill>().TakeDamge(damage);
-
-             ApplyJumpForce();
             Destroy(this.gameObject);
             this.GetComponentInParent<LevelSystem>().DecreaseLivingEnemies();
         }
     }
 
-private void ApplyJumpForce(){
-        // Check if the enemy has a Rigidbody component
-        if (enemyRigidbody != null)
-        {
-            // Apply the jump force along the Y-axis
-            enemyRigidbody.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);
-        }
+    public void slowMoveSpeed(float percentSlowDown)
+    {
+        moveSpeed = moveSpeed * percentSlowDown;
+    }
+
+    public void resetSpeed()
+    {
+        moveSpeed = originalMoveSpeed;
     }
 }
 
