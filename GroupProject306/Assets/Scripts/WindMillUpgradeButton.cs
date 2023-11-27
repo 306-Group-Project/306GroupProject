@@ -6,6 +6,7 @@ public class WindMillUpgradeButton : MonoBehaviour
 {
    public HealthBuff healthBuff;
    public GameObject windMill;
+   public GameObject healthbar;
    public GameManager manager;
 
    public void ApplyHealthBuff()
@@ -15,6 +16,7 @@ public class WindMillUpgradeButton : MonoBehaviour
       {
          healthBuff.Apply(windMill);
          manager.AddPoints(-cost);
+         healthbar.GetComponent<WindMillHealth>().SetHealth(manager.windMill.health);
       }
       else
       {

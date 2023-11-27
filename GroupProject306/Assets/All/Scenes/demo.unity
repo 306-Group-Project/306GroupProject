@@ -16733,7 +16733,6 @@ GameObject:
   - component: {fileID: 2027815521}
   - component: {fileID: 2027815524}
   - component: {fileID: 2027815525}
-  - component: {fileID: 2027815526}
   m_Layer: 5
   m_Name: WindmillHealthButton
   m_TagString: Untagged
@@ -16869,6 +16868,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   healthBuff: {fileID: 11400000, guid: 337ede652a10c3f4e87663a42391658a, type: 2}
   windMill: {fileID: 1866192521}
+  healthbar: {fileID: 468147075}
   manager: {fileID: 1513559558}
 --- !u!114 &2027815525
 MonoBehaviour:
@@ -16883,22 +16883,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   panel: {fileID: 1139720572}
---- !u!114 &2027815526
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2027815518}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: eb95a7cd7240c2f4d999b55a0775924c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  health: 0
-  maxHealth: 100
-  manager: {fileID: 0}
-  healthbar: {fileID: 0}
 --- !u!1 &2030794953
 GameObject:
   m_ObjectHideFlags: 0
