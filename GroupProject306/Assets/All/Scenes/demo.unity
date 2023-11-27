@@ -2924,9 +2924,9 @@ MonoBehaviour:
       m_Calls: []
   m_text: '
 
-    HP: ??
+    HP: +25
 
-    Cost: ?
+    Cost: 5
 
 '
   m_isRightToLeft: 0
@@ -14284,7 +14284,6 @@ GameObject:
   - component: {fileID: 1643032484}
   - component: {fileID: 1643032483}
   - component: {fileID: 1643032482}
-  - component: {fileID: 1643032481}
   - component: {fileID: 1643032485}
   - component: {fileID: 1643032486}
   m_Layer: 5
@@ -14314,24 +14313,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 55}
   m_SizeDelta: {x: 300, y: 75}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1643032481
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1643032479}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 14c5ea4692b512e4fb5621ba1077737e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  manager: {fileID: 0}
-  text: {fileID: 0}
-  Prefab: {fileID: 346343031451866098, guid: 98d44cf2368d62346a4913219d307db8, type: 3}
-  Planting: {fileID: 0}
-  offset: 3
-  worldPosition: {x: 0, y: 0, z: 0}
 --- !u!114 &1643032482
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15864,6 +15845,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 100
+  maxHealth: 100
   manager: {fileID: 1513559558}
   healthbar: {fileID: 468147075}
 --- !u!82 &1866192529
@@ -16749,9 +16731,9 @@ GameObject:
   - component: {fileID: 2027815523}
   - component: {fileID: 2027815522}
   - component: {fileID: 2027815521}
-  - component: {fileID: 2027815520}
   - component: {fileID: 2027815524}
   - component: {fileID: 2027815525}
+  - component: {fileID: 2027815526}
   m_Layer: 5
   m_Name: WindmillHealthButton
   m_TagString: Untagged
@@ -16779,24 +16761,6 @@ RectTransform:
   m_AnchoredPosition: {x: -260, y: 55}
   m_SizeDelta: {x: 300, y: 75}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &2027815520
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2027815518}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 14c5ea4692b512e4fb5621ba1077737e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  manager: {fileID: 0}
-  text: {fileID: 0}
-  Prefab: {fileID: 346343031451866098, guid: 98d44cf2368d62346a4913219d307db8, type: 3}
-  Planting: {fileID: 0}
-  offset: 3
-  worldPosition: {x: 0, y: 0, z: 0}
 --- !u!114 &2027815521
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -16905,6 +16869,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   healthBuff: {fileID: 11400000, guid: 337ede652a10c3f4e87663a42391658a, type: 2}
   windMill: {fileID: 1866192521}
+  manager: {fileID: 1513559558}
 --- !u!114 &2027815525
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -16918,6 +16883,22 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   panel: {fileID: 1139720572}
+--- !u!114 &2027815526
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2027815518}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eb95a7cd7240c2f4d999b55a0775924c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 0
+  maxHealth: 100
+  manager: {fileID: 0}
+  healthbar: {fileID: 0}
 --- !u!1 &2030794953
 GameObject:
   m_ObjectHideFlags: 0
