@@ -13156,7 +13156,7 @@ MonoBehaviour:
   offenceScoreText: {fileID: 1369495307}
   levelText: {fileID: 1564376301}
   highScoreText: {fileID: 1018957935}
-  score: 2
+  score: 15
   level: 0
   windMillHealth: 100
   camera: {fileID: 2119514438}
