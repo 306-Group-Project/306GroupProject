@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.43718457, g: 0.75444883, b: 1.0290297, a: 1}
+  m_IndirectSpecularColor: {r: 0.43718317, g: 0.75444984, b: 1.0290304, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -775,7 +775,7 @@ GameObject:
   - component: {fileID: 94043088}
   - component: {fileID: 94043087}
   - component: {fileID: 94043091}
-  - component: {fileID: 94043092}
+  - component: {fileID: 136756177}
   m_Layer: 5
   m_Name: PlantPowerButton
   m_TagString: Untagged
@@ -865,7 +865,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 94043092}
+      - m_Target: {fileID: 136756177}
         m_TargetAssemblyTypeName: FireRateUpgradeButton, Assembly-CSharp
         m_MethodName: ApplyFireRateUpgrade
         m_Mode: 1
@@ -939,7 +939,6 @@ GameObject:
   - component: {fileID: 136756176}
   - component: {fileID: 136756179}
   - component: {fileID: 136756178}
-  - component: {fileID: 136756177}
   m_Layer: 5
   m_Name: UseShopText
   m_TagString: Untagged
@@ -982,15 +981,6 @@ MonoBehaviour:
   flower: {fileID: 6246380794984729907, guid: 0d30f8fdf56c574429d34611517b6419, type: 3}
   flowerTwo: {fileID: 1602901119289598736, guid: 98d44cf2368d62346a4913219d307db8, type: 3}
   manager: {fileID: 1513559558}
-  m_GameObject: {fileID: 136756175}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e19747de3f5aca642ab2be37e372fb86, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_EffectColor: {r: 0.019607844, g: 0.08627451, b: 0.023529412, a: 0.69411767}
-  m_EffectDistance: {x: 2, y: -1}
-  m_UseGraphicAlpha: 1
 --- !u!114 &136756178
 MonoBehaviour:
   m_ObjectHideFlags: 0

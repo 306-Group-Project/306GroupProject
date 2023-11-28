@@ -12,4 +12,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 68a68252a1a74483b9a5f00de27f3ae5, type: 3}
   m_Name: HealthRestore
   m_EditorClassIdentifier: 
-  healthToRestore: 0
+  healthToRestore: 100
