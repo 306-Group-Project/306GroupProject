@@ -6,8 +6,11 @@
   <component name="ChangeListManager">
     <list default="true" id="ba3bef45-8e98-444b-8ea9-f6c74c86d065" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Scripts.dir/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Scripts.dir/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GameManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/GameManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/objectPlace.cs" beforeDir="false" afterPath="$PROJECT_DIR$/objectPlace.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Level(Text) 1.controller" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Level(Text) 1.controller.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Level(Text).controller" beforeDir="false" afterPath="$PROJECT_DIR$/Level(Text).controller" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LevelNumScreen.controller" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/LevelNumScreen.controller.meta" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -73,11 +76,11 @@
     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
-  "keyToStringList": {
-    "rider.external.source.directories": [
-      "/Users/kelseykeller/Library/Application Support/JetBrains/Rider2023.2/resharper-host/DecompilerCache",
-      "/Users/kelseykeller/Library/Application Support/JetBrains/Rider2023.2/resharper-host/SourcesCache",
-      "/Users/kelseykeller/.local/share/Symbols/src"
+  &quot;keyToStringList&quot;: {
+    &quot;rider.external.source.directories&quot;: [
+      &quot;/Users/kelseykeller/Library/Application Support/JetBrains/Rider2023.2/resharper-host/DecompilerCache&quot;,
+      &quot;/Users/kelseykeller/Library/Application Support/JetBrains/Rider2023.2/resharper-host/SourcesCache&quot;,
+      &quot;/Users/kelseykeller/.local/share/Symbols/src&quot;
     ]
   }
 }</component>
@@ -135,20 +138,20 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
           <url>file://$PROJECT_DIR$/GameManager.cs</url>
-          <line>75</line>
+          <line>78</line>
           <properties documentPath="$PROJECT_DIR$/GameManager.cs" initialLine="66" containingFunctionPresentation="Method 'Update'">
             <startOffsets>
-              <option value="2241" />
+              <option value="2274" />
             </startOffsets>
             <endOffsets>
-              <option value="2266" />
+              <option value="2299" />
             </endOffsets>
           </properties>
           <option name="timeStamp" value="4" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
           <url>file://$PROJECT_DIR$/GameManager.cs</url>
-          <line>87</line>
+          <line>90</line>
           <properties documentPath="$PROJECT_DIR$/GameManager.cs" initialLine="77" isMultiMethodBreakpoint="true">
             <option name="multiMethodBreakpoint" value="true" />
             <startOffsets>

@@ -148,7 +148,7 @@ public class GameManager : MonoBehaviour
         gameScreen.SetActive(true);
 
 		textScreenFolder.SetActive(true); 
-		levelNumScreen.SetActive(true); // add animation 
+		//levelNumScreen.SetActive(true); // configure animation 
 
 		// TODO 
 		// add open shop instructions screen after level screen fades out 
