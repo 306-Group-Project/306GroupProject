@@ -21,7 +21,7 @@ public class GameManager : MonoBehaviour
     public Text levelText;
     public Text highScoreText, gameOverHighScore, gameOverCurrentScore;
     [SerializeField] private int score = 0;
-    [SerializeField] private int level = 0;
+    [SerializeField] private int level = 1;
 
     [SerializeField] private float windMillHealth = 100.0f;
 
@@ -39,6 +39,14 @@ public class GameManager : MonoBehaviour
     public GameObject Coin; 
     [SerializeField] private bool inMenu;
     [SerializeField] private bool isPaused;
+
+	// Text Screen Add Ons 
+	[SerializeField] private GameObject levelNumTextScreen; 
+	[SerializeField] private GameObject openShopTextScreen;
+	[SerializeField] private GameObject useShopTextScreen;
+	[SerializeField] private GameObject waveTextScreen;
+	[SerializeField] private GameObject coinInstructionScreen;
+	[SerializeField] private GameObject coinTipsScreen;
 
     public int enemyKills = 0;
 
@@ -63,7 +71,7 @@ public class GameManager : MonoBehaviour
         windmillDestroyedSound = GetComponent<AudioSource>();
         inMenu = true;
         SetScoreText();
-        SetLevelText(level);
+        SetLevelText(level);	
         Time.timeScale = 0;
     }
 
@@ -133,7 +141,14 @@ public class GameManager : MonoBehaviour
         inMenu = false;
         startMenu.SetActive(false);
         gameScreen.SetActive(true);
-    }
+		
+		levelNumTextScreen.SetActive(true);
+
+		 // TODO 
+		// add shop screen after level screen fades out 
+		//if(level == 1){ }
+			 
+   		}
 
     public void SetScoreText()
     {

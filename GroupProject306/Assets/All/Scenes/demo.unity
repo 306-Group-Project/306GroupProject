@@ -4257,7 +4257,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &458695903
 RectTransform:
   m_ObjectHideFlags: 0
@@ -13621,6 +13621,12 @@ MonoBehaviour:
   Coin: {fileID: 1498403948531744, guid: fa2c57d3f28a5e6419393e8bc3eeb32a, type: 3}
   inMenu: 0
   isPaused: 0
+  levelNumTextScreen: {fileID: 0}
+  openShopTextScreen: {fileID: 0}
+  useShopTextScreen: {fileID: 0}
+  waveTextScreen: {fileID: 0}
+  coinInstructionScreen: {fileID: 0}
+  coinTipsScreen: {fileID: 0}
   enemyKills: 0
 --- !u!82 &1513559559
 AudioSource:
@@ -15640,7 +15646,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1790067835
 RectTransform:
   m_ObjectHideFlags: 0
