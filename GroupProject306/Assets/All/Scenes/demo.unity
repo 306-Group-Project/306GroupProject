@@ -943,7 +943,6 @@ MonoBehaviour:
   fireRateUpgrade: {fileID: 11400000, guid: 4c90d4ed2a38a4f3e93cf22feaef8492, type: 2}
   flower: {fileID: 6246380794984729907, guid: 0d30f8fdf56c574429d34611517b6419, type: 3}
   flowerTwo: {fileID: 1602901119289598736, guid: 98d44cf2368d62346a4913219d307db8, type: 3}
-  flowerThree: {fileID: 0}
   manager: {fileID: 1513559558}
 --- !u!1 &149262420
 GameObject:
@@ -13023,7 +13022,7 @@ MonoBehaviour:
   highScoreText: {fileID: 1018957935}
   gameOverHighScore: {fileID: 1284786544}
   gameOverCurrentScore: {fileID: 1170398511}
-  score: 1000
+  score: 15
   level: 0
   windMillHealth: 100
   camera: {fileID: 2119514438}
