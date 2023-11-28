@@ -8,7 +8,7 @@ public class FireRateUpgradeButton : MonoBehaviour
     public Flower flower;
 
     public Flower flowerTwo;
-    public Flower flowerThree;
+    
     public GameManager manager;
 
     public void ApplyFireRateUpgrade()
