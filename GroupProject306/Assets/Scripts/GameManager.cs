@@ -41,7 +41,11 @@ public class GameManager : MonoBehaviour
     [SerializeField] private bool isPaused;
 
 	// Text Screen Add Ons 
-	[SerializeField] private GameObject levelNumTextScreen; 
+	[SerializeField] private GameObject textScreenFolder; 
+
+	[SerializeField] private GameObject levelNumScreen; 
+    public Text levelFadeText;
+
 	[SerializeField] private GameObject openShopTextScreen;
 	[SerializeField] private GameObject useShopTextScreen;
 	[SerializeField] private GameObject waveTextScreen;
@@ -140,13 +144,15 @@ public class GameManager : MonoBehaviour
         Time.timeScale = 1;
         inMenu = false;
         startMenu.SetActive(false);
-        gameScreen.SetActive(true);
-		
-		levelNumTextScreen.SetActive(true);
 
-		 // TODO 
-		// add shop screen after level screen fades out 
-		//if(level == 1){ }
+        gameScreen.SetActive(true);
+
+		textScreenFolder.SetActive(true); 
+		//levelNumScreen.SetActive(true); // configure animation 
+
+		// TODO 
+		// add open shop instructions screen after level screen fades out 
+		// if(level == 1){ }
 			 
    		}
 
@@ -167,7 +173,10 @@ public class GameManager : MonoBehaviour
     public void SetLevelText(int levelCount)
     {
         levelText.text = "Level: " + levelCount.ToString();
+    	levelFadeText.text = "Level " + levelCount.ToString(); //testing
     }
+
+	
 
     public int getScore() { return score; }
     
@@ -195,6 +204,7 @@ public class GameManager : MonoBehaviour
         pauseMenu.SetActive(false);
         shopMenu.SetActive(false);
         gameScreen.SetActive(true);
+		useShopTextScreen.SetActive(false);
 
     }
 
@@ -213,7 +223,8 @@ public class GameManager : MonoBehaviour
     {
         inMenu = true;
         Time.timeScale = 0;
-        shopMenu.SetActive(true);
+        shopMenu.SetActive(true);	
+		useShopTextScreen.SetActive(true); // TODO add if statment for level 1 only 
         defenceMenu.SetActive(false);
         upgradeMenu.SetActive(false);
         offenceMenu.SetActive(false);
@@ -223,18 +234,21 @@ public class GameManager : MonoBehaviour
     public void OpenDefenceMenu()
     {
         shopMenu.SetActive(false);
+		useShopTextScreen.SetActive(false);
         defenceMenu.SetActive(true);
     }
 
     public void OpenUpgradeMenu()
     {
         shopMenu.SetActive(false);
+		useShopTextScreen.SetActive(false);
         upgradeMenu.SetActive(true);
     }
     
     public void OpenOffenceMenu()
     {
         shopMenu.SetActive(false);
+		useShopTextScreen.SetActive(false);
         offenceMenu.SetActive(true);
     }
 
@@ -249,10 +263,5 @@ public class GameManager : MonoBehaviour
         {
             PlayerPrefs.SetInt("MaxEnemyKills", enemyKills);
         }
-    }
-
-    public void RestartGame()
-    {
-        SceneManager.LoadScene("demo");
     }
 }
