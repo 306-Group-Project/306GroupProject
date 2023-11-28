@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class WindMill : MonoBehaviour
 {
-    [SerializeField] public float health, maxHealth = 100.0f;
+    [SerializeField] public float health, maxHealth = 150.0f;
     public GameManager manager;
     public GameObject healthbar;
     private AudioSource windmillDamageSound;

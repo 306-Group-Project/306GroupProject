@@ -77,7 +77,7 @@ public class CreatePlant : MonoBehaviour
     
     public void sunflowerButton()
     {
-        int cost = 4;
+        int cost = 5;
         if (manager.getScore() >= cost)
         {
             manager.AddPoints(-cost);
@@ -97,7 +97,7 @@ public class CreatePlant : MonoBehaviour
     
     public void mushButton()
     {
-        int cost = 5;
+        int cost = 2;
         if (manager.getScore() >= cost)
         {
             manager.AddPoints(-cost);
