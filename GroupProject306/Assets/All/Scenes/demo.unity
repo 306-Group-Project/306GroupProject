@@ -2948,8 +2948,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1513559558}
-        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
+      - m_Target: {fileID: 2119514441}
+        m_TargetAssemblyTypeName: restartButton, Assembly-CSharp
         m_MethodName: RestartGame
         m_Mode: 1
         m_Arguments:
@@ -18392,6 +18392,7 @@ GameObject:
   - component: {fileID: 2119514437}
   - component: {fileID: 2119514436}
   - component: {fileID: 2119514440}
+  - component: {fileID: 2119514441}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -18494,6 +18495,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cam: {fileID: 2119514438}
+--- !u!114 &2119514441
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2119514435}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e061a7c0be4bb4722a9cf2b34743f86f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &2125621458
 PrefabInstance:
   m_ObjectHideFlags: 0
