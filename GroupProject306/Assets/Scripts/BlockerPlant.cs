@@ -68,4 +68,10 @@ public class BlockerPlant : MonoBehaviour
     {
         health = maxHealth;
     }
+
+	 public void ApplyHealthRestoreUpgrade(float healthToRestore)
+    {
+        health += healthToRestore;
+        health = Mathf.Clamp(health, 0, 100.0f);
+    }
 }
