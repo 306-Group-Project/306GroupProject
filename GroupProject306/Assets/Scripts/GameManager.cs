@@ -250,9 +250,4 @@ public class GameManager : MonoBehaviour
             PlayerPrefs.SetInt("MaxEnemyKills", enemyKills);
         }
     }
-
-    public void RestartGame()
-    {
-        SceneManager.LoadScene("demo");
-    }
 }
