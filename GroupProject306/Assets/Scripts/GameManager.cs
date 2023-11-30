@@ -24,7 +24,6 @@ public class GameManager : MonoBehaviour
     [SerializeField] private int level = 1;
 
     [SerializeField] private float windMillHealth = 100.0f;
-
     [SerializeField] private Camera camera;
     
     // Menus
@@ -224,11 +223,17 @@ public class GameManager : MonoBehaviour
         inMenu = true;
         Time.timeScale = 0;
         shopMenu.SetActive(true);	
-		useShopTextScreen.SetActive(true); // TODO add if statment for level 1 only 
-        defenceMenu.SetActive(false);
+		defenceMenu.SetActive(false);
         upgradeMenu.SetActive(false);
         offenceMenu.SetActive(false);
         gameScreen.SetActive(false);
+	
+		if(level ==1){ 
+			useShopTextScreen.SetActive(true); // TODO add if statment for level 1 only 
+		}
+		else if (level != 1){
+			useShopTextScreen.SetActive(false);  
+		}
     }
     
     public void OpenDefenceMenu()
