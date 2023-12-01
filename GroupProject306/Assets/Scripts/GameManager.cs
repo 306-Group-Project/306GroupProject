@@ -14,7 +14,7 @@ public class GameManager : MonoBehaviour
     public GameObject windmillObject;
     public GameObject smoke;
     private Transform windmillLocation;
-    private AudioSource windmillDestroyedSound;
+    public AudioScript audioScript;
 
     public Text scoreText, defenceScoreText, upgradeScoreText, offenceScoreText;
 
@@ -71,7 +71,6 @@ public class GameManager : MonoBehaviour
     {
         SetHighScore(PlayerPrefs.GetInt("MaxEnemyKills", 0));        
         
-        windmillDestroyedSound = GetComponent<AudioSource>();
         inMenu = true;
         SetScoreText();
         SetLevelText(level);	
@@ -108,6 +107,7 @@ public class GameManager : MonoBehaviour
     void CollectCoin(GameObject coin)
     {
         // Destroy the collected coin GameObject
+        audioScript.playCoinSound();
         Destroy(coin);
         score += 1;
         SetScoreText();
@@ -131,7 +131,7 @@ public class GameManager : MonoBehaviour
 
                 GameObject cloud = Instantiate(smoke, windmillLocation.position, transform.rotation);
                 Destroy(windmillObject);
-                windmillDestroyedSound.Play();
+                audioScript.playWindmillDestroyed();
                 Destroy(cloud, 0.5f);
                 Invoke("EndGame", (float)0.75);
             }
@@ -174,8 +174,6 @@ public class GameManager : MonoBehaviour
         levelText.text = "Level: " + levelCount.ToString();
     	levelFadeText.text = "Level " + levelCount.ToString(); //testing
     }
-
-	
 
     public int getScore() { return score; }
     
