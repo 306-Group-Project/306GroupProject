@@ -8,6 +8,8 @@ public class AudioScript : MonoBehaviour
 
     public AudioSource coinCollected;
 
+    public AudioSource menuSwitch;
+
     public void playCoinSound()
     {
         coinCollected.Play();
@@ -16,5 +18,10 @@ public class AudioScript : MonoBehaviour
     public void playWindmillDestroyed()
     {
         windMillDestroyed.Play();
+    }
+
+    public void playMenuSwitch()
+    {
+        menuSwitch.Play();
     }
 }

@@ -53,7 +53,6 @@ public class GameManager : MonoBehaviour
 
     public int enemyKills = 0;
 
-
     // Start is called before the first frame update
     void Awake()
     {
@@ -143,6 +142,7 @@ public class GameManager : MonoBehaviour
         Time.timeScale = 1;
         inMenu = false;
         startMenu.SetActive(false);
+        audioScript.playMenuSwitch();
 
         gameScreen.SetActive(true);
 
@@ -198,6 +198,7 @@ public class GameManager : MonoBehaviour
         inMenu = false;
         isPaused = false;
         Time.timeScale = 1;
+        audioScript.playMenuSwitch();
         pauseMenu.SetActive(false);
         shopMenu.SetActive(false);
         gameScreen.SetActive(true);
@@ -213,6 +214,7 @@ public class GameManager : MonoBehaviour
             isPaused = !isPaused;
             Time.timeScale = isPaused ? 0 : 1;
             pauseMenu.SetActive(isPaused);
+            audioScript.playMenuSwitch();
         }
     }
     
@@ -225,6 +227,7 @@ public class GameManager : MonoBehaviour
         upgradeMenu.SetActive(false);
         offenceMenu.SetActive(false);
         gameScreen.SetActive(false);
+        audioScript.playMenuSwitch();
 	
 		if(level ==1){ 
 			useShopTextScreen.SetActive(true); // TODO add if statment for level 1 only 
@@ -239,6 +242,7 @@ public class GameManager : MonoBehaviour
         shopMenu.SetActive(false);
 		useShopTextScreen.SetActive(false);
         defenceMenu.SetActive(true);
+        audioScript.playMenuSwitch();
     }
 
     public void OpenUpgradeMenu()
@@ -246,6 +250,7 @@ public class GameManager : MonoBehaviour
         shopMenu.SetActive(false);
 		useShopTextScreen.SetActive(false);
         upgradeMenu.SetActive(true);
+        audioScript.playMenuSwitch();
     }
     
     public void OpenOffenceMenu()
@@ -253,6 +258,7 @@ public class GameManager : MonoBehaviour
         shopMenu.SetActive(false);
 		useShopTextScreen.SetActive(false);
         offenceMenu.SetActive(true);
+        audioScript.playMenuSwitch();
     }
 
     public void EndGame()
