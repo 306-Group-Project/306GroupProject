@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.437184, g: 0.7544493, b: 1.0290301, a: 1}
+  m_IndirectSpecularColor: {r: 0.43718317, g: 0.75444984, b: 1.0290304, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -2733,6 +2733,7 @@ MonoBehaviour:
   angleOffset: 0
   spawnerDistanceFromWindmill: 5
   spawnRate: 1
+  initialDelay: 6
   spawner: {fileID: 326863298}
   levelManager: {fileID: 1617430753}
 --- !u!65 &326863300
@@ -5407,6 +5408,7 @@ MonoBehaviour:
   angleOffset: 0
   spawnerDistanceFromWindmill: 5
   spawnRate: 3
+  initialDelay: 6
   spawner: {fileID: 555505834}
   levelManager: {fileID: 1617430753}
 --- !u!65 &555505836
@@ -11124,6 +11126,7 @@ MonoBehaviour:
   angleOffset: 0
   spawnerDistanceFromWindmill: 4
   spawnRate: 2
+  initialDelay: 6
   spawner: {fileID: 1234586325}
   levelManager: {fileID: 1617430753}
 --- !u!65 &1234586327

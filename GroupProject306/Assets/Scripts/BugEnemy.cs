@@ -8,16 +8,19 @@ public class BugEnemy : Enemy
     //[SerializeField] public float moveSpeed = 0.5f;
 	//[SerializeField] public float originalMoveSpeed = 0.5f;
     private float bhealth = 100.0f;
-    //[SerializeField] private float maxHealth = 100.0f;
+    private float bmaxHealth = 100.0f;
 
     // [SerializeField] private float damageRate = 0.7f;
     private float bdamage = 10.0f;
     //[SerializeField] private float damageTime = 0.0f ;
-    
+
     // public GameObject Coin;
     // Start is called before the first frame update
+    private Light bmylight;
     void Start()
     {
+
+        bmylight = GetComponent<Light>();
         transform.position = new Vector3(transform.position.x, 0.7f, transform.position.z); 
     }
 
@@ -25,6 +28,11 @@ public class BugEnemy : Enemy
     void Update()
     {
         Movement();
+        if (health <= maxHealth / 2.0f)
+        {
+            bmylight.enabled = true;
+        }
+        
     }
 
     private void Movement()
@@ -40,8 +48,9 @@ public class BugEnemy : Enemy
     public void TakeDamage(float damage)
     {
         bhealth -= damage;
+        
 
-        if(bhealth <= 0)
+        if (bhealth <= 0)
         {
             //GameObject effect = Instantiate(deathEffect, transform.position, transform.rotation);
             //Destroy(effect, 1.0f);

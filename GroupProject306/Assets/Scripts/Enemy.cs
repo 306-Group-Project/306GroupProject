@@ -7,20 +7,29 @@ public class Enemy : MonoBehaviour
 {
     [SerializeField] public float moveSpeed = 0.5f;
 	[SerializeField] public float originalMoveSpeed = 0.5f;
-    [SerializeField] private float health = 100.0f;
-    [SerializeField] private float maxHealth = 100.0f;
+    [SerializeField] protected float health = 100.0f;
+    [SerializeField] protected float maxHealth = 100.0f;
 
     [SerializeField] private float damageRate = 0.7f;
     [SerializeField] private float damage = 10.0f;
     [SerializeField] private float damageTime = 0.0f ;
+    private Light mylight;
     
     public GameObject Coin; 
-
     
+    void Start()
+    {
+        mylight = GetComponent<Light>();
+    }
     // Update is called once per frame
     void Update()
     {
         Movement();
+        if (health <= maxHealth / 2.0f)
+        {
+            mylight.enabled = true;
+        }
+
     }
 
     private void Movement()
