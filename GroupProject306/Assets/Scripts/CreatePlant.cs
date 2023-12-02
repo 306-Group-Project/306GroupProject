@@ -7,6 +7,7 @@ public class CreatePlant : MonoBehaviour
 {
     public GameManager manager;
     public GameObject text;
+	public AudioScript audioScript;
     
     public GameObject Prefab;
     public GameObject Planting;
@@ -62,6 +63,7 @@ public class CreatePlant : MonoBehaviour
         {
             manager.AddPoints(-cost);
             SetFlower();
+			audioScript.playConfirmPlant();
         }
     }
     
@@ -72,6 +74,7 @@ public class CreatePlant : MonoBehaviour
         {
             manager.AddPoints(-cost);
             SetFlower();
+			audioScript.playConfirmPlant();
         }
     }
     
@@ -82,6 +85,7 @@ public class CreatePlant : MonoBehaviour
         {
             manager.AddPoints(-cost);
             SetFlower();
+			audioScript.playConfirmPlant();
         }
     }
     
@@ -92,6 +96,7 @@ public class CreatePlant : MonoBehaviour
         {
             manager.AddPoints(-cost);
             SetFlower();
+			audioScript.playConfirmPlant();
         }
     }
     
@@ -102,6 +107,7 @@ public class CreatePlant : MonoBehaviour
         {
             manager.AddPoints(-cost);
             SetFlower();
+			audioScript.playConfirmPlant();
         }
     }
 

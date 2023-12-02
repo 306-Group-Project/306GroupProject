@@ -10,6 +10,7 @@ public class FireRateUpgradeButton : MonoBehaviour
     public Flower flowerTwo;
     
     public GameManager manager;
+	public AudioScript audioScript;
 
     public void ApplyFireRateUpgrade()
     {
@@ -18,6 +19,7 @@ public class FireRateUpgradeButton : MonoBehaviour
         {
             fireRateUpgrade.Apply(flower.gameObject);
             manager.AddPoints(-cost);
+			audioScript.playConfirmUpgrade();
         }
         else
         {

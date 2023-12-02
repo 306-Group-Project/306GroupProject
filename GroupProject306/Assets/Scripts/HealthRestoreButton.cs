@@ -6,7 +6,9 @@ public class HealthRestoreButton : MonoBehaviour
 {
     public HealthRestoreUpgrade healthRestoreUpgrade;
     public GameManager manager;
-    public string plantTag = "Plant"; 
+    public string plantTag = "Plant";
+
+    public AudioScript audioScript;
 
     public void ApplyHealthRestoreUpgrade()
     {
@@ -34,6 +36,7 @@ public class HealthRestoreButton : MonoBehaviour
 
             // Subtract the cost from the player's score
             manager.AddPoints(-cost);
+            audioScript.playConfirmUpgrade();
         }
         else
         {

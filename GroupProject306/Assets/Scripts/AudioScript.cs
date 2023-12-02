@@ -10,6 +10,10 @@ public class AudioScript : MonoBehaviour
 
     public AudioSource menuSwitch;
 
+    public AudioSource confirmPlant;
+
+    public AudioSource confirmUpgrade;
+
     public void playCoinSound()
     {
         coinCollected.Play();
@@ -24,4 +28,15 @@ public class AudioScript : MonoBehaviour
     {
         menuSwitch.Play();
     }
+
+    public void playConfirmPlant()
+    {
+        confirmPlant.Play();
+    }
+
+    public void playConfirmUpgrade()
+    {
+        confirmUpgrade.Play();
+    }
+    
 }
