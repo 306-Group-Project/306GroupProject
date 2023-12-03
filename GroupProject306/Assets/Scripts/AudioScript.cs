@@ -5,13 +5,10 @@ using UnityEngine;
 public class AudioScript : MonoBehaviour
 {
     public AudioSource windMillDestroyed;
-
     public AudioSource coinCollected;
-
     public AudioSource menuSwitch;
-
+    public AudioSource insufficientFunds;
     public AudioSource confirmPlant;
-
     public AudioSource confirmUpgrade;
 
     public void playCoinSound()
@@ -27,6 +24,11 @@ public class AudioScript : MonoBehaviour
     public void playMenuSwitch()
     {
         menuSwitch.Play();
+    }
+
+    public void playInsufficentFunds()
+    {
+        insufficientFunds.Play();
     }
 
     public void playConfirmPlant()

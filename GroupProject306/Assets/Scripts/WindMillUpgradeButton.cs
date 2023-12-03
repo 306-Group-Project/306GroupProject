@@ -24,6 +24,7 @@ public class WindMillUpgradeButton : MonoBehaviour
       }
       else
       {
+	      audioScript.playInsufficentFunds();
          Debug.LogWarning("WindMill Gameobject is not assigned.");
       }
    }

@@ -65,6 +65,10 @@ public class CreatePlant : MonoBehaviour
             SetFlower();
 			audioScript.playConfirmPlant();
         }
+        else
+        {
+            audioScript.playInsufficentFunds();
+        }
     }
     
     public void hyacinthButton()
@@ -75,6 +79,10 @@ public class CreatePlant : MonoBehaviour
             manager.AddPoints(-cost);
             SetFlower();
 			audioScript.playConfirmPlant();
+        }
+        else
+        {
+            audioScript.playInsufficentFunds();
         }
     }
     
@@ -87,6 +95,10 @@ public class CreatePlant : MonoBehaviour
             SetFlower();
 			audioScript.playConfirmPlant();
         }
+        else
+        {
+            audioScript.playInsufficentFunds();
+        }
     }
     
     public void daffodilButton()
@@ -98,6 +110,10 @@ public class CreatePlant : MonoBehaviour
             SetFlower();
 			audioScript.playConfirmPlant();
         }
+        else
+        {
+            audioScript.playInsufficentFunds();
+        }
     }
     
     public void mushButton()
@@ -108,6 +124,10 @@ public class CreatePlant : MonoBehaviour
             manager.AddPoints(-cost);
             SetFlower();
 			audioScript.playConfirmPlant();
+        }
+        else
+        {
+            audioScript.playInsufficentFunds();
         }
     }
 

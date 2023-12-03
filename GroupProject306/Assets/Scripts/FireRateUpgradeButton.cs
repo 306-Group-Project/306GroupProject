@@ -23,6 +23,7 @@ public class FireRateUpgradeButton : MonoBehaviour
         }
         else
         {
+            audioScript.playInsufficentFunds();
             Debug.LogWarning("Flower GameObject is not assigned or not enough score.");
         }
     }

@@ -40,6 +40,7 @@ public class HealthRestoreButton : MonoBehaviour
         }
         else
         {
+            audioScript.playInsufficentFunds();
             Debug.LogWarning("GameManager score is insufficient.");
         }
     }
