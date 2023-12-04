@@ -26,7 +26,7 @@ public class objectPlace : MonoBehaviour
     void placeObjects()
     {
  
-        for (int x = 0; x < 6; x++) // originally < 20
+        for (int x = 0; x < 20; x++) // originally < 20
         {
             float xPos = Random.Range(-4f, 3f);
             float yPos = Random.Range(-4f, 3f);
@@ -35,7 +35,7 @@ public class objectPlace : MonoBehaviour
             obj.transform.parent = this.transform;
         }
 
-        for (int x = 0; x < 6; x++) // originally < 15
+        for (int x = 0; x < 20; x++) // originally < 15
         {
             float xPos = Random.Range(-5f, 5f);
             float yPos = Random.Range(-5f, 5f);

@@ -84,6 +84,14 @@ public class Enemy : MonoBehaviour
     {
         moveSpeed = originalMoveSpeed;
     }
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        if(collision.gameObject.tag == "object")
+        {
+            transform.position += transform.right * moveSpeed * Time.deltaTime;
+        }
+    }
 }
 
 

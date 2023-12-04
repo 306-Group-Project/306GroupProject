@@ -67,6 +67,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: stone2
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 1db637017d60acb4f9383e8712459d4e, type: 3}
+      propertyPath: m_TagString
+      value: object
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 1db637017d60acb4f9383e8712459d4e, type: 3}
       propertyPath: m_LocalScale.x
       value: 3
