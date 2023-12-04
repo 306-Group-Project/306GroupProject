@@ -1,5 +1,60 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &511678029817246988
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1010527751501919683}
+  - component: {fileID: 459796214316534637}
+  m_Layer: 0
+  m_Name: trigger
+  m_TagString: object
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1010527751501919683
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 511678029817246988}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0.6656233, y: -0.23863298, z: -0.23863298, w: 0.6656233}
+  m_LocalPosition: {x: 0.0041, y: -0.0204, z: -0.011}
+  m_LocalScale: {x: 0.33333334, y: 0.33333325, z: 0.33333325}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 8273426133716338784}
+  m_LocalEulerAnglesHint: {x: 50.553, y: -90, z: -90}
+--- !u!136 &459796214316534637
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 511678029817246988}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.15615515
+  m_Height: 0.7261482
+  m_Direction: 0
+  m_Center: {x: 0.032147657, y: 0.12864557, z: -0.056155175}
 --- !u!1 &2832621950157744224
 GameObject:
   m_ObjectHideFlags: 0
@@ -126,6 +181,9 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects:
+    - targetCorrespondingSourceObject: {fileID: 400000, guid: 1db637017d60acb4f9383e8712459d4e, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1010527751501919683}
     - targetCorrespondingSourceObject: {fileID: 400000, guid: 1db637017d60acb4f9383e8712459d4e, type: 3}
       insertIndex: -1
       addedObject: {fileID: 4167438920973865794}

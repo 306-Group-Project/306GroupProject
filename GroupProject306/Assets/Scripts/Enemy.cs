@@ -16,6 +16,8 @@ public class Enemy : MonoBehaviour
     private Light mylight;
     
     public GameObject Coin; 
+
+    public bool stuck = false;
     
     void Start()
     {
@@ -37,7 +39,7 @@ public class Enemy : MonoBehaviour
         if (GameManager.instance.windMill)
         {
             transform.LookAt(GameManager.instance.windMill.transform.position);
-            transform.position  += transform.forward * moveSpeed * Time.deltaTime;
+            transform.position += transform.forward * moveSpeed * Time.deltaTime;
         }
     }
 
@@ -72,6 +74,11 @@ public class Enemy : MonoBehaviour
             other.GetComponent<WindMill>().TakeDamge(damage);
             Destroy(this.gameObject);
             this.GetComponentInParent<LevelSystem>().DecreaseLivingEnemies();
+        } else if(other.gameObject.tag == "object")
+        {
+            Debug.Log("object");
+            transform.position -= transform.forward * moveSpeed * 10 * Time.deltaTime;
+            transform.position += transform.right * moveSpeed * 10 * Time.deltaTime;
         }
     }
 
@@ -83,14 +90,6 @@ public class Enemy : MonoBehaviour
     public void resetSpeed()
     {
         moveSpeed = originalMoveSpeed;
-    }
-
-    private void OnCollisionEnter(Collision collision)
-    {
-        if(collision.gameObject.tag == "object")
-        {
-            transform.position += transform.right * moveSpeed * Time.deltaTime;
-        }
     }
 }
 
