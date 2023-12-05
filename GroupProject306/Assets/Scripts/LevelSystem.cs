@@ -67,7 +67,7 @@ public class LevelSystem : MonoBehaviour
     // increases enemiesInLevel based off of levelCount
     public void GenerateEnemies()
     {
-        enemiesInLevel = 5 + (levelCount * (UnityEngine.Random.Range(4, 7)));
+        enemiesInLevel = 5 + (levelCount * (UnityEngine.Random.Range(2, 4)));
         enemyAlive = enemiesInLevel;
     }
 

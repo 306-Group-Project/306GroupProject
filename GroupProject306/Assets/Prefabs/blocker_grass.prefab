@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 5032562496005741412}
   m_Layer: 0
   m_Name: blocker_grass
-  m_TagString: Plant
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -145,5 +145,3 @@ MonoBehaviour:
   damage: 10
   damageTime: 0
   damageRate: 1
-  decomposeDamage: 2
-  decomposeRateSeconds: 5

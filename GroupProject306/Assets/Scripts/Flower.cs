@@ -10,12 +10,9 @@ public class Flower : MonoBehaviour
     public float decomposeDamage = 2.0f;
     public float decomposeRateSeconds = 5.0f;
 
-	private Shooter shooter;
-
     private void Start()
     {
         InvokeRepeating("decompose", decomposeRateSeconds, decomposeRateSeconds);
-		shooter = GetComponent<Shooter>();
     }
 
 
@@ -61,30 +58,5 @@ public class Flower : MonoBehaviour
     public void SetHealth(float maxHealth)
     {
         health = maxHealth;
-    }
-
-	public void ApplyHealthRestoreUpgrade(float healthToRestore)
-    {
-        health += healthToRestore;
-        health = Mathf.Clamp(health, 0, 100.0f);
-    }
-
-	public void ApplyFireRateUpgrade(float multiplier, float duration)
-    {
-        if (shooter != null)
-        {
-            shooter.SetFireRate(shooter.baseFireRate * multiplier);
-            StartCoroutine(ResetFireRateAfterDelay(multiplier, duration));
-        }
-    }
-
-    private IEnumerator ResetFireRateAfterDelay(float originalMultiplier, float delay)
-    {
-        yield return new WaitForSeconds(delay);
-
-        if (shooter != null)
-        {
-            shooter.SetFireRate(shooter.baseFireRate);
-        }
     }
 }

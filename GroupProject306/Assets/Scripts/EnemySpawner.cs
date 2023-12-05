@@ -11,38 +11,17 @@ public class EnemySpawner : MonoBehaviour
     [Range(1, 10)] public float spawnerDistanceFromWindmill = 2.0f;
 
     [SerializeField] private float spawnRate = 2.0f;
-	[SerializeField] private float initialDelay = 6.0f; // inital spawn delay 
-
     private float spawnTimer;
-	private float initialDelayTimer; 
-	private bool canSpawn = false; 
 
     public GameObject spawner;
 
     // Level Manager object
     public GameObject levelManager;
 
-	void Start(){
-		initialDelayTimer = initialDelay; 
-	} 
-
     // Update is called once per frame
     void Update()
     {
-		// count down the initial delay before eneimes start to spawn 
-		if (initialDelayTimer > 0) 
-		{
-			initialDelayTimer -= Time.deltaTime; 
-			if (initialDelayTimer <= 0)
-			{	
-				canSpawn = true; 
-			}
-		} 
-		
-		if (canSpawn)
-		{
         SpawnEnemy();
-		}
     }
 
     private void SpawnEnemy()

@@ -4,27 +4,17 @@ using UnityEngine;
 
 public class WindMillUpgradeButton : MonoBehaviour
 {
-	public HealthBuff healthBuff;
-	public GameObject windMill;
-	public GameObject healthbar;
-	public GameManager manager;
-	public AudioScript audioScript;
-   
-	
+   public HealthBuff healthBuff;
+   public GameObject windMill;
 
    public void ApplyHealthBuff()
    {
-      int cost = 5;
-      if (windMill != null && manager.getScore() >= cost)
+      if (windMill != null)
       {
-		healthBuff.Apply(windMill);
-		manager.AddPoints(-cost);
-		healthbar.GetComponent<WindMillHealth>().SetHealth(manager.windMill.health);
-		audioScript.playConfirmUpgrade();
+         healthBuff.Apply(windMill);
       }
       else
       {
-	      audioScript.playInsufficentFunds();
          Debug.LogWarning("WindMill Gameobject is not assigned.");
       }
    }
