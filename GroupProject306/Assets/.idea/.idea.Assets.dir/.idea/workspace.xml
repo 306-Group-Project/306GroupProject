@@ -5,6 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ec7354f4-2c72-4779-bb37-1bf00eee26cc" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/Prefabs/bear-trap.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Prefabs/bear-trap.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Scripts/.idea/.idea.Scripts.dir/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Scripts/.idea/.idea.Scripts.dir/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -42,9 +43,9 @@
   },
   "keyToStringList": {
     "rider.external.source.directories": [
-      "C:\\Users\\lheur\\AppData\\Roaming\\JetBrains\\Rider2023.2\\resharper-host\\DecompilerCache",
-      "C:\\Users\\lheur\\AppData\\Roaming\\JetBrains\\Rider2023.2\\resharper-host\\SourcesCache",
-      "C:\\Users\\lheur\\AppData\\Local\\Symbols\\src"
+      "/Users/aleena/Library/Application Support/JetBrains/Rider2023.2/resharper-host/DecompilerCache",
+      "/Users/aleena/Library/Application Support/JetBrains/Rider2023.2/resharper-host/SourcesCache",
+      "/Users/aleena/.local/share/Symbols/src"
     ]
   }
 }]]></component>
@@ -58,6 +59,7 @@
       <updated>1700002920389</updated>
       <workItem from="1700002923318" duration="25000" />
       <workItem from="1700003009757" duration="894000" />
+      <workItem from="1701114829982" duration="9000" />
     </task>
     <servers />
   </component>
