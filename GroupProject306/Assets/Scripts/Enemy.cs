@@ -7,31 +7,20 @@ public class Enemy : MonoBehaviour
 {
     [SerializeField] public float moveSpeed = 0.5f;
 	[SerializeField] public float originalMoveSpeed = 0.5f;
-    [SerializeField] protected float health = 100.0f;
-    [SerializeField] protected float maxHealth = 100.0f;
+    [SerializeField] private float health = 100.0f;
+    [SerializeField] private float maxHealth = 100.0f;
 
     [SerializeField] private float damageRate = 0.7f;
     [SerializeField] private float damage = 10.0f;
     [SerializeField] private float damageTime = 0.0f ;
-    private Light mylight;
     
     public GameObject Coin; 
 
-    public bool stuck = false;
     
-    void Start()
-    {
-        mylight = GetComponent<Light>();
-    }
     // Update is called once per frame
     void Update()
     {
         Movement();
-        if (health <= maxHealth / 2.0f)
-        {
-            mylight.enabled = true;
-        }
-
     }
 
     private void Movement()
@@ -39,7 +28,7 @@ public class Enemy : MonoBehaviour
         if (GameManager.instance.windMill)
         {
             transform.LookAt(GameManager.instance.windMill.transform.position);
-            transform.position += transform.forward * moveSpeed * Time.deltaTime;
+            transform.position  += transform.forward * moveSpeed * Time.deltaTime;
         }
     }
 
@@ -49,8 +38,6 @@ public class Enemy : MonoBehaviour
 
         if(health <= 0)
         {
-            GameManager.instance.increaseEnemyKill();
-
             //GameObject effect = Instantiate(deathEffect, transform.position, transform.rotation);
             //Destroy(effect, 1.0f);
             this.GetComponentInParent<LevelSystem>().DecreaseLivingEnemies();
@@ -63,22 +50,17 @@ public class Enemy : MonoBehaviour
     void DropCoin() {
         Vector3 position = transform.position; // enemy position
 
-        GameObject coin = Instantiate(Coin, position + new Vector3(0f, 0.2f, 0f), Quaternion.identity); // coin drop 
+        GameObject coin = Instantiate(Coin, position, Quaternion.identity); // coin drop 
         coin.SetActive(true);
         //Destroy(coin,10f); 
     }
 
     private void OnTriggerEnter(Collider other)
-    {
+    { 
         if(other.gameObject.tag == "Windmill") {
             other.GetComponent<WindMill>().TakeDamge(damage);
             Destroy(this.gameObject);
             this.GetComponentInParent<LevelSystem>().DecreaseLivingEnemies();
-        } else if(other.gameObject.tag == "object")
-        {
-            Debug.Log("object");
-            transform.position -= transform.forward * moveSpeed * 10 * Time.deltaTime;
-            transform.position += transform.right * moveSpeed * 10 * Time.deltaTime;
         }
     }
 

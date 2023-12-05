@@ -17,7 +17,7 @@ GameObject:
   - component: {fileID: 4653729042599363205}
   m_Layer: 0
   m_Name: Shooter_flower_yellow
-  m_TagString: Plant
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -125,8 +125,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   health: 100
   damageTime: 0
-  decomposeDamage: 2
-  decomposeRateSeconds: 5
 --- !u!65 &4985071230654568140
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -454,6 +452,3 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 977050ac7315f50428e6b8549d66489d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damageTime: 0
-  damageRate: 1
-  damage: 10

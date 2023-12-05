@@ -119,6 +119,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   lifeTime: 10
-  moveSpeed: 2
+  moveSpeed: 1.25
   damage: 30
   curTarget: {fileID: 0}

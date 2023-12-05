@@ -36,11 +36,6 @@ public class flameThrower : MonoBehaviour
             
             explosionEnabled = false;
             loading.value = 0;
-        } 
-        else if(GameManager.instance.getScore() >= 10){
-            explosionEnabled=true;
-            loading.value = 100;
-            GameManager.instance.AddPoints(-10);
         }
     }
 
