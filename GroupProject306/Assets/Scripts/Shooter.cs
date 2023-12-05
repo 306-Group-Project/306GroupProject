@@ -7,7 +7,8 @@ public class Shooter : MonoBehaviour
 {
     public GameObject projectile;
     public float fireTime;
-    public float fireRate = 1.0f;
+    public float baseFireRate = 1.0f;
+    private float currentFireRate;
     public Transform curTarget;
     // variable for sound effect for shooting projectile
     private AudioSource projectileSound;
@@ -17,6 +18,7 @@ public class Shooter : MonoBehaviour
     {
         // this calls and sets up audiosource component
         projectileSound = GetComponent<AudioSource>();
+        currentFireRate = baseFireRate;
     }
 
     // Update is called once per frame
@@ -35,8 +37,13 @@ public class Shooter : MonoBehaviour
             
             proj.GetComponent<Projectile>().setTarget(curTarget);
             
-            fireTime = Time.time + fireRate;
+            fireTime = Time.time + currentFireRate;
         }
+    }
+
+    public void SetFireRate(float newFireRate)
+    {
+        currentFireRate = newFireRate;
     }
 
     void OnTriggerStay(Collider other)

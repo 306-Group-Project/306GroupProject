@@ -14,15 +14,16 @@ public class GameManager : MonoBehaviour
     public GameObject windmillObject;
     public GameObject smoke;
     private Transform windmillLocation;
-    private AudioSource windmillDestroyedSound;
+    public AudioScript audioScript;
 
-    public Text scoreText;
+    public Text scoreText, defenceScoreText, upgradeScoreText, offenceScoreText;
+
     public Text levelText;
+    public Text highScoreText, gameOverHighScore, gameOverCurrentScore;
     [SerializeField] private int score = 0;
-    [SerializeField] private int level = 0;
+    [SerializeField] private int level = 1;
 
     [SerializeField] private float windMillHealth = 100.0f;
-
     [SerializeField] private Camera camera;
     
     // Menus
@@ -34,10 +35,23 @@ public class GameManager : MonoBehaviour
     [SerializeField] private GameObject defenceMenu;
     [SerializeField] private GameObject upgradeMenu;
     [SerializeField] private GameObject offenceMenu;
-     public GameObject Coin; 
+    public GameObject Coin; 
     [SerializeField] private bool inMenu;
     [SerializeField] private bool isPaused;
 
+	// Text Screen Add Ons 
+	[SerializeField] private GameObject textScreenFolder; 
+
+	[SerializeField] private GameObject levelNumScreen; 
+    public Text levelFadeText;
+
+	[SerializeField] private GameObject openShopTextScreen;
+	[SerializeField] private GameObject useShopTextScreen;
+	[SerializeField] private GameObject waveTextScreen;
+	[SerializeField] private GameObject coinInstructionScreen;
+	[SerializeField] private GameObject coinTipsScreen;
+
+    public int enemyKills = 0;
 
     // Start is called before the first frame update
     void Awake()
@@ -54,10 +68,11 @@ public class GameManager : MonoBehaviour
 
     void Start()
     {
-        windmillDestroyedSound = GetComponent<AudioSource>();
+        SetHighScore(PlayerPrefs.GetInt("MaxEnemyKills", 0));        
+        
         inMenu = true;
         SetScoreText();
-        SetLevelText(level);
+        SetLevelText(level);	
         Time.timeScale = 0;
     }
 
@@ -68,39 +83,39 @@ public class GameManager : MonoBehaviour
         {
             PauseGame();
         }
+
         checkWindMillHealth();
-if (Input.GetMouseButtonDown(0)) // Assuming left mouse button for interaction
+        
+        if (Input.GetMouseButtonDown(0)) // Assuming left mouse button for interaction
         {
             Ray ray = camera.ScreenPointToRay(Input.mousePosition);
-           RaycastHit hit;
+            RaycastHit hit;
 			LayerMask mask = LayerMask.GetMask("Coin");
-           Debug.DrawRay(ray.origin, ray.direction * 10,Color.red,3f);
+            //Debug.DrawRay(ray.origin, ray.direction * 10,Color.red,3f);
     		
             if (Physics.Raycast(ray, out hit,1000f,mask,QueryTriggerInteraction.Collide))
             {
-                Debug.Log("Hit");
                 if (hit.collider != null && hit.collider.CompareTag("Coin"))
                 {
                     CollectCoin(hit.collider.gameObject);
                 }
             }
-        }
-    
+        }    
+    }
 
-void CollectCoin(GameObject coin)
+    void CollectCoin(GameObject coin)
     {
-      
-
         // Destroy the collected coin GameObject
+        audioScript.playCoinSound();
         Destroy(coin);
-        score+=1;
+        score += 1;
         SetScoreText();
     }
 
-        
+    public void increaseEnemyKill()
+    {
+        enemyKills += 1;
     }
- 
-
 
     public void checkWindMillHealth()
     {
@@ -115,7 +130,7 @@ void CollectCoin(GameObject coin)
 
                 GameObject cloud = Instantiate(smoke, windmillLocation.position, transform.rotation);
                 Destroy(windmillObject);
-                windmillDestroyedSound.Play();
+                audioScript.playWindmillDestroyed();
                 Destroy(cloud, 0.5f);
                 Invoke("EndGame", (float)0.75);
             }
@@ -127,25 +142,46 @@ void CollectCoin(GameObject coin)
         Time.timeScale = 1;
         inMenu = false;
         startMenu.SetActive(false);
+        audioScript.playMenuSwitch();
+
         gameScreen.SetActive(true);
-    }
+
+		textScreenFolder.SetActive(true); 
+		//levelNumScreen.SetActive(true); // configure animation 
+
+		// TODO 
+		// add open shop instructions screen after level screen fades out 
+		// if(level == 1){ }
+			 
+   		}
 
     public void SetScoreText()
     {
-        scoreText.text = "Score: " + score.ToString();
+        scoreText.text = "Coins: " + score.ToString();
+        defenceScoreText.text = "Coins: " + score.ToString();
+        upgradeScoreText.text = "Coins: " + score.ToString();
+        offenceScoreText.text = "Coins: " + score.ToString();
+    }
+
+    public void SetHighScore(int maxKills)
+    {
+        highScoreText.text = "High Score: " + maxKills.ToString();
+        gameOverHighScore.text = "High Score: " + maxKills.ToString();
     }
 
     public void SetLevelText(int levelCount)
     {
         levelText.text = "Level: " + levelCount.ToString();
+    	levelFadeText.text = "Level " + levelCount.ToString(); //testing
     }
 
+    public int getScore() { return score; }
+    
     public void AddPoints(int scoreToAdd)
     {
         score += scoreToAdd;
         SetScoreText();
     }
-
 
     public float getWindMillHealth()
     {
@@ -162,9 +198,11 @@ void CollectCoin(GameObject coin)
         inMenu = false;
         isPaused = false;
         Time.timeScale = 1;
+        audioScript.playMenuSwitch();
         pauseMenu.SetActive(false);
         shopMenu.SetActive(false);
         gameScreen.SetActive(true);
+		useShopTextScreen.SetActive(false);
 
     }
 
@@ -176,37 +214,51 @@ void CollectCoin(GameObject coin)
             isPaused = !isPaused;
             Time.timeScale = isPaused ? 0 : 1;
             pauseMenu.SetActive(isPaused);
+            audioScript.playMenuSwitch();
         }
     }
     
-    // set the shop menu to open on B button press, will change later
     public void OpenShopMenu()
     {
         inMenu = true;
         Time.timeScale = 0;
-        shopMenu.SetActive(true);
-        defenceMenu.SetActive(false);
+        shopMenu.SetActive(true);	
+		defenceMenu.SetActive(false);
         upgradeMenu.SetActive(false);
         offenceMenu.SetActive(false);
         gameScreen.SetActive(false);
+        audioScript.playMenuSwitch();
+	
+		if(level ==1){ 
+			useShopTextScreen.SetActive(true); // TODO add if statment for level 1 only 
+		}
+		else if (level != 1){
+			useShopTextScreen.SetActive(false);  
+		}
     }
     
     public void OpenDefenceMenu()
     {
         shopMenu.SetActive(false);
+		useShopTextScreen.SetActive(false);
         defenceMenu.SetActive(true);
+        audioScript.playMenuSwitch();
     }
 
     public void OpenUpgradeMenu()
     {
         shopMenu.SetActive(false);
+		useShopTextScreen.SetActive(false);
         upgradeMenu.SetActive(true);
+        audioScript.playMenuSwitch();
     }
     
     public void OpenOffenceMenu()
     {
         shopMenu.SetActive(false);
+		useShopTextScreen.SetActive(false);
         offenceMenu.SetActive(true);
+        audioScript.playMenuSwitch();
     }
 
     public void EndGame()
@@ -214,10 +266,11 @@ void CollectCoin(GameObject coin)
         gameScreen.SetActive(false);
         endGameScreen.SetActive(true);
         Time.timeScale = 0;
-    }
+        gameOverCurrentScore.text = "Current Score: " + enemyKills.ToString();
 
-    public void RestartGame()
-    {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        if (PlayerPrefs.GetInt("MaxEnemyKills", 0) < enemyKills)
+        {
+            PlayerPrefs.SetInt("MaxEnemyKills", enemyKills);
+        }
     }
 }

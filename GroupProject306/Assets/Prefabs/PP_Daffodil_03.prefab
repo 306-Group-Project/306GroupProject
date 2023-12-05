@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 5973120480195360293}
   m_Layer: 0
   m_Name: PP_Daffodil_03
-  m_TagString: Untagged
+  m_TagString: Plant
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -229,6 +229,7 @@ MonoBehaviour:
   projectile: {fileID: 5567386032665859044, guid: bed2c45b6228b154f9fe31419edf86d1, type: 3}
   fireTime: 0.5
   fireRate: 1
+  curTarget: {fileID: 0}
 --- !u!96 &4402158876685148958
 TrailRenderer:
   serializedVersion: 3

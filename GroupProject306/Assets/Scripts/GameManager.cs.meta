@@ -3,7 +3,28 @@ guid: 52759a16b4bf52a42b82ca934a51cf06
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - windMill: {instanceID: 0}
+  - windmillObject: {fileID: 1335958607354298, guid: 6d9ffac09535f23449762fd769a551d4, type: 3}
+  - smoke: {instanceID: 0}
+  - scoreText: {instanceID: 0}
+  - defenceScoreText: {instanceID: 0}
+  - upgradeScoreText: {instanceID: 0}
+  - offenceScoreText: {instanceID: 0}
+  - levelText: {instanceID: 0}
+  - highScoreText: {instanceID: 0}
+  - gameOverHighScore: {instanceID: 0}
+  - gameOverCurrentScore: {instanceID: 0}
+  - camera: {instanceID: 0}
+  - pauseMenu: {instanceID: 0}
+  - startMenu: {instanceID: 0}
+  - gameScreen: {instanceID: 0}
+  - endGameScreen: {instanceID: 0}
+  - shopMenu: {instanceID: 0}
+  - defenceMenu: {instanceID: 0}
+  - upgradeMenu: {instanceID: 0}
+  - offenceMenu: {instanceID: 0}
+  - Coin: {instanceID: 0}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 

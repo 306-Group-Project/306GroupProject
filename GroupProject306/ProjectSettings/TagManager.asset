@@ -12,6 +12,8 @@ TagManager:
   - Levelsystem
   - water
   - Fire
+  - explosion
+  - Plant
   layers:
   - Default
   - TransparentFX

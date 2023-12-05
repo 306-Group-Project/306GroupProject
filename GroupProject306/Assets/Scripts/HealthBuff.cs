@@ -9,17 +9,17 @@ public class HealthBuff : UpgradeEffect
 
   public override void Apply(GameObject target)
   {
-    Debug.Log("Apply method called."); // Add this line
+    Debug.Log("Apply method called."); 
 
     if (target != null)
     {
       WindMill windMill = target.GetComponent<WindMill>();
       if (windMill != null)
       {
-        Debug.Log("WindMill component found."); // Add this line
+        Debug.Log("WindMill component found."); 
 
         windMill.health += amount;
-        Debug.Log("Health increased by " + amount + ". New health: " + windMill.health); // Add this line
+        Debug.Log("Health increased by " + amount + ". New health: " + windMill.health); 
       }
       else
       {
