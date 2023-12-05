@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class EnemySpawner : MonoBehaviour
 {
-    public GameObject enemyPrefab;
+    public GameObject bunny;
+    public GameObject bear;
     [Range(0, Mathf.PI)] public float spawnArcRange = Mathf.PI/2;
     [Range(0, 2 * Mathf.PI)] public float angleOffset;
     [Range(1, 10)] public float spawnerDistanceFromWindmill = 2.0f;
@@ -71,7 +72,8 @@ public class EnemySpawner : MonoBehaviour
                 // this should spawn in the enemies as children of the level system
                 if (levelManager.GetComponent<LevelSystem>().spawnerStatus())
                 {
-                    (Instantiate(enemyPrefab, spawnPosition, Quaternion.identity) as GameObject).transform.parent = levelManager.transform;
+	                
+                    (Instantiate(bunny, spawnPosition, Quaternion.identity) as GameObject).transform.parent = levelManager.transform;
                     levelManager.GetComponent<LevelSystem>().IncreaseEnemyCount();
                 }
                 spawnTimer = Time.time + spawnRate;

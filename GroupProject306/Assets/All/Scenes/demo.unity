@@ -2732,7 +2732,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 839b6dfcb2163ad49b443f6f777ba260, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemyPrefab: {fileID: 2561080276226120825, guid: 6b3070fab770242cd9603c46777871ca, type: 3}
+  bunny: {fileID: 0}
+  bear: {fileID: 0}
   spawnArcRange: 0
   angleOffset: 0
   spawnerDistanceFromWindmill: 5
@@ -5401,7 +5402,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 839b6dfcb2163ad49b443f6f777ba260, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemyPrefab: {fileID: 607780076235608035, guid: 336f45176fb08804781a230dca8bfbc5, type: 3}
+  bunny: {fileID: 0}
+  bear: {fileID: 0}
   spawnArcRange: 0
   angleOffset: 0
   spawnerDistanceFromWindmill: 5
@@ -6901,7 +6903,7 @@ MonoBehaviour:
 
     HP: 100
 
-    Cost: 2
+    Cost: 1
 
 '
   m_isRightToLeft: 0
@@ -11121,7 +11123,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 839b6dfcb2163ad49b443f6f777ba260, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemyPrefab: {fileID: 1115346038830892, guid: 468485b2b792cce429ce332082a11a20, type: 3}
+  bunny: {fileID: 1115346038830892, guid: 468485b2b792cce429ce332082a11a20, type: 3}
+  bear: {fileID: 2561080276226120825, guid: 6b3070fab770242cd9603c46777871ca, type: 3}
   spawnArcRange: 1.5707964
   angleOffset: 0
   spawnerDistanceFromWindmill: 4
@@ -13654,7 +13657,7 @@ MonoBehaviour:
   highScoreText: {fileID: 1018957935}
   gameOverHighScore: {fileID: 1284786544}
   gameOverCurrentScore: {fileID: 1170398511}
-  score: 15
+  score: 30
   level: 1
   windMillHealth: 100
   camera: {fileID: 2119514438}

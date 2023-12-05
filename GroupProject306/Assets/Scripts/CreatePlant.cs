@@ -73,7 +73,7 @@ public class CreatePlant : MonoBehaviour
     
     public void hyacinthButton()
     {
-        int cost = 2;
+        int cost = 1;
         if (manager.getScore() >= cost)
         {
             manager.AddPoints(-cost);
