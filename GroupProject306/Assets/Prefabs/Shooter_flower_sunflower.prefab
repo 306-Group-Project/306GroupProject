@@ -100,7 +100,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   projectile: {fileID: 3156315201882226386, guid: 10865ee4399d273499f4d2968361dd6d, type: 3}
   fireTime: 0
-  fireRate: 1
+  baseFireRate: 1
   curTarget: {fileID: 0}
 --- !u!82 &3208805590497784957
 AudioSource:
@@ -251,8 +251,8 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 1.329, y: 0.07800007, z: 0.259}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_LocalScale: {x: 2, y: 2, z: 2}
+  m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 8514438337333513709}
   - {fileID: 3821680166714471049}

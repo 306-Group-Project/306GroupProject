@@ -8,6 +8,7 @@ public class Projectile : MonoBehaviour
     [SerializeField] private float moveSpeed = 1.25f;
     [SerializeField] private float damage = 30.0f;
     public Transform curTarget = null;
+    public GameObject hitEffect;
 
     // Start is called before the first frame update
     void Start()
@@ -35,6 +36,8 @@ public class Projectile : MonoBehaviour
        if (other.transform.tag == "Enemy")
         {
             other.GetComponent<Enemy>().TakeDamage(damage);
+            GameObject effect = Instantiate(hitEffect, other.transform);
+            Destroy(effect, 0.25f);
             Destroy(this.gameObject);
         }
     }
