@@ -265,12 +265,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   moveSpeed: 0.5
   originalMoveSpeed: 0.5
-  health: 100
-  maxHealth: 100
+  health: 75
+  maxHealth: 75
   damageRate: 0.7
-  damage: 10
+  damage: 15
   damageTime: 0
   Coin: {fileID: 1498403948531744, guid: fa2c57d3f28a5e6419393e8bc3eeb32a, type: 3}
+  stuck: 0
 --- !u!136 &1066629533263246696
 CapsuleCollider:
   m_ObjectHideFlags: 0

@@ -5,13 +5,10 @@ using UnityEngine;
 public class EnemySpawner : MonoBehaviour
 {
     public GameObject bunny;
-<<<<<<< Updated upstream
-    public GameObject bear;
-=======
     public GameObject bug;
     public GameObject bear;
-    
->>>>>>> Stashed changes
+
+
     [Range(0, Mathf.PI)] public float spawnArcRange = Mathf.PI/2;
     [Range(0, 2 * Mathf.PI)] public float angleOffset;
     [Range(1, 10)] public float spawnerDistanceFromWindmill = 2.0f;
@@ -46,7 +43,7 @@ public class EnemySpawner : MonoBehaviour
 
             float randAngle = Random.value * spawnArcRange;
             randAngle += angleOffset;
-            
+
             float x = Mathf.Cos(randAngle) * spawnerDistanceFromWindmill;
             float z = Mathf.Sin(randAngle) * spawnerDistanceFromWindmill;
 
@@ -57,11 +54,6 @@ public class EnemySpawner : MonoBehaviour
                 // this should spawn in the enemies as children of the level system
                 if (levelManager.GetComponent<LevelSystem>().spawnerStatus())
                 {
-<<<<<<< Updated upstream
-	                
-                    (Instantiate(bunny, spawnPosition, Quaternion.identity) as GameObject).transform.parent = levelManager.transform;
-                    levelManager.GetComponent<LevelSystem>().IncreaseEnemyCount();
-=======
 	                if (levelManager.GetComponent<LevelSystem>().getLevelCount() <= 2)
 	                {
 		                (Instantiate(bunny, spawnPosition, Quaternion.identity) as GameObject).transform.parent =
@@ -74,39 +66,48 @@ public class EnemySpawner : MonoBehaviour
 
 		                float rand = Random.Range(0, 10);
 		                if (rand < 8)
+
+	                int rand = Random.Range(0, 11);
+	                if (levelManager.GetComponent<LevelSystem>().getLevel() <= 3)
+	                {
+		                (Instantiate(bunny, spawnPosition, Quaternion.identity) as GameObject).transform.parent =
+			                levelManager.transform;
+		                levelManager.GetComponent<LevelSystem>().IncreaseEnemyCount();
+		                Debug.Log("rand = "+ rand);
+	                } else if (levelManager.GetComponent<LevelSystem>().getLevel() > 3 && levelManager.GetComponent<LevelSystem>().getLevel() <= 6)
+	                {
+		                if (rand < 7)
 		                {
 			                (Instantiate(bunny, spawnPosition, Quaternion.identity) as GameObject).transform.parent =
 				                levelManager.transform;
 			                levelManager.GetComponent<LevelSystem>().IncreaseEnemyCount();
-			                Debug.Log("rand = " + rand);
+			                Debug.Log("rand = "+ rand);
 		                }
 		                else
 		                {
 			                (Instantiate(bear, spawnPosition, Quaternion.identity) as GameObject).transform.parent =
 				                levelManager.transform;
 			                levelManager.GetComponent<LevelSystem>().IncreaseEnemyCount();
-			                Debug.Log("rand = " + rand);
+			                Debug.Log("rand = "+ rand);
 		                }
 	                }
 	                else
 	                {
-		                float rand = Random.Range(0, 10);
-		                if (rand < 3)
+		                if (rand < 2)
 		                {
 			                (Instantiate(bunny, spawnPosition, Quaternion.identity) as GameObject).transform.parent =
 				                levelManager.transform;
 			                levelManager.GetComponent<LevelSystem>().IncreaseEnemyCount();
-			                Debug.Log("rand = " + rand);
+			                Debug.Log("rand = "+ rand);
 		                }
 		                else
 		                {
 			                (Instantiate(bear, spawnPosition, Quaternion.identity) as GameObject).transform.parent =
 				                levelManager.transform;
 			                levelManager.GetComponent<LevelSystem>().IncreaseEnemyCount();
-			                Debug.Log("rand = " + rand);
+			                Debug.Log("rand = "+ rand);
 		                }
 	                }
->>>>>>> Stashed changes
                 }
                 spawnTimer = Time.time + spawnRate;
             }

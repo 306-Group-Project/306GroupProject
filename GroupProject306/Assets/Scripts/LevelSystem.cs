@@ -10,7 +10,7 @@ public class LevelSystem : MonoBehaviour
     /*
      * Holds and tracks how many enemies have spawned and how many enemies have died
      * and creates levels with scaling difficulty. Generates variable for the amount of enemies
-     * per level based on what level the game is on. Activates spawners to spawn them 
+     * per level based on what level the game is on. Activates spawners to spawn them
      * until enough enemies have been defeated
      * Variables
      * enemiesInLevel: int, number of enemies in the level
@@ -53,10 +53,10 @@ public class LevelSystem : MonoBehaviour
                 gManager.GetComponent<GameManager>().OpenShopMenu();
                 enemybar.GetComponent<EnemyWaveBar>().resetMax(enemiesInLevel);
                 spawnEnemies = true;
-                
-                
+
+
             }
-            
+
         }
         else
         {
@@ -91,9 +91,10 @@ public class LevelSystem : MonoBehaviour
 
     }
 
-    public int getLevelCount()
+    public int getLevel()
     {
         return levelCount;
     }
+
 
 }
