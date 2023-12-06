@@ -38,7 +38,11 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
+<<<<<<< Updated upstream
   m_IndirectSpecularColor: {r: 0.43718457, g: 0.75444883, b: 1.0290297, a: 1}
+=======
+  m_IndirectSpecularColor: {r: 0.437184, g: 0.7544493, b: 1.0290301, a: 1}
+>>>>>>> Stashed changes
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -2383,6 +2387,7 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 326365248}
   m_CullTransparentMesh: 1
+<<<<<<< Updated upstream
 --- !u!1 &326863298
 GameObject:
   m_ObjectHideFlags: 0
@@ -2509,6 +2514,8 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+=======
+>>>>>>> Stashed changes
 --- !u!1 &328966300
 GameObject:
   m_ObjectHideFlags: 0
@@ -4713,6 +4720,7 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 533729778}
   m_CullTransparentMesh: 1
+<<<<<<< Updated upstream
 --- !u!1 &555505834
 GameObject:
   m_ObjectHideFlags: 0
@@ -4839,6 +4847,8 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+=======
+>>>>>>> Stashed changes
 --- !u!1 &560038427
 GameObject:
   m_ObjectHideFlags: 0
@@ -6150,7 +6160,11 @@ MonoBehaviour:
 
     HP: 100
 
+<<<<<<< Updated upstream
     Cost: 10
+=======
+    Cost: 1
+>>>>>>> Stashed changes
 
 '
   m_isRightToLeft: 0
@@ -9930,9 +9944,16 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 839b6dfcb2163ad49b443f6f777ba260, type: 3}
+<<<<<<< Updated upstream
   m_Name:
   m_EditorClassIdentifier:
   bunny: {fileID: 1115346038830892, guid: 468485b2b792cce429ce332082a11a20, type: 3}
+=======
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bunny: {fileID: 1115346038830892, guid: 468485b2b792cce429ce332082a11a20, type: 3}
+  bug: {fileID: 607780076235608035, guid: 336f45176fb08804781a230dca8bfbc5, type: 3}
+>>>>>>> Stashed changes
   bear: {fileID: 2561080276226120825, guid: 6b3070fab770242cd9603c46777871ca, type: 3}
   spawnArcRange: 1.5707964
   angleOffset: 0
@@ -17148,8 +17169,6 @@ SceneRoots:
   - {fileID: 1330688090}
   - {fileID: 1617430755}
   - {fileID: 1234586330}
-  - {fileID: 326863303}
-  - {fileID: 555505839}
   - {fileID: 2014525605}
   - {fileID: 1864757689556541985}
   - {fileID: 1375910542}
