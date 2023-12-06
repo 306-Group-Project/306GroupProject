@@ -124,3 +124,4 @@ MonoBehaviour:
   moveSpeed: 1.25
   damage: 30
   curTarget: {fileID: 0}
+  hitEffect: {fileID: 985483039366664255, guid: f91edac4d13fc4343ba96bb6a843ad05, type: 3}

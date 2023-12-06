@@ -84,6 +84,14 @@ public class SmokerMushroom : MonoBehaviour
         }
     }
 
+    private void OnTriggerStay(Collider other)
+    {
+        if(other.transform.tag == "Enemy")
+        {
+            other.GetComponent<Enemy>().TakeDamage(damage);
+        }
+    }
+
     private void decompose()
     {
         health -= decomposeDamage;
