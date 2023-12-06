@@ -91,6 +91,10 @@ public class LevelSystem : MonoBehaviour
 
     }
 
+    public int getLevel()
+    {
+        return levelCount;
+    }
     
 
 }
