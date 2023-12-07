@@ -4,52 +4,35 @@ using UnityEngine;
 
 public class EnemySpawner : MonoBehaviour
 {
-    public GameObject enemyPrefab;
-    [Range(0, Mathf.PI)] public float spawnArcRange = Mathf.PI/2;
+    public GameObject bunny;
+    public GameObject bug;
+    public GameObject bear;
+
+
+    [Range(0, Mathf.PI)] public float spawnArcRange = Mathf.PI / 2;
     [Range(0, 2 * Mathf.PI)] public float angleOffset;
     [Range(1, 10)] public float spawnerDistanceFromWindmill = 2.0f;
 
     [SerializeField] private float spawnRate = 2.0f;
-	[SerializeField] private float initialDelay = 6.0f; // inital spawn delay 
-
     private float spawnTimer;
-	private float initialDelayTimer; 
-	private bool canSpawn = false; 
 
     public GameObject spawner;
 
     // Level Manager object
     public GameObject levelManager;
 
-	void Start(){
-		initialDelayTimer = initialDelay; 
-	} 
-
     // Update is called once per frame
     void Update()
     {
-		// count down the initial delay before eneimes start to spawn 
-		if (initialDelayTimer > 0) 
-		{
-			initialDelayTimer -= Time.deltaTime; 
-			if (initialDelayTimer <= 0)
-			{	
-				canSpawn = true; 
-			}
-		} 
-		
-		if (canSpawn)
-		{
         SpawnEnemy();
-		}
     }
 
     private void SpawnEnemy()
     {
 
-            if (Time.time > spawnTimer)
-            {
-                Vector3 spawnPosition = transform.position;
+        if (Time.time > spawnTimer)
+        {
+            Vector3 spawnPosition = transform.position;
 
             // Instantiate the enemy at the spawner's position
             //Instantiate(enemyPrefab, spawnPosition, Quaternion.identity);
@@ -60,22 +43,71 @@ public class EnemySpawner : MonoBehaviour
 
             float randAngle = Random.value * spawnArcRange;
             randAngle += angleOffset;
-            
+
             float x = Mathf.Cos(randAngle) * spawnerDistanceFromWindmill;
             float z = Mathf.Sin(randAngle) * spawnerDistanceFromWindmill;
 
             Debug.DrawLine(Vector3.zero, new Vector3(x, 0.2f, z), Color.red, 1f);
 
-            spawner.transform.position = new Vector3 (x, 0.2f, z);
+            spawner.transform.position = new Vector3(x, 0.2f, z);
 
-                // this should spawn in the enemies as children of the level system
-                if (levelManager.GetComponent<LevelSystem>().spawnerStatus())
+            // this should spawn in the enemies as children of the level system
+            if (levelManager.GetComponent<LevelSystem>().spawnerStatus())
+            {
+                if (levelManager.GetComponent<LevelSystem>().getLevel() <= 2)
                 {
-                    (Instantiate(enemyPrefab, spawnPosition, Quaternion.identity) as GameObject).transform.parent = levelManager.transform;
+                    (Instantiate(bunny, spawnPosition, Quaternion.identity) as GameObject).transform.parent =
+                        levelManager.transform;
                     levelManager.GetComponent<LevelSystem>().IncreaseEnemyCount();
+
+                }
+                else if (levelManager.GetComponent<LevelSystem>().getLevel() > 2 && levelManager.GetComponent<LevelSystem>().getLevel() <= 5)
+                {
+
+                    float rand = Random.Range(0, 10);
+                    if (rand < 8)
+
+                        //int rand = Random.Range(0, 11); why is there two rand? can't do that
+                    if (levelManager.GetComponent<LevelSystem>().getLevel() <= 3)
+                    {
+                        (Instantiate(bunny, spawnPosition, Quaternion.identity) as GameObject).transform.parent =
+                            levelManager.transform;
+                        levelManager.GetComponent<LevelSystem>().IncreaseEnemyCount();
+                       
+                    }
+                    else if (levelManager.GetComponent<LevelSystem>().getLevel() > 3 && levelManager.GetComponent<LevelSystem>().getLevel() <= 6)
+                    {
+                        if (rand < 7)
+                        {
+                            (Instantiate(bunny, spawnPosition, Quaternion.identity) as GameObject).transform.parent =
+                                levelManager.transform;
+                            levelManager.GetComponent<LevelSystem>().IncreaseEnemyCount();
+                        }
+                        else
+                        {
+                            (Instantiate(bear, spawnPosition, Quaternion.identity) as GameObject).transform.parent =
+                                levelManager.transform;
+                            levelManager.GetComponent<LevelSystem>().IncreaseEnemyCount();
+                        }
+                    }
+                    else
+                    {
+                        if (rand < 2)
+                        {
+                            (Instantiate(bunny, spawnPosition, Quaternion.identity) as GameObject).transform.parent =
+                                levelManager.transform;
+                            levelManager.GetComponent<LevelSystem>().IncreaseEnemyCount();   
+                        }
+                        else
+                        {
+                            (Instantiate(bear, spawnPosition, Quaternion.identity) as GameObject).transform.parent =
+                                levelManager.transform;
+                            levelManager.GetComponent<LevelSystem>().IncreaseEnemyCount();
+                        }
+                    }
                 }
                 spawnTimer = Time.time + spawnRate;
             }
-
+        }
     }
 }

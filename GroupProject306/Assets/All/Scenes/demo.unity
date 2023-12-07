@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.43718317, g: 0.75444984, b: 1.0290304, a: 1}
+  m_IndirectSpecularColor: {r: 0.43849614, g: 0.7540145, b: 1.0313286, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -2732,12 +2732,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 839b6dfcb2163ad49b443f6f777ba260, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemyPrefab: {fileID: 2561080276226120825, guid: 6b3070fab770242cd9603c46777871ca, type: 3}
+  bunny: {fileID: 0}
+  bug: {fileID: 0}
+  bear: {fileID: 0}
   spawnArcRange: 0
   angleOffset: 0
   spawnerDistanceFromWindmill: 5
   spawnRate: 1
-  initialDelay: 6
   spawner: {fileID: 326863298}
   levelManager: {fileID: 1617430753}
 --- !u!65 &326863300
@@ -5401,12 +5402,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 839b6dfcb2163ad49b443f6f777ba260, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemyPrefab: {fileID: 607780076235608035, guid: 336f45176fb08804781a230dca8bfbc5, type: 3}
+  bunny: {fileID: 0}
+  bug: {fileID: 0}
+  bear: {fileID: 0}
   spawnArcRange: 0
   angleOffset: 0
   spawnerDistanceFromWindmill: 5
   spawnRate: 3
-  initialDelay: 6
   spawner: {fileID: 555505834}
   levelManager: {fileID: 1617430753}
 --- !u!65 &555505836
@@ -11121,12 +11123,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 839b6dfcb2163ad49b443f6f777ba260, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemyPrefab: {fileID: 1115346038830892, guid: 468485b2b792cce429ce332082a11a20, type: 3}
+  bunny: {fileID: 1115346038830892, guid: 468485b2b792cce429ce332082a11a20, type: 3}
+  bug: {fileID: 607780076235608035, guid: 336f45176fb08804781a230dca8bfbc5, type: 3}
+  bear: {fileID: 2561080276226120825, guid: 6b3070fab770242cd9603c46777871ca, type: 3}
   spawnArcRange: 1.5707964
   angleOffset: 0
   spawnerDistanceFromWindmill: 4
   spawnRate: 2
-  initialDelay: 6
   spawner: {fileID: 1234586325}
   levelManager: {fileID: 1617430753}
 --- !u!65 &1234586327
