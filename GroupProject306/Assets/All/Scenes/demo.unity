@@ -2725,7 +2725,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bunny: {fileID: 0}
-  bug: {fileID: 0}
   bear: {fileID: 0}
   spawnArcRange: 0
   angleOffset: 0
@@ -5394,7 +5393,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bunny: {fileID: 0}
-  bug: {fileID: 0}
   bear: {fileID: 0}
   spawnArcRange: 0
   angleOffset: 0
@@ -11113,7 +11111,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bunny: {fileID: 1115346038830892, guid: 468485b2b792cce429ce332082a11a20, type: 3}
-  bug: {fileID: 607780076235608035, guid: 336f45176fb08804781a230dca8bfbc5, type: 3}
   bear: {fileID: 2561080276226120825, guid: 6b3070fab770242cd9603c46777871ca, type: 3}
   spawnArcRange: 1.15
   angleOffset: 0
@@ -13634,6 +13631,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 52759a16b4bf52a42b82ca934a51cf06, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  audioScript: {fileID: 1513559563}
   windMill: {fileID: 1866192525}
   windmillObject: {fileID: 1866192521}
   smoke: {fileID: 104829970813648393, guid: d3015b7eea383f64d8b81f965cc466e7, type: 3}
@@ -13899,8 +13897,8 @@ MonoBehaviour:
   windMillDestroyed: {fileID: 1513559559}
   coinCollected: {fileID: 1513559562}
   menuSwitch: {fileID: 1513559564}
-  insufficientFunds: {fileID: 1513559567}
-  confirmPlant: {fileID: 1513559565}
+  insufficientFunds: {fileID: 1513559562}
+  confirmPlant: {fileID: 1513559566}
   confirmUpgrade: {fileID: 1513559566}
 --- !u!82 &1513559564
 AudioSource:
@@ -14008,7 +14006,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 36a97d152a07e9f489c73b24e2870cf0, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 1ed8fb76fc64e4e46847348138782234, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -14104,7 +14102,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 05ea3f67ce8294747886594e37015ea3, type: 3}
+  m_audioClip: {fileID: 8300000, guid: abdbbfd33a46f4549987385f85c536b5, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 0.233
   m_Pitch: 1
@@ -14200,7 +14198,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 1ed8fb76fc64e4e46847348138782234, type: 3}
+  m_audioClip: {fileID: 8300000, guid: abdbbfd33a46f4549987385f85c536b5, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1

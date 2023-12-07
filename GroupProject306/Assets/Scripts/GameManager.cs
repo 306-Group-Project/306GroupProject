@@ -8,7 +8,8 @@ using UnityEngine.UI;
 public class GameManager : MonoBehaviour
 {
     public static GameManager instance = null;
-
+    public AudioScript audioScript;
+    
     // windmill items
     public WindMill windMill;
     public GameObject windmillObject;
@@ -99,6 +100,7 @@ void CollectCoin(GameObject coin)
         Destroy(coin);
         score+=1;
         SetScoreText();
+        audioScript.playCoinSound();
     }
 
         
@@ -132,6 +134,7 @@ void CollectCoin(GameObject coin)
         inMenu = false;
         startMenu.SetActive(false);
         gameScreen.SetActive(true);
+        audioScript.playMenuSwitch();
     }
 
     public void SetScoreText()
@@ -178,6 +181,7 @@ void CollectCoin(GameObject coin)
         pauseMenu.SetActive(false);
         shopMenu.SetActive(false);
         gameScreen.SetActive(true);
+        audioScript.playMenuSwitch();
 
     }
 
@@ -189,7 +193,9 @@ void CollectCoin(GameObject coin)
             isPaused = !isPaused;
             Time.timeScale = isPaused ? 0 : 1;
             pauseMenu.SetActive(isPaused);
+            audioScript.playMenuSwitch();
         }
+        
     }
     
     // set the shop menu to open on B button press, will change later
@@ -202,24 +208,32 @@ void CollectCoin(GameObject coin)
         upgradeMenu.SetActive(false);
         offenceMenu.SetActive(false);
         gameScreen.SetActive(false);
+        audioScript.playMenuSwitch();
+
     }
     
     public void OpenDefenceMenu()
     {
         shopMenu.SetActive(false);
         defenceMenu.SetActive(true);
+        audioScript.playMenuSwitch();
+
     }
 
     public void OpenUpgradeMenu()
     {
         shopMenu.SetActive(false);
         upgradeMenu.SetActive(true);
+        audioScript.playMenuSwitch();
+
     }
     
     public void OpenOffenceMenu()
     {
         shopMenu.SetActive(false);
         offenceMenu.SetActive(true);
+        audioScript.playMenuSwitch();
+
     }
 
     public void EndGame()
@@ -227,10 +241,14 @@ void CollectCoin(GameObject coin)
         gameScreen.SetActive(false);
         endGameScreen.SetActive(true);
         Time.timeScale = 0;
+        windmillDestroyedSound.Play();
+
     }
 
     public void RestartGame()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        audioScript.playMenuSwitch();
+
     }
 }
