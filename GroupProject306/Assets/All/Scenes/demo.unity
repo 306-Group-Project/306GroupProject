@@ -13639,6 +13639,7 @@ MonoBehaviour:
   defenceScoreText: {fileID: 1792474240}
   upgradeScoreText: {fileID: 532993233}
   offenceScoreText: {fileID: 1369495307}
+  gameOverScreenScore: {fileID: 1170398511}
   levelText: {fileID: 1564376301}
   score: 20
   level: 1
