@@ -8,15 +8,16 @@ using UnityEngine.UI;
 public class GameManager : MonoBehaviour
 {
     public static GameManager instance = null;
+    public AudioScript audioScript;
 
     // windmill items
     public WindMill windMill;
     public GameObject windmillObject;
     public GameObject smoke;
     private Transform windmillLocation;
-    public AudioScript audioScript;
+    
 
-    public Text scoreText, defenceScoreText, upgradeScoreText, offenceScoreText;
+    public Text scoreText, defenceScoreText, upgradeScoreText, offenceScoreText, gameOverScreenScore;
 
     public Text levelText;
     public Text highScoreText, gameOverHighScore, gameOverCurrentScore;
@@ -69,7 +70,6 @@ public class GameManager : MonoBehaviour
     void Start()
     {
         SetHighScore(PlayerPrefs.GetInt("MaxEnemyKills", 0));        
-        
         inMenu = true;
         SetScoreText();
         SetLevelText(level);	
@@ -161,6 +161,7 @@ public class GameManager : MonoBehaviour
         defenceScoreText.text = "Coins: " + score.ToString();
         upgradeScoreText.text = "Coins: " + score.ToString();
         offenceScoreText.text = "Coins: " + score.ToString();
+        gameOverScreenScore.text = "Score: " + score.ToString();
     }
 
     public void SetHighScore(int maxKills)

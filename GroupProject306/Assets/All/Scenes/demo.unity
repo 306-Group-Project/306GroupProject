@@ -2733,7 +2733,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bunny: {fileID: 0}
-  bug: {fileID: 0}
   bear: {fileID: 0}
   spawnArcRange: 0
   angleOffset: 0
@@ -5403,7 +5402,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bunny: {fileID: 0}
-  bug: {fileID: 0}
   bear: {fileID: 0}
   spawnArcRange: 0
   angleOffset: 0
@@ -11124,7 +11122,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bunny: {fileID: 1115346038830892, guid: 468485b2b792cce429ce332082a11a20, type: 3}
-  bug: {fileID: 607780076235608035, guid: 336f45176fb08804781a230dca8bfbc5, type: 3}
   bear: {fileID: 2561080276226120825, guid: 6b3070fab770242cd9603c46777871ca, type: 3}
   spawnArcRange: 1.15
   angleOffset: 0
@@ -13645,14 +13642,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 52759a16b4bf52a42b82ca934a51cf06, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  audioScript: {fileID: 1513559563}
   windMill: {fileID: 1866192525}
   windmillObject: {fileID: 1866192521}
   smoke: {fileID: 104829970813648393, guid: d3015b7eea383f64d8b81f965cc466e7, type: 3}
-  audioScript: {fileID: 1513559563}
   scoreText: {fileID: 626487974}
   defenceScoreText: {fileID: 1792474240}
   upgradeScoreText: {fileID: 532993233}
   offenceScoreText: {fileID: 1369495307}
+  gameOverScreenScore: {fileID: 1170398511}
   levelText: {fileID: 1564376301}
   highScoreText: {fileID: 1018957935}
   gameOverHighScore: {fileID: 1284786544}

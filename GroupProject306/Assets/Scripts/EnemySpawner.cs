@@ -5,7 +5,6 @@ using UnityEngine;
 public class EnemySpawner : MonoBehaviour
 {
     public GameObject bunny;
-    public GameObject bug;
     public GameObject bear;
 
 
