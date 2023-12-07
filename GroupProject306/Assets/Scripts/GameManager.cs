@@ -17,7 +17,11 @@ public class GameManager : MonoBehaviour
     private AudioSource windmillDestroyedSound;
 
     public Text scoreText;
+    public Text defenceScoreText;
+    public Text upgradeScoreText;
+    public Text offenceScoreText;
     public Text levelText;
+    
     [SerializeField] private int score = 0;
     [SerializeField] private int level = 0;
 
@@ -133,6 +137,10 @@ void CollectCoin(GameObject coin)
     public void SetScoreText()
     {
         scoreText.text = "Score: " + score.ToString();
+        defenceScoreText.text = "Score: " + score.ToString();
+        upgradeScoreText.text = "Score: " + score.ToString();
+        offenceScoreText.text = "Score: " + score.ToString();
+
     }
 
     public void SetLevelText(int levelCount)
@@ -144,6 +152,11 @@ void CollectCoin(GameObject coin)
     {
         score += scoreToAdd;
         SetScoreText();
+    }
+    
+    public int getScore()
+    {
+        return score;
     }
 
 
