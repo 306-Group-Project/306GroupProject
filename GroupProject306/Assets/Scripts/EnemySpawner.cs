@@ -9,7 +9,7 @@ public class EnemySpawner : MonoBehaviour
     public GameObject bear;
 
 
-    [Range(0, Mathf.PI)] public float spawnArcRange = Mathf.PI/2;
+    [Range(0, Mathf.PI)] public float spawnArcRange = Mathf.PI / 2;
     [Range(0, 2 * Mathf.PI)] public float angleOffset;
     [Range(1, 10)] public float spawnerDistanceFromWindmill = 2.0f;
 
@@ -30,9 +30,9 @@ public class EnemySpawner : MonoBehaviour
     private void SpawnEnemy()
     {
 
-            if (Time.time > spawnTimer)
-            {
-                Vector3 spawnPosition = transform.position;
+        if (Time.time > spawnTimer)
+        {
+            Vector3 spawnPosition = transform.position;
 
             // Instantiate the enemy at the spawner's position
             //Instantiate(enemyPrefab, spawnPosition, Quaternion.identity);
@@ -49,10 +49,12 @@ public class EnemySpawner : MonoBehaviour
 
             Debug.DrawLine(Vector3.zero, new Vector3(x, 0.2f, z), Color.red, 1f);
 
-            spawner.transform.position = new Vector3 (x, 0.2f, z);
+            spawner.transform.position = new Vector3(x, 0.2f, z);
 
-                // this should spawn in the enemies as children of the level system
-                if (levelManager.GetComponent<LevelSystem>().spawnerStatus())
+            // this should spawn in the enemies as children of the level system
+            if (levelManager.GetComponent<LevelSystem>().spawnerStatus())
+            {
+                if (levelManager.GetComponent<LevelSystem>().getLevel() <= 2)
                 {
 	                if (levelManager.GetComponent<LevelSystem>().getLevelCount() <= 2)
 	                {
@@ -111,6 +113,6 @@ public class EnemySpawner : MonoBehaviour
                 }
                 spawnTimer = Time.time + spawnRate;
             }
-
+        }
     }
 }
