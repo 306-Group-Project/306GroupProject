@@ -9,7 +9,7 @@ public class EnemySpawner : MonoBehaviour
     public GameObject bear;
 
 
-    [Range(0, Mathf.PI)] public float spawnArcRange = Mathf.PI / 2;
+    [Range(0, 2 * Mathf.PI)] public float spawnArcRange = Mathf.PI / 2;
     [Range(0, 2 * Mathf.PI)] public float angleOffset;
     [Range(1, 10)] public float spawnerDistanceFromWindmill = 2.0f;
 
@@ -20,6 +20,11 @@ public class EnemySpawner : MonoBehaviour
 
     // Level Manager object
     public GameObject levelManager;
+
+    private void Start()
+    {
+        angleOffset = Random.Range(0, 2 * Mathf.PI);
+    }
 
     // Update is called once per frame
     void Update()
@@ -32,14 +37,31 @@ public class EnemySpawner : MonoBehaviour
 
         if (Time.time > spawnTimer)
         {
-            Vector3 spawnPosition = transform.position;
+            int level = levelManager.GetComponent<LevelSystem>().getLevel();
 
-            // Instantiate the enemy at the spawner's position
-            //Instantiate(enemyPrefab, spawnPosition, Quaternion.identity);
+            // level 2 and lower, quarter circle
+            if (level <= 2)
+            {
+                spawnArcRange += 0;
+            }
 
-            //Vector2 randSpawnerSpot = Random.insideUnitCircle.normalized * 2.0f;
+            // level 3 and 4, half circle
+            else if(level <= 4 && level >= 3)
+            {
+                spawnArcRange = Mathf.PI;
+            }
 
-            //spawner.transform.position = new Vector3(randSpawnerSpot.x, 0.3f, randSpawnerSpot.y);
+            // level 5 and 6, three quarter circle
+            else if (level <= 6 && level >= 5)
+            {
+                spawnArcRange = Mathf.PI + Mathf.PI / 2;
+            }
+
+            // all other levels full circle
+            else
+            {
+                spawnArcRange = 2 * Mathf.PI;
+            }
 
             float randAngle = Random.value * spawnArcRange;
             randAngle += angleOffset;
@@ -47,9 +69,9 @@ public class EnemySpawner : MonoBehaviour
             float x = Mathf.Cos(randAngle) * spawnerDistanceFromWindmill;
             float z = Mathf.Sin(randAngle) * spawnerDistanceFromWindmill;
 
-            Debug.DrawLine(Vector3.zero, new Vector3(x, 0.2f, z), Color.red, 1f);
-
             spawner.transform.position = new Vector3(x, 0.2f, z);
+
+            Vector3 spawnPosition = transform.position;
 
             // this should spawn in the enemies as children of the level system
             if (levelManager.GetComponent<LevelSystem>().spawnerStatus())
@@ -65,9 +87,8 @@ public class EnemySpawner : MonoBehaviour
                 {
 
                     float rand = Random.Range(0, 10);
-                    if (rand < 8)
 
-                        //int rand = Random.Range(0, 11); why is there two rand? can't do that
+                    // just bunnys for first three levels
                     if (levelManager.GetComponent<LevelSystem>().getLevel() <= 3)
                     {
                         (Instantiate(bunny, spawnPosition, Quaternion.identity) as GameObject).transform.parent =
@@ -75,6 +96,8 @@ public class EnemySpawner : MonoBehaviour
                         levelManager.GetComponent<LevelSystem>().IncreaseEnemyCount();
                        
                     }
+
+                    // from level 4 to 6 get bunnys and bears, mostly bunnys
                     else if (levelManager.GetComponent<LevelSystem>().getLevel() > 3 && levelManager.GetComponent<LevelSystem>().getLevel() <= 6)
                     {
                         if (rand < 7)
@@ -90,6 +113,8 @@ public class EnemySpawner : MonoBehaviour
                             levelManager.GetComponent<LevelSystem>().IncreaseEnemyCount();
                         }
                     }
+
+                    // level 7 and above get mostly bears
                     else
                     {
                         if (rand < 2)
@@ -106,6 +131,7 @@ public class EnemySpawner : MonoBehaviour
                         }
                     }
                 }
+
                 spawnTimer = Time.time + spawnRate;
             }
         }
