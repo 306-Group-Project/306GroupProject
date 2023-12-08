@@ -63,6 +63,9 @@ public class EnemySpawner : MonoBehaviour
                 spawnArcRange = 2 * Mathf.PI;
             }
 
+        	if (levelManager.GetComponent<LevelSystem>().spawnerStatus())  /// UPDATE 
+			{
+
             float randAngle = Random.value * spawnArcRange;
             randAngle += angleOffset;
 
@@ -131,6 +134,7 @@ public class EnemySpawner : MonoBehaviour
                         }
                     }
                 }
+			}
 
                 spawnTimer = Time.time + spawnRate;
             }

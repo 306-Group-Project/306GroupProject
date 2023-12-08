@@ -2732,7 +2732,7 @@ MonoBehaviour:
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
-        m_CallState: 2
+        m_CallState: 1
 --- !u!114 &328966303
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -18544,6 +18544,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1268113338720233243, guid: 8361d6cf0aa0d314683e960d51cdb8dc, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1442615936132209463, guid: 8361d6cf0aa0d314683e960d51cdb8dc, type: 3}
       propertyPath: m_AnchorMax.x
       value: 0
@@ -18575,6 +18579,10 @@ PrefabInstance:
     - target: {fileID: 5935936501088013807, guid: 8361d6cf0aa0d314683e960d51cdb8dc, type: 3}
       propertyPath: m_Name
       value: fireBallSpawner
+      objectReference: {fileID: 0}
+    - target: {fileID: 5935936501088013807, guid: 8361d6cf0aa0d314683e960d51cdb8dc, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5935936501088013807, guid: 8361d6cf0aa0d314683e960d51cdb8dc, type: 3}
       propertyPath: m_TagString
@@ -18636,6 +18644,10 @@ PrefabInstance:
       propertyPath: m_ConstrainProportionsScale
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 8117338894798475169, guid: 8361d6cf0aa0d314683e960d51cdb8dc, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8555590678309713176, guid: 8361d6cf0aa0d314683e960d51cdb8dc, type: 3}
       propertyPath: m_Name
       value: Windmill
@@ -18647,6 +18659,10 @@ PrefabInstance:
     - target: {fileID: 8555590678309713176, guid: 8361d6cf0aa0d314683e960d51cdb8dc, type: 3}
       propertyPath: m_TagString
       value: Windmill
+      objectReference: {fileID: 0}
+    - target: {fileID: 8831478357287217625, guid: 8361d6cf0aa0d314683e960d51cdb8dc, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects:
@@ -18778,6 +18794,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1163200092}
     m_Modifications:
+    - target: {fileID: 2033354450680626694, guid: 7510fc8f3e8a448d1a259f35029176d3, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 43.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2033354450680626694, guid: 7510fc8f3e8a448d1a259f35029176d3, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -161.3
+      objectReference: {fileID: 0}
     - target: {fileID: 5443260939702250402, guid: 7510fc8f3e8a448d1a259f35029176d3, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
