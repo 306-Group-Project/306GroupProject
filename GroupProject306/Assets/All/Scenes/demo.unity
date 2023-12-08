@@ -13321,6 +13321,7 @@ MonoBehaviour:
   upgradeMenu: {fileID: 1287654976}
   offenceMenu: {fileID: 1822993394}
   Coin: {fileID: 1498403948531744, guid: fa2c57d3f28a5e6419393e8bc3eeb32a, type: 3}
+  Coins: {fileID: 1950871307682000, guid: 01348926c7cbb3347a006c37204131c3, type: 3}
   inMenu: 0
   isPaused: 0
   textScreenFolder: {fileID: 1163200091}

@@ -35,7 +35,8 @@ public class GameManager : MonoBehaviour
     [SerializeField] private GameObject defenceMenu;
     [SerializeField] private GameObject upgradeMenu;
     [SerializeField] private GameObject offenceMenu;
-    public GameObject Coin; 
+    public GameObject Coin;
+    public GameObject Coins; 
     [SerializeField] private bool inMenu;
     [SerializeField] private bool isPaused;
 
@@ -109,6 +110,7 @@ public class GameManager : MonoBehaviour
         }    
     }
 
+    // collection for single coins 
     void CollectCoin(GameObject coin)
     {
         // Destroy the collected coin GameObject
@@ -116,6 +118,16 @@ public class GameManager : MonoBehaviour
         Destroy(coin);
         coinInstructionScreen.SetActive(false);
         score += 1;
+        SetScoreText();
+    }
+    
+    // collection for stacks of coins 
+    void CollectCoins(GameObject coins)
+    {
+        // Destroy the collected coin GameObject
+        audioScript.playCoinSound();
+        Destroy(coins);
+        score += 5;
         SetScoreText();
     }
 
