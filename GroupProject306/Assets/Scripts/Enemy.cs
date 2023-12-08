@@ -3,8 +3,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Enemy : MonoBehaviour
-{
+public class Enemy : MonoBehaviour {
+    public GameManager gameManager; 
+    
     [SerializeField] public float moveSpeed = 0.5f;
 	[SerializeField] public float originalMoveSpeed = 0.5f;
     [SerializeField] protected float health = 100.0f;
@@ -13,15 +14,23 @@ public class Enemy : MonoBehaviour
     [SerializeField] private float damageRate = 0.7f;
     [SerializeField] private float damage = 10.0f;
     [SerializeField] private float damageTime = 0.0f ;
+    
     private Light mylight;
     
     public GameObject Coin; 
 
     public bool stuck = false;
     
+    public static int counter = 0; // coin tracker for text screens
+    
+    public float screenDuration = 0.5f; // Duration of the screen in seconds
+
+    
     void Start()
     {
         mylight = GetComponent<Light>();
+        gameManager = GameObject.FindObjectOfType<GameManager>(); // Find the GameManager instance
+
     }
     // Update is called once per frame
     void Update()
@@ -57,15 +66,27 @@ public class Enemy : MonoBehaviour
             Destroy(this.gameObject);
             
             DropCoin();
+
         }
     }
 
     void DropCoin() {
+        counter++;
+        
         Vector3 position = transform.position; // enemy position
 
         GameObject coin = Instantiate(Coin, position + new Vector3(0f, 0.2f, 0f), Quaternion.identity); // coin drop 
         coin.SetActive(true);
-        //Destroy(coin,10f); 
+
+        if (counter == 1) {
+            gameManager.coinInstructionScreen.SetActive(true);
+            StartCoroutine(DeactivateScreenAfterDelay());
+            
+        }
+            else if (counter != 1) {
+            gameManager.coinInstructionScreen.SetActive(false);
+        }
+
     }
 
     private void OnTriggerEnter(Collider other)
@@ -91,6 +112,13 @@ public class Enemy : MonoBehaviour
     {
         moveSpeed = originalMoveSpeed;
     }
+    
+    IEnumerator DeactivateScreenAfterDelay()
+    {
+        yield return new WaitForSeconds(screenDuration);
+        gameManager.coinInstructionScreen.SetActive(false);
+    }
+    
 }
 
 

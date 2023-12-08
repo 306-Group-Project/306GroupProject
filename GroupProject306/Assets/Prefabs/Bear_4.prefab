@@ -549,10 +549,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   moveSpeed: 0.75
   originalMoveSpeed: 0.5
-  health: 50
-  maxHealth: 50
+  health: 150
+  maxHealth: 150
   damageRate: 0.7
-  damage: 10
+  damage: 20
   damageTime: 0
   Coin: {fileID: 1950871307682000, guid: 01348926c7cbb3347a006c37204131c3, type: 3}
   stuck: 0

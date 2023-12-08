@@ -4,7 +4,7 @@ MonoImporter:
   externalObjects: {}
   serializedVersion: 2
   defaultReferences:
-  - enemySlow: {fileID: 11400000, guid: 2d97fe5fd0b709145988bfb8e127af93, type: 2}
+  - coinInstructionScreen: {fileID: 3699328921503234345, guid: fc9d2e1c1666a403384993e43053073f, type: 3}
   - Coin: {fileID: 1498403948531744, guid: fa2c57d3f28a5e6419393e8bc3eeb32a, type: 3}
   executionOrder: 0
   icon: {instanceID: 0}
