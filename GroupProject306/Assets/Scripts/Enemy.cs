@@ -87,6 +87,9 @@ public class Enemy : MonoBehaviour {
             gameManager.coinInstructionScreen.SetActive(false);
         }
 
+            Destroy(coin, 5f);
+
+
     }
 
     private void OnTriggerEnter(Collider other)
