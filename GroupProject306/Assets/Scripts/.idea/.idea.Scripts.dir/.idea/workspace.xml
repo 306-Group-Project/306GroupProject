@@ -4,14 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ba3bef45-8e98-444b-8ea9-f6c74c86d065" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Scripts.dir/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Scripts.dir/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AudioScript.cs" beforeDir="false" afterPath="$PROJECT_DIR$/AudioScript.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CreatePlant.cs" beforeDir="false" afterPath="$PROJECT_DIR$/CreatePlant.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FireRateUpgradeButton.cs" beforeDir="false" afterPath="$PROJECT_DIR$/FireRateUpgradeButton.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/HealthRestoreButton.cs" beforeDir="false" afterPath="$PROJECT_DIR$/HealthRestoreButton.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WindMillUpgradeButton.cs" beforeDir="false" afterPath="$PROJECT_DIR$/WindMillUpgradeButton.cs" afterDir="false" />
-    </list>
+    <list default="true" id="ba3bef45-8e98-444b-8ea9-f6c74c86d065" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -60,7 +53,7 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "main",
+    "git-widget-placeholder": "latest-working-copy",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
