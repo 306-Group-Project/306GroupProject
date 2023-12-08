@@ -91,8 +91,8 @@ public class EnemySpawner : MonoBehaviour
 
                     float rand = Random.Range(0, 10);
 
-                    // just bunnys for first three levels
-                    if (levelManager.GetComponent<LevelSystem>().getLevel() <= 3)
+                    // just bunnys for first two levels
+                    if (levelManager.GetComponent<LevelSystem>().getLevel() <= 2)
                     {
                         (Instantiate(bunny, spawnPosition, Quaternion.identity) as GameObject).transform.parent =
                             levelManager.transform;
@@ -101,7 +101,7 @@ public class EnemySpawner : MonoBehaviour
                     }
 
                     // from level 4 to 6 get bunnys and bears, mostly bunnys
-                    else if (levelManager.GetComponent<LevelSystem>().getLevel() > 3 && levelManager.GetComponent<LevelSystem>().getLevel() <= 6)
+                    else if (levelManager.GetComponent<LevelSystem>().getLevel() > 2 && levelManager.GetComponent<LevelSystem>().getLevel() <= 6)
                     {
                         if (rand < 7)
                         {

@@ -5,13 +5,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ba3bef45-8e98-444b-8ea9-f6c74c86d065" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/../Prefabs/Bear_4.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/../Prefabs/Bear_4.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Prefabs/Demo White Rabbit.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/../Prefabs/Demo White Rabbit.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Scripts.dir/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Scripts.dir/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CameraFollow.cs" beforeDir="false" afterPath="$PROJECT_DIR$/CameraFollow.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MovePlayer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/MovePlayer.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../All/Scenes/demo.unity" beforeDir="false" afterPath="$PROJECT_DIR$/../All/Scenes/demo.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Scripts.dir/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Scripts.dir/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/EnemySpawner.cs" beforeDir="false" afterPath="$PROJECT_DIR$/EnemySpawner.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -35,7 +28,7 @@
     <setting file="file://$PROJECT_DIR$/FireRateUpgrade.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/FireRateUpgradeButton.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Flower.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/GameManager.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/GameManager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/HealthBuff.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/HealthRestoreButton.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/HealthRestoreUpgrade.cs" root0="FORCE_HIGHLIGHTING" />
@@ -47,7 +40,7 @@
     <setting file="file://$PROJECT_DIR$/UpgradeEffect.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/WindMill.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/WindMillHealth.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/WindMillUpgradeButton.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/WindMillUpgradeButton.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/objectPlace.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/restartButton.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
@@ -126,6 +119,7 @@
       <workItem from="1702060705995" duration="3000" />
       <workItem from="1702068105895" duration="1379000" />
       <workItem from="1702071156713" duration="657000" />
+      <workItem from="1702076409826" duration="313000" />
     </task>
     <servers />
   </component>
