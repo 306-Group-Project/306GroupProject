@@ -48,10 +48,16 @@ public class GameManager : MonoBehaviour
 	[SerializeField] private GameObject openShopTextScreen;
 	[SerializeField] private GameObject useShopTextScreen;
 	[SerializeField] private GameObject waveTextScreen;
-	[SerializeField] private GameObject coinInstructionScreen;
+	[SerializeField] public GameObject coinInstructionScreen;
 	[SerializeField] private GameObject coinTipsScreen;
 
     public int enemyKills = 0;
+    
+    // Level Manager object
+    public GameObject levelManager;
+    
+    public float screenDuration = 0.5f; // Duration of the screen in seconds
+    
 
     // Start is called before the first frame update
     void Awake()
@@ -108,6 +114,7 @@ public class GameManager : MonoBehaviour
         // Destroy the collected coin GameObject
         audioScript.playCoinSound();
         Destroy(coin);
+        coinInstructionScreen.SetActive(false);
         score += 1;
         SetScoreText();
     }
@@ -136,6 +143,12 @@ public class GameManager : MonoBehaviour
             }
         }
     }
+    
+    IEnumerator DeactivateScreenAfterDelay()
+    {
+        yield return new WaitForSeconds(screenDuration);
+        openShopTextScreen.SetActive(false);
+    }
 
     public void StartGame()
     {
@@ -147,11 +160,9 @@ public class GameManager : MonoBehaviour
         gameScreen.SetActive(true);
 
 		textScreenFolder.SetActive(true); 
-		//levelNumScreen.SetActive(true); // configure animation 
-
-		// TODO 
-		// add open shop instructions screen after level screen fades out 
-		// if(level == 1){ }
+        
+        openShopTextScreen.SetActive(true); 
+        StartCoroutine(DeactivateScreenAfterDelay());
 			 
    		}
 
@@ -220,6 +231,9 @@ public class GameManager : MonoBehaviour
     
     public void OpenShopMenu()
     {
+        int level = levelManager.GetComponent<LevelSystem>().getLevel();
+        
+        openShopTextScreen.SetActive(false);
         inMenu = true;
         Time.timeScale = 0;
         shopMenu.SetActive(true);	
@@ -228,8 +242,8 @@ public class GameManager : MonoBehaviour
         offenceMenu.SetActive(false);
         gameScreen.SetActive(false);
         audioScript.playMenuSwitch();
-	
-		if(level ==1){ 
+        
+		if(level == 1){ 
 			useShopTextScreen.SetActive(true); // TODO add if statment for level 1 only 
 		}
 		else if (level != 1){
@@ -260,6 +274,8 @@ public class GameManager : MonoBehaviour
         offenceMenu.SetActive(true);
         audioScript.playMenuSwitch();
     }
+
+    
 
     public void EndGame()
     {
