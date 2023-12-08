@@ -9,7 +9,7 @@ public class GameManager : MonoBehaviour
 {
     public static GameManager instance = null;
     public AudioScript audioScript;
-
+    
     // windmill items
     public WindMill windMill;
     public GameObject windmillObject;
@@ -18,21 +18,21 @@ public class GameManager : MonoBehaviour
     private AudioSource windmillDestroyedSound;
 
     public Text scoreText;
-
+    
     public Text defenceScoreText;
     public Text upgradeScoreText;
     public Text offenceScoreText;
     public Text gameOverScreenScore;
-
+    
     public Text levelText;
-
+    
     [SerializeField] private int score = 0;
     [SerializeField] private int level = 0;
 
     [SerializeField] private float windMillHealth = 100.0f;
 
     [SerializeField] private Camera camera;
-
+    
     // Menus
     [SerializeField] private GameObject pauseMenu;
     [SerializeField] private GameObject startMenu;
@@ -42,7 +42,7 @@ public class GameManager : MonoBehaviour
     [SerializeField] private GameObject defenceMenu;
     [SerializeField] private GameObject upgradeMenu;
     [SerializeField] private GameObject offenceMenu;
-     public GameObject Coin;
+     public GameObject Coin; 
     [SerializeField] private bool inMenu;
     [SerializeField] private bool isPaused;
 
@@ -63,7 +63,6 @@ public class GameManager : MonoBehaviour
     void Start()
     {
         windmillDestroyedSound = GetComponent<AudioSource>();
-        SetHighScore(PlayerPrefs.GetInt("MaxEnemyKills", 0));
         inMenu = true;
         SetScoreText();
         SetLevelText(level);
@@ -84,7 +83,7 @@ if (Input.GetMouseButtonDown(0)) // Assuming left mouse button for interaction
            RaycastHit hit;
 			LayerMask mask = LayerMask.GetMask("Coin");
            Debug.DrawRay(ray.origin, ray.direction * 10,Color.red,3f);
-
+    		
             if (Physics.Raycast(ray, out hit,1000f,mask,QueryTriggerInteraction.Collide))
             {
                 Debug.Log("Hit");
@@ -94,11 +93,11 @@ if (Input.GetMouseButtonDown(0)) // Assuming left mouse button for interaction
                 }
             }
         }
-
+    
 
 void CollectCoin(GameObject coin)
     {
-
+      
 
         // Destroy the collected coin GameObject
         Destroy(coin);
@@ -107,9 +106,9 @@ void CollectCoin(GameObject coin)
         audioScript.playCoinSound();
     }
 
-
+        
     }
-
+ 
 
 
     public void checkWindMillHealth()
@@ -143,17 +142,11 @@ void CollectCoin(GameObject coin)
 
     public void SetScoreText()
     {
-        scoreText.text = "Coins: " + score.ToString();
-        defenceScoreText.text = "Coins: " + score.ToString();
-        upgradeScoreText.text = "Coins: " + score.ToString();
-        offenceScoreText.text = "Coins: " + score.ToString();
+        scoreText.text = "Score: " + score.ToString();
+        defenceScoreText.text = "Score: " + score.ToString();
+        upgradeScoreText.text = "Score: " + score.ToString();
+        offenceScoreText.text = "Score: " + score.ToString();
         gameOverScreenScore.text = "Score: " + score.ToString();
-    }
-
-    public void SetHighScore(int maxKills)
-    {
-        highScoreText.text = "High Score: " + maxKills.ToString();
-        gameOverHighScore.text = "High Score: " + maxKills.ToString();
     }
 
     public void SetLevelText(int levelCount)
@@ -166,7 +159,7 @@ void CollectCoin(GameObject coin)
         score += scoreToAdd;
         SetScoreText();
     }
-
+    
     public int getScore()
     {
         return score;
@@ -205,9 +198,9 @@ void CollectCoin(GameObject coin)
             pauseMenu.SetActive(isPaused);
             audioScript.playMenuSwitch();
         }
-
+        
     }
-
+    
     // set the shop menu to open on B button press, will change later
     public void OpenShopMenu()
     {
@@ -221,7 +214,7 @@ void CollectCoin(GameObject coin)
         audioScript.playMenuSwitch();
 
     }
-
+    
     public void OpenDefenceMenu()
     {
         shopMenu.SetActive(false);
@@ -237,7 +230,7 @@ void CollectCoin(GameObject coin)
         audioScript.playMenuSwitch();
 
     }
-
+    
     public void OpenOffenceMenu()
     {
         shopMenu.SetActive(false);

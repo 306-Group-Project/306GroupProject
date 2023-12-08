@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class EnemySpawner : MonoBehaviour
 {
-    public GameObject bunny;
-    public GameObject bear;
+	public GameObject bunny;
+	public GameObject bear;
 
 
     [Range(0, 2 * Mathf.PI)] public float spawnArcRange = Mathf.PI / 2;
