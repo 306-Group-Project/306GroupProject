@@ -120,6 +120,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   lifeTime: 10
   moveSpeed: 2
-  damage: 30
+  damage: 35
   curTarget: {fileID: 0}
   hitEffect: {fileID: 985483039366664255, guid: f91edac4d13fc4343ba96bb6a843ad05, type: 3}

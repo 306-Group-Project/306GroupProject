@@ -127,7 +127,7 @@ public class GameManager : MonoBehaviour
         // Destroy the collected coin GameObject
         audioScript.playCoinSound();
         Destroy(coins);
-        score += 5;
+        score += 3;
         SetScoreText();
     }
 
