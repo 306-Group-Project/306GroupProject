@@ -10,7 +10,7 @@ public class CameraFollow : MonoBehaviour
     private float zoom;
     private float zoomMultiplier = 4.0f;
     private float minZoom = 0.2f;
-    private float maxZoom = 2.25f;
+    private float maxZoom = 3.0f;
     private float velocity = 0.0f;
     private float smoothTime = 0.25f;
 
