@@ -39,6 +39,7 @@ RenderSettings:
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
   m_IndirectSpecularColor: {r: 0.43718457, g: 0.75444883, b: 1.0290297, a: 1}
+  m_IndirectSpecularColor: {r: 0.437184, g: 0.7544493, b: 1.0290301, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -2892,7 +2893,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 82abd47adf97b443dbe4097cce494e64, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 8d42e0dedf6894067898dc63850743f9, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -3647,7 +3648,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: power up
+  m_text: Firing Power
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: b4ddfb3635c5c4e9099693b18f3cba56, type: 2}
   m_sharedMaterial: {fileID: -567259756381480063, guid: b4ddfb3635c5c4e9099693b18f3cba56, type: 2}
@@ -4727,7 +4728,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "health \n\n\nRestore plants back to full health\n"
+  m_text: "plant health \n\n\nRestore plants back to full health\n"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: b4ddfb3635c5c4e9099693b18f3cba56, type: 2}
   m_sharedMaterial: {fileID: -567259756381480063, guid: b4ddfb3635c5c4e9099693b18f3cba56, type: 2}
@@ -4754,10 +4755,10 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 55
+  m_fontSize: 52.2
   m_fontSizeBase: 55
   m_fontWeight: 400
-  m_enableAutoSizing: 0
+  m_enableAutoSizing: 1
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 0
@@ -7382,7 +7383,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -55, y: -102}
+  m_AnchoredPosition: {x: -55, y: -140}
   m_SizeDelta: {x: 30.46759, y: 30.4676}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &826434565
@@ -7405,7 +7406,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: c3fbb71c3de78498984c45d3f8c2ba69, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 82abd47adf97b443dbe4097cce494e64, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -10369,9 +10370,9 @@ MonoBehaviour:
       m_Calls: []
   m_text: '
 
-    HP: ??
+    HP: +1.5x
 
-    Cost: ?
+    Cost: 7
 
 '
   m_isRightToLeft: 0
@@ -10529,7 +10530,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: plant health
+  m_text: Water Plants
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: b4ddfb3635c5c4e9099693b18f3cba56, type: 2}
   m_sharedMaterial: {fileID: -567259756381480063, guid: b4ddfb3635c5c4e9099693b18f3cba56, type: 2}
@@ -10926,9 +10927,10 @@ MonoBehaviour:
       m_Calls: []
   m_text: '
 
-    HP: ??
 
-    Cost: ?
+    HP: +100
+
+    Cost: 10
 
 '
   m_isRightToLeft: 0
@@ -17192,11 +17194,12 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'power up
+  m_text: 'Firing Power
 
 
 
-    Increase firing speed of plants 1.5x
+
+    increase firerate to take down enemies quicker
 
 '
   m_isRightToLeft: 0
@@ -17225,10 +17228,10 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 55
+  m_fontSize: 50.3
   m_fontSizeBase: 55
   m_fontWeight: 400
-  m_enableAutoSizing: 0
+  m_enableAutoSizing: 1
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 0
@@ -17332,7 +17335,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 43c8992ab13f24f28aba8264007b5c38, type: 3}
+  m_Sprite: {fileID: 21300000, guid: c67ada968c3f243fead9f6566a84c455, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
