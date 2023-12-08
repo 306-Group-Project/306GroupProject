@@ -152,8 +152,8 @@ void CollectCoin(GameObject coin)
 
     public void SetHighScore(int maxKills)
     {
-        highScoreText.text = "High Score: " + maxKills.ToString();
-        gameOverHighScore.text = "High Score: " + maxKills.ToString();
+        upgradeScoreText.text = "High Score: " + maxKills.ToString();
+        gameOverScreenScore.text = "High Score: " + maxKills.ToString();
     }
 
     public void SetLevelText(int levelCount)
