@@ -10,6 +10,7 @@ public class AudioScript : MonoBehaviour
     public AudioSource insufficientFunds;
     public AudioSource confirmPlant;
     public AudioSource confirmUpgrade;
+	public AudioSource backgroundMusic; 
 
     public void playCoinSound()
     {
@@ -40,5 +41,11 @@ public class AudioScript : MonoBehaviour
     {
         confirmUpgrade.Play();
     }
+
+	public void playBackgroundMusic()
+	{
+		backgroundMusic.Play();
+	}
+
     
 }
