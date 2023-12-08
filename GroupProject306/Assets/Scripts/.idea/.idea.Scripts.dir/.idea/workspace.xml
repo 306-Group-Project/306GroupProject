@@ -5,12 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ba3bef45-8e98-444b-8ea9-f6c74c86d065" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/../Prefabs/Bear_4.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/../Prefabs/Bear_4.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Prefabs/Demo White Rabbit.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/../Prefabs/Demo White Rabbit.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Scripts.dir/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Scripts.dir/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AudioScript.cs" beforeDir="false" afterPath="$PROJECT_DIR$/AudioScript.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CreatePlant.cs" beforeDir="false" afterPath="$PROJECT_DIR$/CreatePlant.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FireRateUpgradeButton.cs" beforeDir="false" afterPath="$PROJECT_DIR$/FireRateUpgradeButton.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/HealthRestoreButton.cs" beforeDir="false" afterPath="$PROJECT_DIR$/HealthRestoreButton.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WindMillUpgradeButton.cs" beforeDir="false" afterPath="$PROJECT_DIR$/WindMillUpgradeButton.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LevelSystem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/LevelSystem.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -25,7 +23,7 @@
     <setting file="file://$PROJECT_DIR$/BlockerPlant.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/CameraFollow.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/CameraZoom.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/CreatePlant.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/CreatePlant.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Enemy.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/EnemySlow.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/EnemySpawner.cs" root0="FORCE_HIGHLIGHTING" />
@@ -60,7 +58,7 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "main",
+    "git-widget-placeholder": "final-working-copy",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -117,6 +115,7 @@
       <workItem from="1701193421548" duration="756000" />
       <workItem from="1701378250201" duration="2284000" />
       <workItem from="1701466452837" duration="2711000" />
+      <workItem from="1702055104650" duration="980000" />
     </task>
     <servers />
   </component>
@@ -125,24 +124,5 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/BlockerPlant.cs</url>
-          <properties documentPath="$PROJECT_DIR$/BlockerPlant.cs" initialLine="0" isMultiMethodBreakpoint="true">
-            <option name="multiMethodBreakpoint" value="true" />
-            <startOffsets>
-              <option value="-1" />
-            </startOffsets>
-            <endOffsets>
-              <option value="-1" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="6" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
 </project>

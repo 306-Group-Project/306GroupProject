@@ -30,7 +30,9 @@ public class LevelSystem : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        levelCount = 1;
         GenerateEnemies();
+        
     }
 
     // Update is called once per frame
