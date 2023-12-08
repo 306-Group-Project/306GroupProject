@@ -12,13 +12,13 @@ public class EnemySpawner : MonoBehaviour
     [Range(0, 2 * Mathf.PI)] public float angleOffset;
     [Range(1, 10)] public float spawnerDistanceFromWindmill = 2.0f;
 
-	[SerializeField] private float spawnRate = 2.0f;
-	private float spawnTimer;
+    [SerializeField] private float spawnRate = 2.0f;
+    private float spawnTimer;
 
-	public GameObject spawner;
+    public GameObject spawner;
 
-	// Level Manager object
-	public GameObject levelManager;
+    // Level Manager object
+    public GameObject levelManager;
 
     private void Start()
     {
@@ -31,8 +31,8 @@ public class EnemySpawner : MonoBehaviour
         SpawnEnemy();
     }
 
-	private void SpawnEnemy()
-	{
+    private void SpawnEnemy()
+    {
 
         if (Time.time > spawnTimer)
         {
@@ -62,11 +62,11 @@ public class EnemySpawner : MonoBehaviour
                 spawnArcRange = 2 * Mathf.PI;
             }
 
-			float randAngle = Random.value * spawnArcRange;
-			randAngle += angleOffset;
+            float randAngle = Random.value * spawnArcRange;
+            randAngle += angleOffset;
 
-			float x = Mathf.Cos(randAngle) * spawnerDistanceFromWindmill;
-			float z = Mathf.Sin(randAngle) * spawnerDistanceFromWindmill;
+            float x = Mathf.Cos(randAngle) * spawnerDistanceFromWindmill;
+            float z = Mathf.Sin(randAngle) * spawnerDistanceFromWindmill;
 
             spawner.transform.position = new Vector3(x, 0.2f, z);
 
@@ -81,6 +81,9 @@ public class EnemySpawner : MonoBehaviour
                         levelManager.transform;
                     levelManager.GetComponent<LevelSystem>().IncreaseEnemyCount();
 
+	                }
+	                else if (levelManager.GetComponent<LevelSystem>().getLevelCount() > 2 && levelManager.GetComponent<LevelSystem>().getLevelCount() <= 5)
+	                {
 
                     float rand = Random.Range(0, 10);
 
