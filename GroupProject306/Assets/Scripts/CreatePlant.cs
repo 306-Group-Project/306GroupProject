@@ -4,7 +4,9 @@ using UnityEngine;
 
 public class CreatePlant : MonoBehaviour
 {
-
+    public GameManager manager;
+    public AudioScript audioScript;
+    
     public GameObject Prefab;
     public GameObject Planting;
     public float offset = 3.0f;
