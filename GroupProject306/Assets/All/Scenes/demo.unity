@@ -2285,7 +2285,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 85ed5328c1e313a41b1a541d7951915c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 10
+  moveSpeed: 5
   rotateSpeed: 360
   _rotation: {x: 0, y: 0, z: 0}
   movePoint: {fileID: 881476819}
@@ -10929,7 +10929,7 @@ MonoBehaviour:
 
     HP: +100
 
-    Cost: 10
+    Cost: 6
 
 '
   m_isRightToLeft: 0
@@ -18797,11 +18797,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2033354450680626694, guid: 7510fc8f3e8a448d1a259f35029176d3, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 43.2
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2033354450680626694, guid: 7510fc8f3e8a448d1a259f35029176d3, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -161.3
+      value: -178
       objectReference: {fileID: 0}
     - target: {fileID: 5443260939702250402, guid: 7510fc8f3e8a448d1a259f35029176d3, type: 3}
       propertyPath: m_Pivot.x

@@ -14,7 +14,7 @@ public class FireRateUpgradeButton : MonoBehaviour
 
     public void ApplyFireRateUpgrade()
     {
-        int cost = 5;
+        int cost = 7;
         if (flower != null && manager.getScore() >= cost)
         {
             fireRateUpgrade.Apply(flower.gameObject);

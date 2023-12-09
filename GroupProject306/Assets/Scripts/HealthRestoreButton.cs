@@ -12,7 +12,7 @@ public class HealthRestoreButton : MonoBehaviour
 
     public void ApplyHealthRestoreUpgrade()
     {
-        int cost = 5; 
+        int cost = 6; 
         if (manager.getScore() >= cost)
         {
             // Find all active Flower objects with the specified tag
