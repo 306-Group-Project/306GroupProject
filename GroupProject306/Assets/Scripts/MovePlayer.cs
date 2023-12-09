@@ -3,7 +3,7 @@ using UnityEngine;
 
 public class MovePlayer : MonoBehaviour
 {
-    [SerializeField] private float moveSpeed = 3.5f;
+    [SerializeField] private float moveSpeed = 7.0f;
     [SerializeField] private float rotateSpeed = 360.0f;
     [SerializeField] private Vector3 _rotation;
 

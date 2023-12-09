@@ -265,6 +265,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8e35b9e0335b57849930211550a7576e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  gameManager: {fileID: 0}
   moveSpeed: 0.5
   originalMoveSpeed: 0.5
   health: 100
@@ -274,6 +275,7 @@ MonoBehaviour:
   damageTime: 0
   Coin: {fileID: 1498403948531744, guid: fa2c57d3f28a5e6419393e8bc3eeb32a, type: 3}
   stuck: 0
+  screenDuration: 0.5
 --- !u!136 &1066629533263246696
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -417,7 +419,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: df7087e4d8a8bb546bc08ce68632903f, type: 3}
+  m_audioClip: {fileID: 8300000, guid: df9379fb0de7c7641b500589e7768da9, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 0.737
   m_Pitch: 1
