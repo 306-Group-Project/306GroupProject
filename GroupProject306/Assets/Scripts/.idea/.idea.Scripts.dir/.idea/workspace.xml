@@ -5,16 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ba3bef45-8e98-444b-8ea9-f6c74c86d065" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/../All/Scenes/demo.unity" beforeDir="false" afterPath="$PROJECT_DIR$/../All/Scenes/demo.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Coins/Devtoid - Gold Coins/3D Assets/Silver Coin - Single/Mesh/Materials/goldCoin_Diffuse.mat" beforeDir="false" afterPath="$PROJECT_DIR$/../Coins/Devtoid - Gold Coins/3D Assets/Silver Coin - Single/Mesh/Materials/goldCoin_Diffuse.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Coins/Devtoid - Gold Coins/3D Assets/Silver Coins/Mesh/Materials/goldCoin_Diffuse.mat" beforeDir="false" afterPath="$PROJECT_DIR$/../Coins/Devtoid - Gold Coins/3D Assets/Silver Coins/Mesh/Materials/goldCoin_Diffuse.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Pixel Cursors/Cursors/basic_01 BLUE.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/../Pixel Cursors/Cursors/basic_01 BLUE.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Scripts.dir/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Scripts.dir/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FireRateUpgradeButton.cs" beforeDir="false" afterPath="$PROJECT_DIR$/FireRateUpgradeButton.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/HealthRestoreButton.cs" beforeDir="false" afterPath="$PROJECT_DIR$/HealthRestoreButton.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../ProjectSettings/EditorBuildSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/../../ProjectSettings/EditorBuildSettings.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../ProjectSettings/ProjectSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/../../ProjectSettings/ProjectSettings.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../ProjectSettings/QualitySettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/../../ProjectSettings/QualitySettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Enemy.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Enemy.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GameManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/GameManager.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -132,6 +124,7 @@
       <workItem from="1702078029030" duration="332000" />
       <workItem from="1702079988669" duration="774000" />
       <workItem from="1702089101272" duration="127000" />
+      <workItem from="1702091446361" duration="69000" />
     </task>
     <servers />
   </component>

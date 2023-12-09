@@ -57,7 +57,7 @@ public class GameManager : MonoBehaviour
     // Level Manager object
     public GameObject levelManager;
     
-    public float screenDuration = 0.5f; // Duration of the screen in seconds
+    public float screenDuration = 2f; // Duration of the screen in seconds
     
 
     // Start is called before the first frame update

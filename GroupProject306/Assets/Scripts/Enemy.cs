@@ -23,7 +23,7 @@ public class Enemy : MonoBehaviour {
     
     public static int counter = 0; // coin tracker for text screens
     
-    public float screenDuration = 0.5f; // Duration of the screen in seconds
+    public float screenDuration = 2f; // Duration of the screen in seconds
 
     
     void Start()
